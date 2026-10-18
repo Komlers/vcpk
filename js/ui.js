@@ -59,6 +59,8 @@ function renderChips(){
   if(tip) tip.style.display = names.length ? "none" : "";
   const ib = $("importRosterBtn");
   if(ib) ib.textContent = names.length ? "导入" : "📥 导入班级名单（TXT）";
+  const row = document.querySelector(".classRow");
+  if(row) row.classList.toggle("has-roster", names.length > 0);
 }
 function renderHistory(){
   const h = loadHis(S.cls);

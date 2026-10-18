@@ -22,7 +22,7 @@
 
   /* ============ 主页 ============ */
   #setup{padding:40px 5vw 34px;max-width:1120px;margin:0 auto;width:100%;}
-  .hero{text-align:center;margin-bottom:28px;}
+  .hero{text-align:center;margin-bottom:14px;}
   .logo{font-size:54px;font-weight:800;letter-spacing:8px;margin-bottom:10px;}
   .logo .r{color:var(--red);} .logo .b{color:var(--blue);}
   .sub{font-size:24px;color:var(--muted);}
@@ -92,6 +92,7 @@
   /* ============ 班级行 ============ */
   .classRow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
   .classRow .chips{flex:1;min-width:0;}
+  .classRow:not(.has-roster) .chips{display:none;}  /* 无名单时隐藏 chips，按钮居左 */
 
   /* ============ 限时下拉框（与词库按钮同尺寸） ============ */
   .durSelect{font-size:26px;padding:14px 26px;border-radius:14px;border:2px solid var(--line);
