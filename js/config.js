@@ -1,0 +1,53 @@
+"use strict";
+
+/* ================== 词库：从 lib/ 目录加载 ==================
+   文件命名：lib/{书号}{单元}.json
+     b4u1~b4u5 = 选择性必修一（高中第四册）Unit 1~5
+     b5u1~b5u5 = 选择性必修二（高中第五册）Unit 1~5
+   仅 b4u2.json 含 chunks 词块表。词库随仓库维护，部署后由浏览器 fetch 读取；
+   直接双击 index.html（file://）会被浏览器拦截本地 JSON 请求，请用 http:// 访问。 */
+let LIB = [];      // [英文, 中文, 单元标签]
+let CHUNKS = [];   // 词块表 [英文,中文,家族,页码,题干,答案,重组片段]
+let LIB_INFO = {}; // tag -> { name, file } 词库展示名
+const WORD_BANK_FILES = [
+  { file:"b4u1", tag:"U1" }, { file:"b4u2", tag:"U2" }, { file:"b4u3", tag:"U3" },
+  { file:"b4u4", tag:"U4" }, { file:"b4u5", tag:"U5" },
+  { file:"b5u1", tag:"X2U1" }, { file:"b5u2", tag:"X2U2" }, { file:"b5u3", tag:"X2U3" },
+  { file:"b5u4", tag:"X2U4" }, { file:"b5u5", tag:"X2U5" }
+];
+
+/* ================== 题量方案（按挑战时长自动配比） ==================
+   w=单词题，c1=词块选义，c2=词块配对，c3=词块重组
+   ⚠️ PLAN 只决定「开场前 N 题的配比」，**不再是题池总上限**。
+   题池 = 当前检查范围内的**全部可用词条**（每个单词/词块各出一次），
+   开场题按 PLAN 配比排在前面，其余全部续在题池尾部 → 任意时长都不会循环重复同一批词汇。 */
+const PLAN = {
+  120:{w:5,  c1:4,  c2:2, c3:1},
+  180:{w:7,  c1:6,  c2:3, c3:2},
+  240:{w:10, c1:8,  c2:4, c3:3},
+  300:{w:13, c1:10, c2:5, c3:4}
+};
+const PAIR_POOL = ["of","to","for","with","from","into","on","about","as","in","against","by","up","out","over","at"];
+
+/* 词块/单词索引（buildIndex 填充） */
+let chunkIdxByEn = {};   // 词块英文 -> CHUNKS 下标
+let wordByEn = {};        // 单词英文 -> LIB 词条
+let CHUNK_ENS = new Set();  /* 词块英文集合（避免词块与同名单词重复出题） */
+
+/* ================== 全局状态 ================== */
+const $ = id => document.getElementById(id);
+let S = {
+  cls:"", p1:"红方选手", p2:"蓝方选手",
+  units:[], useChunks:false, dur:120, mode:"mix",
+  pool:[], qi:0, round:1, scores:[0,0], streak:[0,0], maxStreak:[0,0],
+  locked:[false,false], timer:null, left:0, pendingNext:false,
+  wrongSet:new Set(), revival:false, basePoints:10, curQ:null, reviewList:[]
+};
+let redName = "", blueName = "", champFixed = false, manualMode = false, drawnPool = [];
+let pickSide = "red";       /* 选名弹窗当前选中方 */
+let tempUnits = [];          /* 词库弹窗临时选择 */
+let pendingClass = "";       /* 导入名单时暂存班级名 */
+
+/* ================== 工具 ================== */
+const shuffle = a => { a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; };
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;");

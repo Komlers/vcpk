@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>词汇擂台 PK</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= 全屏按钮 ================= -->
+<button id="fsBtn" title="全屏 / 退出全屏（快捷键 F，Esc 退出）">
+  <svg class="icoEnter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg>
+  <svg class="icoExit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"></path></svg>
+  <span id="fsLabel">全屏</span>
+</button>
+
+<!-- ================= 主页 ================= -->
+<div id="setup" class="screen">
+  <div class="hero">
+    <div class="logo"><span class="r">词</span>汇<span class="b">擂</span>台</div>
+    <div class="sub">双人同台 · 单词 / 词块对战 · <b>败者守擂</b> · 班级名单本地保存</div>
+  </div>
+
+  <div class="mini" style="text-align:center;margin-bottom:6px">快捷键：<kbd>F</kbd> 进入 / 退出全屏 · <kbd>Esc</kbd> 退出全屏（右上角也有按钮）</div>
+
+  <div class="card">
+    <h3><span class="stepNo">1</span>选择班级<span class="hint">名单 / 战绩 / 擂主按班级分开保存</span></h3>
+    <div class="classRow">
+      <div class="chips" id="classChips"></div>
+      <button class="drawBtn" id="importRosterBtn">📥 导入班级名单（TXT）</button>
+    </div>
+    <div class="mini" id="noRosterTip" style="margin-top:14px;color:#9a6a00">⚠ 还没有班级名单，点右侧按钮导入TXT。<br>一行一个名字，自动去重，名单仅保存在本机。</div>
+    <input type="file" id="rosterFile" accept=".txt,text/plain" style="display:none">
+  </div>
+
+  <div class="card">
+    <h3><span class="stepNo">2</span>上台选手<span class="hint">先抽擂主（红方），再抽挑战者（蓝方）</span></h3>
+    <div class="mini" id="rosterInfo" style="margin:-4px 0 14px">请先在上方选择或导入班级名单。</div>
+    <div class="drawRow">
+      <div class="drawBox red clickable" id="redBox"><div class="dlabel">🛡 擂主 · 红方（点击抽取）</div><div class="dname" id="redNameBox">待抽取</div></div>
+      <div class="vsBadge">VS</div>
+      <div class="drawBox blue clickable" id="blueBox"><div class="dlabel">⚔ 挑战 · 蓝方（点击抽取）</div><div class="dname" id="blueNameBox">待抽取</div></div>
+    </div>
+    <div class="nameRow hidden" id="manualRow" style="margin-top:14px">
+      <input id="m1" placeholder="红方名字" maxlength="8">
+      <input id="m2" placeholder="蓝方名字" maxlength="8">
+    </div>
+    <div class="drawFoot">
+      <span class="mini" id="drawInfo">先抽擂主（红方），再抽挑战者（蓝方）。</span>
+      <span class="footLinks">
+        <a href="javascript:;" id="manualBtn" class="footLink">输入</a>
+        <a href="javascript:;" id="pickBtn" class="footLink">选择</a>
+      </span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><span class="stepNo">3</span>出题范围与时长<span class="hint">题池按范围自动扩满，全程不重复出题</span></h3>
+    <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;">
+      <button class="drawBtn" id="openLibModal" style="font-size:26px;padding:14px 26px">📚 选择词库</button>
+      <select id="durSelect" class="durSelect">
+        <option value="30">30s</option>
+        <option value="60">1m</option>
+        <option value="90">1m30s</option>
+        <option value="120" selected>2m</option>
+        <option value="150">2m30s</option>
+        <option value="180">3m</option>
+        <option value="210">3m30s</option>
+        <option value="240">4m</option>
+        <option value="270">4m30s</option>
+        <option value="300">5m</option>
+      </select>
+    </div>
+    <div class="mini" id="planInfo" style="margin-top:14px"></div>
+  </div>
+
+  <div class="card" id="hisPanel">
+    <h3 id="hisTitle">📊 本班战绩</h3>
+    <div id="hisBody" class="mini">暂无记录</div>
+    <button class="clearBtn hidden" id="clearBtn">清空本班历史</button>
+  </div>
+
+  <button class="startBtn" id="startBtn">开 始 PK</button>
+</div>
+
+<!-- ================= 词库选择弹窗 ================= -->
+<div id="libModal" class="modal hidden">
+  <div class="modalMask"></div>
+  <div class="modalBox">
+    <h3>选择题库<span class="hint" id="libHint">点击切换选中，支持多选</span></h3>
+    <div class="libChips" id="libChips"></div>
+    <div class="btnRow" style="margin-top:20px">
+      <button class="drawBtn" id="libCancel">取消</button>
+      <button class="startBtn small" id="libConfirm">确定</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 选名弹窗 ================= -->
+<div id="pickModal" class="modal hidden">
+  <div class="modalMask"></div>
+  <div class="modalBox">
+    <div class="pickTabs">
+      <button class="pickTab on" data-side="red">🛡 红方</button>
+      <button class="pickTab" data-side="blue">⚔ 蓝方</button>
+    </div>
+    <div class="pickGrid" id="pickGrid"></div>
+    <div class="btnRow" style="margin-top:16px">
+      <button class="drawBtn" id="pickCancel">关闭</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 对战页 ================= -->
+<div id="battle" class="screen hidden">
+  <div class="topbar">
+    <div class="pcard red">
+      <div class="pinfo"><span class="prole">🛡 擂主 · 红方</span><span class="pname" id="n1"></span></div>
+      <span class="pscore" id="s1">0</span>
+    </div>
+    <div class="timerWrap"><div class="tlabel">剩余时间</div><div class="timer" id="timer">3:00</div></div>
+    <div class="pcard blue">
+      <span class="pscore" id="s2">0</span>
+      <div class="pinfo right"><span class="prole">⚔ 挑战 · 蓝方</span><span class="pname" id="n2"></span></div>
+    </div>
+  </div>
+  <div class="qzone">
+    <div id="qWord"></div>
+    <div id="qTip">点出你认为是正确的答案</div>
+  </div>
+  <div class="arena">
+    <div class="side red" id="side1">
+      <div id="pg1"></div>
+      <div class="streakTag red" id="st1"></div>
+      <button class="opt" data-side="1"></button>
+      <button class="opt" data-side="1"></button>
+      <button class="opt" data-side="1"></button>
+      <button class="opt" data-side="1"></button>
+    </div>
+    <div class="side blue" id="side2">
+      <div id="pg2"></div>
+      <div class="streakTag blue" id="st2"></div>
+      <button class="opt" data-side="2"></button>
+      <button class="opt" data-side="2"></button>
+      <button class="opt" data-side="2"></button>
+      <button class="opt" data-side="2"></button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 结果页 ================= -->
+<div id="result" class="screen hidden">
+  <div class="crown">🏆</div>
+  <div id="winName"></div>
+  <div id="finalScore"></div>
+  <div class="wrongBox" id="wrongBox">
+    <h4>错词/错块本（本局错的单词与词块，下节课优先复现）</h4>
+    <div id="wrongChips"></div>
+  </div>
+  <div class="btnRow">
+    <button id="againBtn">下一局：败者守擂，抽新蓝方</button>
+    <button id="reviveBtn" class="hidden">错词加时赛 30 秒</button>
+    <button id="homeBtn">返回主页</button>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/wordbank.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/game.js"></script>
+<script src="js/events.js"></script>
+
+
+</body></html>
