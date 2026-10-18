@@ -1,0 +1,14 @@
+# Office Files
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# DataBase Files
+*.db
+
+# Demo Folder
+demo/
+data/
