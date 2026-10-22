@@ -80,14 +80,14 @@ function renderHistory(){
     const stTop = Object.entries(h.streaks||{}).sort((a,b)=>b[1]-a[1])[0];
     let html = '<div class="row">'
       + '<div class="stat">总场次 <b>' + h.matches.length + '</b></div>';
-    if(winTop) html += '<div class="stat">胜场王 <b>' + esc(winTop[0]) + ' ' + winTop[1] + '胜</b></div>';
-    if(stTop) html += '<div class="stat">连击纪录 <b>' + esc(stTop[0]) + ' x' + stTop[1] + '</b></div>';
+    if(winTop) html += '<div class="stat">胜场王 <b>' + esc(dispName(winTop[0])) + ' ' + winTop[1] + '胜</b></div>';
+    if(stTop) html += '<div class="stat">连击纪录 <b>' + esc(dispName(stTop[0])) + ' x' + stTop[1] + '</b></div>';
     html += "</div>";
     html += '<div id="recentList">' + h.matches.slice(-5).reverse().map(m=>{
-      const res = m.s1===m.s2 ? "平局" : (m.s1>m.s2 ? esc(m.p1)+" 胜" : esc(m.p2)+" 胜");
+      const res = m.s1===m.s2 ? "平局" : (m.s1>m.s2 ? esc(dispName(m.p1))+" 胜" : esc(dispName(m.p2))+" 胜");
       const d = new Date(m.t);
       const tag = (d.getMonth()+1) + "/" + d.getDate();
-      return '<div class="recentItem"><span>' + esc(m.p1) + ' ' + m.s1 + ' : ' + m.s2 + ' ' + esc(m.p2)
+      return '<div class="recentItem"><span>' + esc(dispName(m.p1)) + ' ' + m.s1 + ' : ' + m.s2 + ' ' + esc(dispName(m.p2))
         + '</span><span class="mini">' + m.unit + " · " + res + " · " + tag + '</span></div>';
     }).join("") + "</div>";
     body.innerHTML = html;
@@ -95,7 +95,7 @@ function renderHistory(){
   }
   const rw = reviewWords(S.cls).length;
   let info = "";
-  if(redName) info += "擂主已就位：" + esc(redName) + (champFixed ? "（本地记忆）" : "") + "。";
+  if(redName) info += "擂主已就位：" + esc(dispName(redName)) + (champFixed ? "（本地记忆）" : "") + "。";
   if(rw) info += "🔁 待复现错词 " + rw + " 个，将优先出题（答对即出本）。";
   $("drawInfo").textContent = info || "先抽擂主（红方），再抽挑战者（蓝方）。";
 
@@ -115,10 +115,21 @@ function resetDrawn(){ drawnPool = shuffle(rosters()[S.cls] || []); }
 function takeName(exclude){
   if(!rosters()[S.cls] || !rosters()[S.cls].length) return "";
   if(!drawnPool.length) resetDrawn();
-  let idx = drawnPool.findIndex(n => n !== exclude);
-  if(idx < 0){ resetDrawn(); idx = drawnPool.findIndex(n => n !== exclude); }
-  if(idx < 0) return "";   /* 全班只剩对方一人，无法再抽出不同选手 */
+  /* 以 @ 开头的名字不计入随机抽取（仅手动输入/选择可用） */
+  const isGhost = n => n.trimStart().startsWith("@");
+  let idx = drawnPool.findIndex(n => n !== exclude && !isGhost(n));
+  if(idx < 0){ resetDrawn(); idx = drawnPool.findIndex(n => n !== exclude && !isGhost(n)); }
+  if(idx < 0) return "";
   return drawnPool.splice(idx, 1)[0];
+}
+/* 手输名字解析：若名单中存在 @前缀 的对应名字（@张三 / @ 张三），则返回带@的原始名；
+   否则返回用户输入本身。显示层统一用 dispName 去掉@，内部存储与抽人逻辑保留@标记。 */
+function resolveGhostName(input){
+  if(!input) return "";
+  if(input.trimStart().startsWith("@")) return input;
+  const roster = rosters()[S.cls] || [];
+  const match = roster.find(n => n.replace(/^@\s*/, "") === input);
+  return match || input;
 }
 function animateDraw(boxId, finalName, done){
   const names = rosters()[S.cls] || ["?"];
@@ -127,10 +138,10 @@ function animateDraw(boxId, finalName, done){
   if(shell) shell.classList.add("drawing");
   let ticks = 0;
   const iv = setInterval(()=>{
-    box.textContent = names[(Math.random()*names.length)|0];
+    box.textContent = dispName(names[(Math.random()*names.length)|0]);
     if(++ticks > 15){
       clearInterval(iv);
-      box.textContent = finalName || "—";
+      box.textContent = dispName(finalName) || "—";
       if(shell) shell.classList.remove("drawing");
       beep(880, .1);
       if(done) done();
@@ -138,11 +149,11 @@ function animateDraw(boxId, finalName, done){
   }, 70);
 }
 function refreshNameBoxes(){
-  $("redNameBox").textContent = redName || "待抽取";
-  $("blueNameBox").textContent = blueName || "待抽取";
-  /* 手输框始终同步当前名字：打开"手输名字"即可直接修改，无需重敲 */
-  $("m1").value = redName;
-  $("m2").value = blueName;
+  $("redNameBox").textContent = dispName(redName) || "待抽取";
+  $("blueNameBox").textContent = dispName(blueName) || "待抽取";
+  /* 手输框显示不带@的名字，内部 redName/blueName 可能存的是带@的幽灵名 */
+  $("m1").value = dispName(redName);
+  $("m2").value = dispName(blueName);
 }
 
 /* ================== 选名弹窗 ================== */
@@ -158,7 +169,7 @@ function renderPickGrid(){
   roster.forEach(n=>{
     const el = document.createElement("div");
     el.className = "pickName" + (n === cur ? " cur" : "");
-    el.textContent = n;
+    el.textContent = dispName(n);
     el.addEventListener("click", ()=>{
       if(pickSide === "red"){ redName = n; champFixed = false; saveChamp(S.cls, n); }
       else { blueName = n; }

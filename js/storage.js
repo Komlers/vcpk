@@ -21,7 +21,7 @@ function parseRosterText(text){
   const seen = new Set();
   const names = [];
   const stat = {empty:0, comment:0, invalid:0, dup:0};
-  const okRe = /^[一-龥 a-zA-Z0-9·.\-]+$/;
+  const okRe = /^[一-龥 a-zA-Z0-9·.\-@]+$/;
   String(text).split(/\r?\n/).forEach(raw=>{
     const line = raw.trim();
     if(!line){ stat.empty++; return; }

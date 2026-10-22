@@ -18,7 +18,7 @@ function startBattle(revival){
   }
   S.qi = 0; S.round = 1; S.scores = [0,0]; S.streak = [0,0]; S.maxStreak = [0,0];
   S.left = S.dur; S.pendingNext = false;
-  $("n1").textContent = S.p1; $("n2").textContent = S.p2;
+  $("n1").textContent = dispName(S.p1); $("n2").textContent = dispName(S.p2);
   $("s1").textContent = "0"; $("s2").textContent = "0";
   $("st1").textContent = ""; $("st2").textContent = "";
   show("battle");
@@ -217,13 +217,13 @@ function endBattle(){
       ? "双方全对平局！下期重新选擂主 🎉"
       : "平局！连击纪录低者守擂，纪录相同则更换擂主";
   }
-  else title = (a>b ? S.p1 : S.p2) + " 获胜！";
+  else title = dispName(a>b ? S.p1 : S.p2) + " 获胜！";
   if(a!==b) beep(660,.3); else beep(440,.3);
   show("result");
   $("winName").textContent = title;
   $("winName").style.color = a===b ? "#3a4150" : (a>b ? "#e05555" : "#4a7fe0");
   $("finalScore").innerHTML =
-    '<span class="r">' + esc(S.p1) + " " + a + "</span> : " + b + ' <span class="b">' + esc(S.p2) + "</span>"
+    '<span class="r">' + esc(dispName(S.p1)) + " " + a + "</span> : " + b + ' <span class="b">' + esc(dispName(S.p2)) + "</span>"
     + '<div class="mini" style="margin-top:8px">' + (S.revival ? "错词加时赛" : (S.units.length + " 个词库")) + " · " + (S.dur>=60 ? (S.dur/60)+" 分钟" : S.dur+" 秒") + "</div>";
   const wc = $("wrongChips");
   wc.innerHTML = "";

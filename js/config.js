@@ -52,3 +52,5 @@ let pendingClass = "";       /* 导入名单时暂存班级名 */
 /* ================== 工具 ================== */
 const shuffle = a => { a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; };
 const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+/* 显示用名字：去掉 @ 前缀（内部标记，前端不可见） */
+const dispName = n => n ? String(n).replace(/^@\s*/, "") : n;

@@ -15,8 +15,8 @@ $("manualBtn").addEventListener("click", ()=>{
   $("manualBtn").textContent = manualMode ? "收起" : "输入";
   refreshNameBoxes();   /* 打开手输时，把手输框预填为当前名字 */
 });
-$("m1").addEventListener("input", e=>{ redName = e.target.value.trim(); $("redNameBox").textContent = redName || "待抽取"; champFixed=false; saveChamp(S.cls, redName); renderHistory(); });
-$("m2").addEventListener("input", e=>{ blueName = e.target.value.trim(); $("blueNameBox").textContent = blueName || "待抽取"; renderHistory(); });
+$("m1").addEventListener("input", e=>{ const raw = e.target.value.trim(); redName = resolveGhostName(raw); $("redNameBox").textContent = dispName(redName) || "待抽取"; champFixed=false; saveChamp(S.cls, redName); renderHistory(); });
+$("m2").addEventListener("input", e=>{ const raw = e.target.value.trim(); blueName = resolveGhostName(raw); $("blueNameBox").textContent = dispName(blueName) || "待抽取"; renderHistory(); });
 
 /* ================== 选名弹窗 ================== */
 $("pickBtn").addEventListener("click", ()=>{
