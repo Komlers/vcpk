@@ -171,7 +171,7 @@ function renderPickGrid(){
     el.className = "pickName" + (n === cur ? " cur" : "");
     el.textContent = dispName(n);
     el.addEventListener("click", ()=>{
-      if(pickSide === "red"){ redName = n; champFixed = false; saveChamp(S.cls, n); }
+      if(pickSide === "red"){ redName = n; champFixed = false; }
       else { blueName = n; }
       refreshNameBoxes(); renderHistory();
       $("pickModal").classList.add("hidden");
