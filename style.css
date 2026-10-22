@@ -338,3 +338,14 @@
   /* ============ 底部导航按钮 ============ */
   .btnRow .drawBtn{background:#fff;color:var(--ink2);}
   .btnRow .startBtn.small{flex:1;max-width:360px;}
+
+  /* ============ 高DPI大屏适配 ============
+     4K/300%系统缩放环境下，CSS像素被放大渲染导致元素过大。
+     通过 zoom 整体缩小，效果等同浏览器手动 Ctrl+-，覆盖字体/间距/边框/阴影。
+     Chrome / Edge 支持，教室大屏环境适用。 */
+  @media (min-resolution: 1.5dppx) {
+    html { zoom: 0.92; }
+  }
+  @media (min-resolution: 2.5dppx) {
+    html { zoom: 0.85; }
+  }
