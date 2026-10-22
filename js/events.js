@@ -262,3 +262,8 @@ document.addEventListener("keydown", e=>{
 });
 syncFsBtn();
 if(!fsSupported()){ $("fsBtn").style.display = "none"; }
+
+/* ================== 禁止右键菜单 ==================
+   触屏大屏上学生长按容易触发 Windows 右键，弹出浏览器菜单影响答题。
+   全局拦截 contextmenu，包括鼠标右键和触屏长按。 */
+document.addEventListener("contextmenu", e => e.preventDefault());
