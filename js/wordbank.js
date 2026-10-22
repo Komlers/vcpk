@@ -8,6 +8,73 @@ async function loadWordBank(){
     (data.words || []).forEach(w => LIB.push([w[0], w[1], tag]));
     if(data.chunks) CHUNKS = CHUNKS.concat(data.chunks);
   }
+  loadCustomLibs();
+}
+
+/* ================== 自定义词库（本地导入，持久化到 localStorage） ==================
+   存储格式：{ "C1": {name, words:[[en,cn]], chunks:[]}, "C2": {...} }
+   自定义词库 tag 以 "C" 开头，file 标记为 "custom" 便于 UI 区分。 */
+function loadCustomLibs(){
+  let data = {};
+  try{ data = JSON.parse(localStorage.getItem(CUSTOM_LIB_KEY)) || {}; }catch(e){}
+  for(const tag in data){
+    const d = data[tag];
+    if(!d || !Array.isArray(d.words)) continue;
+    LIB_INFO[tag] = { name: d.name || tag, file: "custom" };
+    if(!WORD_BANK_FILES.find(x => x.tag === tag)){
+      WORD_BANK_FILES.push({ file: "custom", tag });
+    }
+    d.words.forEach(w => LIB.push([w[0], w[1], tag]));
+    if(Array.isArray(d.chunks)) CHUNKS = CHUNKS.concat(d.chunks);
+  }
+}
+/* 生成下一个可用的自定义 tag（C1, C2, ... 跳过已占用） */
+function nextCustomTag(){
+  const used = new Set(WORD_BANK_FILES.map(x => x.tag));
+  let i = 1;
+  while(used.has("C" + i)) i++;
+  return "C" + i;
+}
+/* 导入自定义词库：解析 JSON → 存 localStorage → 合并到内存 → 返回 tag */
+function importCustomLib(jsonText){
+  let data;
+  try{ data = JSON.parse(jsonText); }catch(e){ throw new Error("JSON 解析失败：" + e.message); }
+  if(!data || !Array.isArray(data.words) || !data.words.length){
+    throw new Error("词库格式不正确：需要 { name, words:[[英文,中文],...] }");
+  }
+  const tag = nextCustomTag();
+  const name = data.name || ("自定义词库 " + tag);
+  const entry = { name, words: data.words, chunks: Array.isArray(data.chunks) ? data.chunks : [] };
+  /* 持久化 */
+  let all = {};
+  try{ all = JSON.parse(localStorage.getItem(CUSTOM_LIB_KEY)) || {}; }catch(e){}
+  all[tag] = entry;
+  localStorage.setItem(CUSTOM_LIB_KEY, JSON.stringify(all));
+  /* 合并到内存 */
+  LIB_INFO[tag] = { name, file: "custom" };
+  WORD_BANK_FILES.push({ file: "custom", tag });
+  entry.words.forEach(w => LIB.push([w[0], w[1], tag]));
+  if(entry.chunks.length) CHUNKS = CHUNKS.concat(entry.chunks);
+  return { tag, name, count: entry.words.length, chunks: entry.chunks.length };
+}
+/* 删除自定义词库：从 localStorage、内存数组、索引中清除 */
+function deleteCustomLib(tag){
+  /* 从持久化存储移除 */
+  let all = {};
+  try{ all = JSON.parse(localStorage.getItem(CUSTOM_LIB_KEY)) || {}; }catch(e){}
+  delete all[tag];
+  localStorage.setItem(CUSTOM_LIB_KEY, JSON.stringify(all));
+  /* 从 WORD_BANK_FILES 移除 */
+  const idx = WORD_BANK_FILES.findIndex(x => x.tag === tag);
+  if(idx >= 0) WORD_BANK_FILES.splice(idx, 1);
+  /* 从 LIB_INFO 移除 */
+  delete LIB_INFO[tag];
+  /* 从 LIB 中移除该 tag 的单词 */
+  for(let i = LIB.length - 1; i >= 0; i--){
+    if(LIB[i][2] === tag) LIB.splice(i, 1);
+  }
+  /* CHUNKS 无法按 tag 区分（词块不含 tag），只能重建索引；词块数据量小，影响有限 */
+  buildIndex();
 }
 
 /* ================== 索引 ================== */

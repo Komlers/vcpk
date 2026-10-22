@@ -142,6 +142,27 @@ $("libChips").addEventListener("click", e=>{
   else tempUnits.push(tag);
   renderLibChips();
 });
+
+/* ================== 导入本地词库 ================== */
+$("importLibBtn").addEventListener("click", ()=>$("libFile").click());
+$("libFile").addEventListener("change", e=>{
+  const file = e.target.files && e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = ()=>{
+    e.target.value = "";
+    try{
+      const r = importCustomLib(reader.result);
+      tempUnits.push(r.tag);
+      renderLibChips();
+      alert("✅ 已导入词库「" + r.name + "」：" + r.count + " 个单词"
+        + (r.chunks ? " + " + r.chunks + " 个词块" : "") + "。\n已自动选中，点确定后生效。");
+    }catch(err){
+      alert("❌ 导入失败：" + err.message);
+    }
+  };
+  reader.readAsText(file, "UTF-8");
+});
 $("libConfirm").addEventListener("click", ()=>{
   if(!tempUnits.length){ alert("请至少选择一个词库！"); return; }
   S.units = tempUnits;

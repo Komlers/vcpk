@@ -88,6 +88,10 @@
   <div class="modalBox">
     <h3>选择题库<span class="hint" id="libHint">点击切换选中，支持多选</span></h3>
     <div class="libChips" id="libChips"></div>
+    <div class="importLibRow">
+      <button class="drawBtn" id="importLibBtn" style="font-size:22px;padding:12px 24px">📥 导入本地词库（JSON）</button>
+      <input type="file" id="libFile" accept=".json,application/json" style="display:none">
+    </div>
     <div class="btnRow" style="margin-top:20px">
       <button class="drawBtn" id="libCancel">取消</button>
       <button class="startBtn small" id="libConfirm">确定</button>

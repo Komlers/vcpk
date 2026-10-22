@@ -302,6 +302,13 @@
   .libChip.on{border-color:var(--blue);background:var(--blue-bg);color:#2456bd;
               box-shadow:0 4px 14px rgba(74,127,224,.18);}
   .libChip.on::before{content:"✓";background:var(--blue);border-color:var(--blue);}
+  .libChip.customLib{border-style:dashed;border-color:#c9d1de;}
+  .libChip.customLib.on{border-style:solid;border-color:var(--blue);}
+  .libDel{margin-left:auto;flex:none;width:26px;height:26px;border-radius:50%;
+          background:#f0f2f7;color:var(--muted);font-size:20px;line-height:24px;text-align:center;
+          cursor:pointer;transition:.12s;}
+  .libDel:hover{background:var(--red);color:#fff;}
+  .importLibRow{display:flex;align-items:center;gap:16px;margin-top:18px;flex-wrap:wrap;}
 
   /* ============ 限时滚轮 ============ */
   .card.center{display:flex;flex-direction:column;align-items:center;}

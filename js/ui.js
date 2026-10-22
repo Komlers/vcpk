@@ -95,7 +95,7 @@ function renderHistory(){
   }
   const rw = reviewWords(S.cls).length;
   let info = "";
-  if(redName) info += "擂主已就位：" + esc(redName) + (champFixed ? "（上局败者守擂）" : "") + "。";
+  if(redName) info += "擂主已就位：" + esc(redName) + (champFixed ? "（本地记忆）" : "") + "。";
   if(rw) info += "🔁 待复现错词 " + rw + " 个，将优先出题（答对即出本）。";
   $("drawInfo").textContent = info || "先抽擂主（红方），再抽挑战者（蓝方）。";
 
@@ -178,6 +178,22 @@ function renderLibChips(){
     chip.className = "libChip" + (tempUnits.includes(tag) ? " on" : "");
     chip.dataset.tag = tag;
     chip.textContent = (LIB_INFO[tag] && LIB_INFO[tag].name) ? LIB_INFO[tag].name : file;
+    /* 自定义词库：右上角显示删除按钮 */
+    if(file === "custom"){
+      chip.classList.add("customLib");
+      const del = document.createElement("span");
+      del.className = "libDel";
+      del.textContent = "×";
+      del.title = "删除此自定义词库";
+      del.addEventListener("click", e=>{
+        e.stopPropagation();
+        if(!confirm("确定删除自定义词库「" + (LIB_INFO[tag]?.name || tag) + "」吗？此操作不可恢复。")) return;
+        deleteCustomLib(tag);
+        tempUnits = tempUnits.filter(t => t !== tag);
+        renderLibChips();
+      });
+      chip.appendChild(del);
+    }
     box.appendChild(chip);
   });
   $("libHint").textContent = tempUnits.length === 0 ? "未选择词库（请至少选一个）"

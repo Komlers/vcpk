@@ -15,6 +15,7 @@ const WORD_BANK_FILES = [
   { file:"b5u1", tag:"X2U1" }, { file:"b5u2", tag:"X2U2" }, { file:"b5u3", tag:"X2U3" },
   { file:"b5u4", tag:"X2U4" }, { file:"b5u5", tag:"X2U5" }
 ];
+const CUSTOM_LIB_KEY = "vpk_custom_libs";  /* 自定义词库持久化键 */
 
 /* ================== 题量方案（按挑战时长自动配比） ==================
    w=单词题，c1=词块选义，c2=词块配对，c3=词块重组
