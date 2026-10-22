@@ -94,12 +94,6 @@
   .classRow .chips{flex:1;min-width:0;}
   .classRow:not(.has-roster) .chips{display:none;}  /* 无名单时隐藏 chips，按钮居左 */
 
-  /* ============ 限时下拉框（与词库按钮同尺寸） ============ */
-  .durSelect{font-size:26px;padding:14px 26px;border-radius:14px;border:2px solid var(--line);
-              background:#fff;font-weight:700;color:var(--ink2);cursor:pointer;outline:none;
-              font-family:"Microsoft YaHei","PingFang SC",sans-serif;}
-  .durSelect:focus{border-color:var(--blue);}
-
   /* 选名弹窗 */
   .pickTabs{display:flex;gap:10px;margin-bottom:18px;}
   .pickTab{flex:1;padding:12px;border:none;border-radius:12px;font-size:22px;font-weight:700;
@@ -274,6 +268,18 @@
   .modalBox h3{font-size:27px;color:var(--ink2);font-weight:700;margin-bottom:18px;
                display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
   .modalBox h3 .hint{font-size:21px;font-weight:400;color:var(--muted2);margin-left:auto;}
+
+  /* 时长选择弹窗 */
+  .durPicker{display:flex;align-items:center;justify-content:center;gap:30px;padding:20px 0 10px;}
+  .durArrow{width:72px;height:72px;border-radius:50%;border:2px solid var(--line);
+            background:#f8f9fc;color:var(--ink2);font-size:40px;font-weight:800;
+            cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;
+            line-height:1;}
+  .durArrow:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg);
+                  transform:scale(1.06);}
+  .durArrow:active{transform:scale(.95);}
+  .durValue{font-size:64px;font-weight:800;color:var(--ink2);min-width:2.2em;text-align:center;
+            font-variant-numeric:tabular-nums;}
 
   /* 规则介绍弹窗 */
   .ruleBody{display:flex;flex-direction:column;gap:16px;}

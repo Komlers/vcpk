@@ -203,9 +203,18 @@ function updateLibBtn(){
   const n = S.units.length;
   $("openLibModal").textContent = n ? "📚 已选 " + n + " 个词库" : "📚 选择词库";
 }
-/* 限时下拉：根据 S.dur 设置 select 选中项 */
-function updateDurSelect(){
-  $("durSelect").value = String(S.dur);
+/* 限时：格式化秒数为 m:ss */
+function fmtDur(sec){
+  const m = Math.floor(sec/60), s = sec%60;
+  return m + ":" + (s<10?"0":"") + s;
+}
+/* 限时按钮文字 */
+function updateDurBtn(){
+  $("openDurModal").textContent = "⏱ 限时 " + fmtDur(S.dur);
+}
+/* 弹窗中间显示当前选择的限时 */
+function renderDurPicker(val){
+  $("durValue").textContent = fmtDur(val);
 }
 
 /* ================== 配置恢复 ================== */
@@ -222,7 +231,7 @@ function restoreCfg(){
   }catch(e){}
   /* 首次使用不默认勾选任何词库，由用户手动选择 */
   S.useChunks = S.units.includes("U2");
-  updateDurSelect();
+  updateDurBtn();
   updateLibBtn();
 }
 /* 题池提示：随选词库与时长实时更新 */

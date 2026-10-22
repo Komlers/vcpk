@@ -199,10 +199,29 @@ $("startBtn").addEventListener("click", ()=>{
   if(!fsElement()){ toggleFullscreen(); }
   startBattle(false);
 });
-$("durSelect").addEventListener("change", e=>{
-  S.dur = parseInt(e.target.value,10);
+/* ================== 时长选择弹窗 ================== */
+let tempDur = 60;
+$("openDurModal").addEventListener("click", ()=>{
+  tempDur = S.dur;
+  renderDurPicker(tempDur);
+  $("durModal").classList.remove("hidden");
+});
+$("durMinus").addEventListener("click", ()=>{
+  if(tempDur > 30){ tempDur -= 30; renderDurPicker(tempDur); }
+});
+$("durPlus").addEventListener("click", ()=>{
+  if(tempDur < 300){ tempDur += 30; renderDurPicker(tempDur); }
+});
+$("durConfirm").addEventListener("click", ()=>{
+  S.dur = tempDur;
+  updateDurBtn();
   planInfo();
   saveCfg();
+  $("durModal").classList.add("hidden");
+});
+$("durCancel").addEventListener("click", ()=>$("durModal").classList.add("hidden"));
+$("durModal").addEventListener("click", e=>{
+  if(e.target.classList.contains("modalMask")) $("durModal").classList.add("hidden");
 });
 
 /* ================== 对战答题 ================== */

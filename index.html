@@ -63,18 +63,7 @@
     <h3><span class="stepNo">3</span>出题范围与时长<span class="hint">题池按范围自动扩满，全程不重复出题</span></h3>
     <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;">
       <button class="drawBtn" id="openLibModal" style="font-size:26px;padding:14px 26px">📚 选择词库</button>
-      <select id="durSelect" class="durSelect">
-        <option value="30">30s</option>
-        <option value="60">1m</option>
-        <option value="90">1m30s</option>
-        <option value="120" selected>2m</option>
-        <option value="150">2m30s</option>
-        <option value="180">3m</option>
-        <option value="210">3m30s</option>
-        <option value="240">4m</option>
-        <option value="270">4m30s</option>
-        <option value="300">5m</option>
-      </select>
+      <button class="drawBtn" id="openDurModal" style="font-size:26px;padding:14px 26px">⏱ 限时 1:00</button>
     </div>
     <div class="mini" id="planInfo" style="margin-top:14px"></div>
   </div>
@@ -95,6 +84,24 @@
     <div class="btnRow" style="margin-top:20px">
       <button class="drawBtn" id="libCancel">取消</button>
       <button class="startBtn small" id="libConfirm">确定</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 时长选择弹窗 ================= -->
+<div id="durModal" class="modal hidden">
+  <div class="modalMask"></div>
+  <div class="modalBox">
+    <h3>⏱ 选择限时</h3>
+    <div class="durPicker">
+      <button class="durArrow" id="durMinus">−</button>
+      <div class="durValue" id="durValue">1:00</div>
+      <button class="durArrow" id="durPlus">+</button>
+    </div>
+    <div class="mini" style="text-align:center;margin-top:10px">每次调整 30 秒 · 范围 30 秒 ~ 5 分钟</div>
+    <div class="btnRow" style="margin-top:20px">
+      <button class="drawBtn" id="durCancel">取消</button>
+      <button class="startBtn small" id="durConfirm">确定</button>
     </div>
   </div>
 </div>
