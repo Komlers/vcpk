@@ -101,7 +101,7 @@ function renderHistory(){
 
   /* 名单载入状态：直观确认名单已导入、还剩多少人没抽 */
   if(!S.cls){
-    $("rosterInfo").textContent = "⚠ 还没有班级名单，请点上方「导入班级名单（TXT）」按钮，从本地 TXT 导入。";
+    $("rosterInfo").textContent = "⚠ 还没有班级名单，请点击「导入班级名单（TXT）」按钮，从本地 TXT 导入。";
     return;
   }
   const roster = rosters()[S.cls] || [];
@@ -212,7 +212,7 @@ function updateDurSelect(){
 function restoreCfg(){
   /* 先按当前班级重置，避免沿用上一个班级的词库/时长 */
   S.units = [];
-  S.dur = 120;
+  S.dur = 60;
   try{
     const c = JSON.parse(localStorage.getItem("vpk_cfg_" + S.cls));
     if(c){
@@ -220,8 +220,7 @@ function restoreCfg(){
       if(c.dur) S.dur = c.dur;
     }
   }catch(e){}
-  // 默认全选
-  if(!S.units.length) S.units = WORD_BANK_FILES.map(x => x.tag);
+  /* 首次使用不默认勾选任何词库，由用户手动选择 */
   S.useChunks = S.units.includes("U2");
   updateDurSelect();
   updateLibBtn();
@@ -234,10 +233,10 @@ function planInfo(){
   const rg = poolRange();
   const poolN = rg.words + rg.chunks;
   const head = S.useChunks
-    ? "开场配比（" + mins + " 分钟）：" + p.w + " 单词 + " + p.c1 + " 词块选义 + " + p.c2 + " 词块配对 + " + p.c3 + " 词块重组 ＝ " + total + " 题"
-    : "开场配比（" + mins + " 分钟）：纯单词 " + p.w + " 题（选含词块的词库可加入词块题）";
+    ? mins + " 分钟 | " + p.w + " 单词 + " + p.c1 + " 词块选义 + " + p.c2 + " 词块配对 + " + p.c3 + " 词块重组 ＝ " + total + " 题"
+    : mins + " 分钟 | 纯单词 " + p.w + " 题";
   $("planInfo").textContent = head + "｜本题池 " + poolN + " 条（"
-    + rg.words + " 单词" + (rg.chunks ? " + " + rg.chunks + " 词块" : "") + "），可持续出 " + poolN + " 题不重复";
+    + rg.words + " 单词" + (rg.chunks ? " + " + rg.chunks + " 词块" : "") + "）";
 }
 /* 没有指定班级时，自动选 LocalStorage 里第一个班级 */
 function autoSelectClass(){

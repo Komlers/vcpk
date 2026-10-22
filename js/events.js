@@ -77,9 +77,7 @@ $("classChips").addEventListener("click", e=>{
 
 /* ================== 导入 TXT 名单 ================== */
 $("importRosterBtn").addEventListener("click", ()=>{
-  const existing = Object.keys(rosters());
-  const suggest = existing.length ? existing[existing.length-1] : "1班";
-  const name = prompt("请输入要导入的班级名称：", suggest);
+  const name = prompt("请输入要导入的班级名称：");
   if(name === null) return;
   const cls = name.trim();
   if(!cls){ alert("班级名称不能为空。"); return; }
