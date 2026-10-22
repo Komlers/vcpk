@@ -243,20 +243,31 @@ function endBattle(){
   }
 }
 
-/* ================== 初始化 ================== */
+/* ================== 初始化 ==================
+   分两阶段：
+   ① 立即渲染不依赖词库的 UI（班级名单、擂主、战绩、配置），从 localStorage 读取，无网络延迟
+   ② 异步并行加载词库 JSON，完成后补建索引、题池提示和词库按钮状态
+   避免慢网络下词库 fetch 阻塞名单/擂主显示。 */
 (async function init(){
+  /* ① 先渲染本地数据（名单、擂主、战绩、配置） */
+  autoSelectClass();
+  restoreCfg();
+  redName = loadChamp(S.cls);
+  champFixed = !!redName;
+  resetDrawn();
+  refreshNameBoxes();
+  renderHistory();
+  updateLibBtn();
+  show("setup");
+
+  /* ② 异步加载词库，完成后补建索引、恢复配置（过滤已选词库）与题池提示 */
   try{ await loadWordBank(); }
   catch(err){
     alert("词库加载失败：" + err.message + "\n\n请确认本页面通过 http:// 或 https:// 访问；直接双击 index.html（file://）会被浏览器拦截本地 JSON 请求。");
     return;
   }
   buildIndex();
-  autoSelectClass();
-  restoreCfg();
-  redName = loadChamp(S.cls);
-  champFixed = !!redName;
-  resetDrawn(); refreshNameBoxes(); renderHistory();
+  restoreCfg();   /* 词库加载后重新过滤已选词库 tag，确保用户保存的选择正确恢复 */
   updateLibBtn();
   planInfo();
-  show("setup");
 })();

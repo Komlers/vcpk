@@ -1,13 +1,14 @@
 /* ================== 词库加载 ================== */
 async function loadWordBank(){
-  for(const {file, tag} of WORD_BANK_FILES){
+  /* 并行加载所有词库 JSON，避免串行请求在慢网络下累积延迟 */
+  await Promise.all(WORD_BANK_FILES.map(async ({file, tag}) => {
     const res = await fetch("lib/" + file + ".json", {cache:"no-cache"});
     if(!res.ok) throw new Error("lib/" + file + ".json 加载失败（HTTP " + res.status + "）");
     const data = await res.json();
     LIB_INFO[tag] = { name: data.name || file, file };
     (data.words || []).forEach(w => LIB.push([w[0], w[1], tag]));
     if(data.chunks) CHUNKS = CHUNKS.concat(data.chunks);
-  }
+  }));
   loadCustomLibs();
 }
 
