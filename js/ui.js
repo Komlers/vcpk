@@ -96,7 +96,7 @@ function renderHistory(){
   const rw = reviewWords(S.cls).length;
   let info = "";
   if(redName) info += "擂主已就位：" + esc(dispName(redName)) + (champFixed ? "（本地记忆）" : "") + "。";
-  if(rw) info += "🔁 待复现错词 " + rw + " 个，将优先出题（答对即出本）。";
+  if(rw) info += "🔁 待复现 " + rw + " 个错词。";
   $("drawInfo").textContent = info || "先抽擂主（红方），再抽挑战者（蓝方）。";
 
   /* 名单载入状态：直观确认名单已导入、还剩多少人没抽 */

@@ -1,5 +1,5 @@
-# VCPK
+# 词汇擂台 PK
 
-Vocabulary PK
+适用于高中英语课堂复习词汇
 
-For Senior High School English Lesson
+本项目由AI全盘生成和维护。
