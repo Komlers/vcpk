@@ -152,6 +152,23 @@ $("libConfirm").addEventListener("click", ()=>{
   $("libModal").classList.add("hidden");
 });
 
+/* ================== 规则介绍弹窗 ================== */
+$("ruleBtn").addEventListener("click", ()=>$("ruleModal").classList.remove("hidden"));
+$("ruleClose").addEventListener("click", ()=>$("ruleModal").classList.add("hidden"));
+$("ruleModal").addEventListener("click", e=>{
+  if(e.target.classList.contains("modalMask")) $("ruleModal").classList.add("hidden");
+});
+
+/* ================== 历史战绩弹窗 ================== */
+$("hisBtn").addEventListener("click", ()=>{
+  renderHistory();
+  $("hisModal").classList.remove("hidden");
+});
+$("hisClose").addEventListener("click", ()=>$("hisModal").classList.add("hidden"));
+$("hisModal").addEventListener("click", e=>{
+  if(e.target.classList.contains("modalMask")) $("hisModal").classList.add("hidden");
+});
+
 /* ================== 开始 PK / 限时 ================== */
 $("startBtn").addEventListener("click", ()=>{
   if(!redName || !blueName){ alert("请先抽取（或手输）红蓝双方选手！"); return; }
@@ -159,6 +176,8 @@ $("startBtn").addEventListener("click", ()=>{
   S.useChunks = S.units.includes("U2");
   saveCfg();
   S.p1 = redName; S.p2 = blueName;
+  /* 未全屏则自动进入全屏，保证对战体验 */
+  if(!fsElement()){ toggleFullscreen(); }
   startBattle(false);
 });
 $("durSelect").addEventListener("change", e=>{

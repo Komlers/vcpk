@@ -120,11 +120,20 @@
   .startBtn:hover{box-shadow:0 12px 32px rgba(74,127,224,.42);filter:brightness(1.03);}
   .startBtn:active{transform:scale(.985);}
 
-  /* 历史面板 */
-  #hisPanel .row{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:14px;}
-  #hisPanel .stat{background:#f5f7fb;border:1px solid var(--line);border-radius:14px;
+  /* 标题下功能按钮 */
+  .heroBtns{display:flex;gap:16px;justify-content:center;margin-top:18px;}
+  .heroBtn{padding:12px 28px;border-radius:14px;border:2px solid var(--line);
+           background:#fff;color:var(--ink2);font-size:22px;font-weight:700;
+           cursor:pointer;transition:all .15s;box-shadow:var(--shadow-sm);}
+  .heroBtn:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg);
+                 transform:translateY(-2px);box-shadow:0 6px 18px rgba(74,127,224,.18);}
+  .heroBtn:active{transform:translateY(0) scale(.97);}
+
+  /* 历史战绩弹窗内 */
+  #hisModal .row{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:14px;}
+  #hisModal .stat{background:#f5f7fb;border:1px solid var(--line);border-radius:14px;
                   padding:12px 22px;font-size:25px;}
-  #hisPanel .stat b{color:var(--blue-d);}
+  #hisModal .stat b{color:var(--blue-d);}
   #recentList{margin-top:8px;display:flex;flex-direction:column;gap:8px;}
   .recentItem{display:flex;justify-content:space-between;align-items:center;gap:14px;
               background:#f8f9fc;border-radius:12px;padding:11px 18px;font-size:25px;}
@@ -265,6 +274,14 @@
   .modalBox h3{font-size:27px;color:var(--ink2);font-weight:700;margin-bottom:18px;
                display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
   .modalBox h3 .hint{font-size:21px;font-weight:400;color:var(--muted2);margin-left:auto;}
+
+  /* 规则介绍弹窗 */
+  .ruleBody{display:flex;flex-direction:column;gap:16px;}
+  .ruleItem{background:#f8f9fc;border-radius:14px;padding:16px 20px;border:1px solid var(--line);}
+  .ruleItem b{font-size:23px;color:var(--ink2);display:block;margin-bottom:6px;}
+  .ruleItem p{font-size:21px;color:var(--muted2);line-height:1.6;margin:0;}
+  .ruleItem kbd{background:#eef1f8;border:1px solid var(--line);border-radius:6px;
+                padding:2px 10px;font-size:19px;font-family:inherit;color:var(--ink2);}
 
   /* ============ 内联紧凑滚轮 ============ */
   .timerPicker.inline{margin:0;}

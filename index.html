@@ -20,6 +20,10 @@
   <div class="hero">
     <div class="logo"><span class="r">词</span>汇<span class="b">擂</span>台</div>
     <div class="sub">双人同台 · 单词 / 词块对战 · <b>败者守擂</b> · 班级名单本地保存</div>
+    <div class="heroBtns">
+      <button class="heroBtn" id="ruleBtn">📖 规则介绍</button>
+      <button class="heroBtn" id="hisBtn">📊 历史战绩</button>
+    </div>
   </div>
 
   <div class="mini" style="text-align:center;margin-bottom:24px">快捷键：<kbd>F</kbd> 进入 / 退出全屏 · <kbd>Esc</kbd> 退出全屏（右上角也有按钮）</div>
@@ -75,12 +79,6 @@
     <div class="mini" id="planInfo" style="margin-top:14px"></div>
   </div>
 
-  <div class="card" id="hisPanel">
-    <h3 id="hisTitle">📊 本班战绩</h3>
-    <div id="hisBody" class="mini">暂无记录</div>
-    <button class="clearBtn hidden" id="clearBtn">清空本班历史</button>
-  </div>
-
   <button class="startBtn" id="startBtn">开 始 PK</button>
 </div>
 
@@ -93,6 +91,40 @@
     <div class="btnRow" style="margin-top:20px">
       <button class="drawBtn" id="libCancel">取消</button>
       <button class="startBtn small" id="libConfirm">确定</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 规则介绍弹窗 ================= -->
+<div id="ruleModal" class="modal hidden">
+  <div class="modalMask"></div>
+  <div class="modalBox">
+    <h3>📖 规则介绍</h3>
+    <div class="ruleBody">
+      <div class="ruleItem"><b>🎯 对战方式</b><p>红蓝双方同台答题，屏幕左右各一套选项，同时作答、互不干扰。答对得分，答错不扣分。</p></div>
+      <div class="ruleItem"><b>⏱ 限时挑战</b><p>每局可设 30 秒～5 分钟，时间到立即结算。题池按时长自动扩满，全程不重复出题。</p></div>
+      <div class="ruleItem"><b>📚 题型说明</b><p>纯单词词库为「单词选义」；含词块的词库会加入「词块选义 / 词块配对 / 词块重组」三种题型，按比例混合出题。</p></div>
+      <div class="ruleItem"><b>🔥 连击加分</b><p>连续答对触发连击，连击越高单次得分越多；答错则连击清零。屏幕上方会显示当前连击数。</p></div>
+      <div class="ruleItem"><b>🛡 败者守擂</b><p>每局结束后，败者（或平局时双方）成为下一局擂主（红方），系统自动抽取新的挑战者（蓝方），实现车轮战。</p></div>
+      <div class="ruleItem"><b>🔁 错词复现</b><p>本局答错的单词和词块会进入「错词本」，下节课优先出题，答对即出本。结算页可发起 30 秒错词加时赛。</p></div>
+      <div class="ruleItem"><b>💾 本地保存</b><p>班级名单、对战战绩、擂主记录、词库与时长配置均保存在本机浏览器（LocalStorage），不上传任何服务器。</p></div>
+      <div class="ruleItem"><b>⌨ 快捷键</b><p><kbd>F</kbd> 进入 / 退出全屏 · <kbd>Esc</kbd> 退出全屏（右上角也有按钮）。</p></div>
+    </div>
+    <div class="btnRow" style="margin-top:20px">
+      <button class="startBtn small" id="ruleClose">我知道了</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 历史战绩弹窗 ================= -->
+<div id="hisModal" class="modal hidden">
+  <div class="modalMask"></div>
+  <div class="modalBox">
+    <h3 id="hisTitle">📊 本班战绩</h3>
+    <div id="hisBody" class="mini">暂无记录</div>
+    <button class="clearBtn hidden" id="clearBtn">清空本班历史</button>
+    <div class="btnRow" style="margin-top:20px">
+      <button class="drawBtn" id="hisClose">关闭</button>
     </div>
   </div>
 </div>
