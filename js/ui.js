@@ -188,7 +188,12 @@ function renderLibChips(){
     const chip = document.createElement("div");
     chip.className = "libChip" + (tempUnits.includes(tag) ? " on" : "");
     chip.dataset.tag = tag;
-    chip.textContent = (LIB_INFO[tag] && LIB_INFO[tag].name) ? LIB_INFO[tag].name : file;
+    const info = LIB_INFO[tag];
+    if(info){
+      chip.textContent = info.label ? (info.label + " - " + info.name) : info.name;
+    }else{
+      chip.textContent = file;
+    }
     /* 自定义词库：右上角显示删除按钮 */
     if(file === "custom"){
       chip.classList.add("customLib");

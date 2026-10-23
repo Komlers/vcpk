@@ -1,8 +1,9 @@
 {
   "book": "b1",
   "unit": "u3",
-  "label": "必修一 U3",
-  "name": "必修一U3 Sports and Fitness",
+  "label": "必修1 U3",
+  "name": "Sports and Fitness",
+  "title": "Sports and Fitness",
   "words": [
     [
       "fitness",

@@ -1,8 +1,9 @@
 {
   "book": "b2",
   "unit": "u2",
-  "label": "必修二 U2",
-  "name": "必修二U2 Wildlife Protection",
+  "label": "必修2 U2",
+  "name": "Wildlife Protection",
+  "title": "Wildlife Protection",
   "words": [
     [
       "wildlife",

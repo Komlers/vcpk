@@ -1,8 +1,9 @@
 {
   "book": "b2",
   "unit": "u5",
-  "label": "必修二 U5",
-  "name": "必修二U5 Music",
+  "label": "必修2 U5",
+  "name": "Music",
+  "title": "Music",
   "words": [
     [
       "classical",

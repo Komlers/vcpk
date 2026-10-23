@@ -5,7 +5,7 @@ async function loadWordBank(){
     const res = await fetch("lib/" + file + ".json", {cache:"no-cache"});
     if(!res.ok) throw new Error("lib/" + file + ".json 加载失败（HTTP " + res.status + "）");
     const data = await res.json();
-    LIB_INFO[tag] = { name: data.name || file, file };
+    LIB_INFO[tag] = { name: data.name || file, label: data.label || "", title: data.title || data.name || "", file };
     (data.words || []).forEach(w => LIB.push([w[0], w[1], tag]));
     if(data.chunks) CHUNKS = CHUNKS.concat(data.chunks);
   }));

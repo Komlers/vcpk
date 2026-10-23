@@ -1,8 +1,9 @@
 {
   "book": "b1",
   "unit": "u5",
-  "label": "必修一 U5",
-  "name": "必修一U5 Languages Around the World",
+  "label": "必修1 U5",
+  "name": "Languages Around the World",
+  "title": "Languages Around the World",
   "words": [
     [
       "billion",

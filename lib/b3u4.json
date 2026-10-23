@@ -1,8 +1,9 @@
 {
   "book": "b3",
   "unit": "u4",
-  "label": "必修三 U4",
-  "name": "必修三U4 Space Exploration",
+  "label": "必修3 U4",
+  "name": "Space Exploration",
+  "title": "Space Exploration",
   "words": [
     [
       "astronaut",
