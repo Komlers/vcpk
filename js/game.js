@@ -59,17 +59,17 @@ function nextQuestion(){
     q = {kind:"c1", en:c[0], cn:c[1], ans:c[1],
          opts1:shuffle(opts), opts2:shuffle(opts),
          big:c[0], cls:"chunk", say:c[0],
-         tip:"🧩 词块选义 · 点击正确的中文意思（来源 "+c[3]+"）"};
+         tip:"🧩 词块选义 · 点击正确的中文意思"};
   }else if(spec.t === "c2"){
     const c = CHUNKS[spec.i];
-    const opts = shuffle([c[5]].concat(pairDistract(spec.i)));
-    q = {kind:"c2", en:c[0], cn:c[1], ans:c[5],
+    const opts = shuffle([c[4]].concat(pairDistract(spec.i)));
+    q = {kind:"c2", en:c[0], cn:c[1], ans:c[4],
          opts1:shuffle(opts), opts2:shuffle(opts),
-         big:c[4], cls:"sent", say:"",
-         tip:"🧩 词块配对 · "+c[1]+"（来源 "+c[3]+"）"};
+         big:c[3], cls:"sent", say:"",
+         tip:"🧩 词块配对 · "+c[1]};
   }else{
     const c = CHUNKS[spec.i];
-    const pieces = c[6].slice();
+    const pieces = c[5].slice();
     const opts = shuffle(pieces.concat(orderDecoys(spec.i, 4 - pieces.length)));
     q = {kind:"c3", en:c[0], cn:c[1], ans:"", pieces:pieces, need:pieces.length,
          progress:[[],[]], opts1:opts, opts2:shuffle(opts),

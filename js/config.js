@@ -7,7 +7,7 @@
    仅 b4u2.json 含 chunks 词块表。词库随仓库维护，部署后由浏览器 fetch 读取；
    直接双击 index.html（file://）会被浏览器拦截本地 JSON 请求，请用 http:// 访问。 */
 let LIB = [];      // [英文, 中文, 单元标签]
-let CHUNKS = [];   // 词块表 [英文,中文,家族,页码,题干,答案,重组片段]
+let CHUNKS = [];   // 词块表 [英文,中文,家族,题干,答案,重组片段]
 let LIB_INFO = {}; // tag -> { name, file } 词库展示名
 const WORD_BANK_FILES = [
   { file:"b4u1", tag:"U1" }, { file:"b4u2", tag:"U2" }, { file:"b4u3", tag:"U3" },

@@ -4,103 +4,686 @@
   "label": "选必一 U2",
   "name": "选必一U2单词",
   "words": [
-    ["switch", "开关；转换；改变"],
-    ["switch off/on", "关/开(电器)"],
-    ["appliance", "电器；器具"],
-    ["remote", "远程的；偏远的"],
-    ["remote control", "遥控器"],
-    ["air conditioner", "空调机"],
-    ["automatic", "自动的"],
-    ["integrate", "使合并；使成为一体"],
-    ["integrate...into...", "使……并入……"],
-    ["sensor", "传感器；敏感元件"],
-    ["mode", "模式；方式；风格"],
-    ["routine", "常规；日常"],
-    ["daily routine", "日常惯例"],
-    ["command", "命令；控制"],
-    ["obey", "服从；遵守"],
-    ["critical", "严重的；关键的；批判性的"],
-    ["leak", "漏；渗漏；漏洞"],
-    ["fantasy", "幻想；想象"],
-    ["available", "可获得的；有空的"],
-    ["nevertheless", "尽管如此；然而"],
-    ["structure", "结构；体系"],
-    ["security", "安全；保护措施"],
-    ["crime", "犯罪活动；罪行"],
-    ["artificial", "人造的；人工的"],
-    ["artificial intelligence", "人工智能"],
-    ["prediction", "预测；预言"],
-    ["forecast", "预测；预报"],
-    ["oppose", "反对；抵制"],
-    ["advocate", "提倡；支持；倡导者"],
-    ["emphasis", "强调；重视"],
-    ["put emphasis on", "强调"],
-    ["luxury", "奢侈品；奢华"],
-    ["career", "职业；事业"],
-    ["prospect", "前景；可能性"],
-    ["resistance", "抵制；抵抗"],
-    ["paragraph", "段落"],
-    ["signpost", "路标；指示牌"],
-    ["essay", "文章；散文"],
-    ["accurate", "准确的；精确的"],
-    ["librarian", "图书管理员"],
-    ["Christian", "基督徒；基督教的"]
-  ]
-,  "chunks": [
-    ["persuade sb. of sth.", "使某人相信某事", "prep", "P2", "persuade sb. ____ sth.", "of", null],
-    ["persuade sb. to do sth.", "说服某人做某事", "phr", "P2", "persuade sb. ____ do sth.", "to", null],
-    ["persuade sb. out of doing sth.", "说服某人不要做某事", "prep", "P2", "persuade sb. ____ doing sth.", "out of", null],
-    ["switch on", "打开（电器）", "phr", "P5", "switch ____ the lights（开灯）", "on", null],
-    ["switch over", "切换（频道）", "phr", "P5", "switch ____ to another channel（换频道）", "over", null],
-    ["switch from ... to ...", "从……转变为……", "prep", "P5", "switch ____ paper to digital records", "from", null],
-    ["in the distance", "在远处", "coll", "P6", "The mountains are ____ the distance.", "in", ["in","the","distance"]],
-    ["keep one's distance from sb.", "与某人保持距离", "prep", "P6", "keep one's distance ____ strangers", "from", ["keep","one's distance","from sb."]],
-    ["integrate ... with ...", "把……与……合并", "prep", "P15", "integrate theory ____ practice", "with", null],
-    ["common sense", "常识", "coll", "P16", "It is ____ sense to lock the door.", "common", ["common","sense"]],
-    ["be sensitive to", "对……敏感", "prep", "P16", "be sensitive ____ others' feelings", "to", ["be","sensitive","to"]],
-    ["a mode of transport", "一种交通方式", "coll", "P18", "Bikes are a mode ____ transport.", "of", null],
-    ["daily routine", "日常惯例", "coll", "P19", "Keep your ____ routine simple.", "daily", ["daily","routine"]],
-    ["break a routine", "打破常规", "coll", "P19", "establish or ____ a routine（确立或打破常规）", "break", null],
-    ["have a preference for", "偏爱；喜爱", "prep", "P21", "have a preference ____ jazz", "for", null],
-    ["prefer A to B", "更喜欢A而不是B", "prep", "P21", "I prefer tea ____ coffee.", "to", null],
-    ["in an instant", "立刻；马上", "coll", "P23", "He was gone ____ an instant.", "in", ["in","an","instant"]],
-    ["the instant ...", "一……就……", "phr", "P23", "____ instant I saw her, I recognized her.", "the", null],
-    ["instant noodles", "方便面", "coll", "P23", "instant ____（方便面）", "noodles", null],
-    ["have a good command of", "掌握；精通", "prep", "P27", "have a good command ____ English", "of", ["have","a good command","of"]],
-    ["under one's command", "由……指挥", "prep", "P27", "The army is ____ the king's command.", "under", null],
-    ["warn sb. against doing sth.", "警告某人不要做某事", "prep", "P31", "warn sb. ____ doing sth.", "against", null],
-    ["early on", "在初期；早先", "coll", "P32", "____ on, the project went well.", "early", ["early","on"]],
-    ["be critical to", "对……至关重要", "prep", "P34", "Sleep is critical ____ health.", "to", ["be","critical","to"]],
-    ["have the potential to do sth.", "有潜力做某事", "phr", "P36", "have the potential ____ succeed", "to", null],
-    ["achieve one's potential", "发挥某人的潜力", "coll", "P36", "achieve one's ____（发挥潜力）", "potential", null],
-    ["a gas leak", "煤气泄漏", "coll", "P37", "a gas ____（煤气泄漏）", "leak", null],
-    ["be relevant to", "与……有关", "prep", "P41", "These comments are not relevant ____ the enquiry.", "to", null],
-    ["put out the fire", "扑灭火", "phr", "P43", "put ____ the fire", "out", ["put out","the","fire"]],
-    ["catch fire", "着火", "coll", "P43", "catch ____（着火）", "fire", ["catch","fire"]],
-    ["be available to sb.", "（某人）可获得", "prep", "P47", "The arts should be available ____ more people.", "to", null],
-    ["be available for sth.", "可用于做某事", "prep", "P47", "Tickets are available ____ booking online.", "for", null],
-    ["make sense of", "理解；明白", "prep", "P49", "make sense ____ the data", "of", ["make","sense","of"]],
-    ["in a sense", "在某一方面；就某种意义来说", "coll", "P49", "____ a sense, it doesn't matter.", "in", null],
-    ["a sense of security", "安全感", "coll", "P53", "a sense ____ security", "of", ["a sense","of","security"]],
-    ["commit a crime", "犯罪", "coll", "P54", "commit a ____（犯罪）", "crime", null],
-    ["combine ... with ...", "把……与……结合", "prep", "P55", "combine exercise ____ a balanced diet", "with", null],
-    ["artificial intelligence", "人工智能", "coll", "P57", "artificial ____（人工智能）", "intelligence", null],
-    ["It is predicted that ...", "据预测……", "phr", "P59", "It is ____ that prices will rise.", "predicted", ["It is","predicted","that"]],
-    ["weather forecast", "天气预报", "coll", "P60", "weather ____（天气预报）", "forecast", ["weather","forecast"]],
-    ["be occupied with sth.", "忙于某事", "prep", "P61", "be occupied ____ one's homework", "with", null],
-    ["be opposed to", "反对；抵制", "prep", "P64", "be opposed ____ the plan", "to", ["be","opposed","to"]],
-    ["cease to do / doing sth.", "停止做某事", "phr", "P66", "cease ____ do sth.（停止做某事）", "to", null],
-    ["be absent from", "缺席", "prep", "P69", "be absent ____ the meeting", "from", ["be","absent","from"]],
-    ["in one's absence", "当某人缺席时", "coll", "P69", "in my ____（当我不在的时候）", "absence", null],
-    ["be present at", "出席；在场", "prep", "P69", "be present ____ the ceremony", "at", null],
-    ["with an emphasis on", "强调；重视", "prep", "P75", "with an emphasis ____ healthy diet", "on", ["with","an emphasis","on"]],
-    ["put emphasis on", "强调……的重要性", "prep", "P75", "put emphasis ____ critical thinking", "on", null],
-    ["lose touch with sb.", "与某人失去联系", "prep", "P78", "lose touch ____ classmates", "with", null],
-    ["keep in touch with", "与……保持联系", "prep", "P78", "keep in touch ____ your parents", "with", ["keep","in touch","with"]],
-    ["resist doing sth.", "抵制做某事", "phr", "P81", "resist ____ sth.（抵制做某事）", "doing", null],
-    ["be accurate in", "在……方面准确", "prep", "P84", "be accurate ____ her judgement", "in", null],
-    ["to be accurate", "准确地说", "phr", "P84", "____ be accurate, the figure is 42.", "to", ["to","be","accurate"]],
-    ["rural areas", "农村地区", "coll", "P71", "rural ____（农村地区）", "areas", null],
-    ["a week hence", "从现在起一星期后", "coll", "P65", "a week ____（一周后）", "hence", null]
+    [
+      "switch",
+      "开关；转换；改变"
+    ],
+    [
+      "switch off/on",
+      "关/开(电器)"
+    ],
+    [
+      "appliance",
+      "电器；器具"
+    ],
+    [
+      "remote",
+      "远程的；偏远的"
+    ],
+    [
+      "remote control",
+      "遥控器"
+    ],
+    [
+      "air conditioner",
+      "空调机"
+    ],
+    [
+      "automatic",
+      "自动的"
+    ],
+    [
+      "integrate",
+      "使合并；使成为一体"
+    ],
+    [
+      "integrate...into...",
+      "使……并入……"
+    ],
+    [
+      "sensor",
+      "传感器；敏感元件"
+    ],
+    [
+      "mode",
+      "模式；方式；风格"
+    ],
+    [
+      "routine",
+      "常规；日常"
+    ],
+    [
+      "daily routine",
+      "日常惯例"
+    ],
+    [
+      "command",
+      "命令；控制"
+    ],
+    [
+      "obey",
+      "服从；遵守"
+    ],
+    [
+      "critical",
+      "严重的；关键的；批判性的"
+    ],
+    [
+      "leak",
+      "漏；渗漏；漏洞"
+    ],
+    [
+      "fantasy",
+      "幻想；想象"
+    ],
+    [
+      "available",
+      "可获得的；有空的"
+    ],
+    [
+      "nevertheless",
+      "尽管如此；然而"
+    ],
+    [
+      "structure",
+      "结构；体系"
+    ],
+    [
+      "security",
+      "安全；保护措施"
+    ],
+    [
+      "crime",
+      "犯罪活动；罪行"
+    ],
+    [
+      "artificial",
+      "人造的；人工的"
+    ],
+    [
+      "artificial intelligence",
+      "人工智能"
+    ],
+    [
+      "prediction",
+      "预测；预言"
+    ],
+    [
+      "forecast",
+      "预测；预报"
+    ],
+    [
+      "oppose",
+      "反对；抵制"
+    ],
+    [
+      "advocate",
+      "提倡；支持；倡导者"
+    ],
+    [
+      "emphasis",
+      "强调；重视"
+    ],
+    [
+      "put emphasis on",
+      "强调"
+    ],
+    [
+      "luxury",
+      "奢侈品；奢华"
+    ],
+    [
+      "career",
+      "职业；事业"
+    ],
+    [
+      "prospect",
+      "前景；可能性"
+    ],
+    [
+      "resistance",
+      "抵制；抵抗"
+    ],
+    [
+      "paragraph",
+      "段落"
+    ],
+    [
+      "signpost",
+      "路标；指示牌"
+    ],
+    [
+      "essay",
+      "文章；散文"
+    ],
+    [
+      "accurate",
+      "准确的；精确的"
+    ],
+    [
+      "librarian",
+      "图书管理员"
+    ],
+    [
+      "Christian",
+      "基督徒；基督教的"
+    ]
+  ],
+  "chunks": [
+    [
+      "persuade sb. of sth.",
+      "使某人相信某事",
+      "prep",
+      "persuade sb. ____ sth.",
+      "of",
+      null
+    ],
+    [
+      "persuade sb. to do sth.",
+      "说服某人做某事",
+      "phr",
+      "persuade sb. ____ do sth.",
+      "to",
+      null
+    ],
+    [
+      "persuade sb. out of doing sth.",
+      "说服某人不要做某事",
+      "prep",
+      "persuade sb. ____ doing sth.",
+      "out of",
+      null
+    ],
+    [
+      "switch on",
+      "打开（电器）",
+      "phr",
+      "switch ____ the lights（开灯）",
+      "on",
+      null
+    ],
+    [
+      "switch over",
+      "切换（频道）",
+      "phr",
+      "switch ____ to another channel（换频道）",
+      "over",
+      null
+    ],
+    [
+      "switch from ... to ...",
+      "从……转变为……",
+      "prep",
+      "switch ____ paper to digital records",
+      "from",
+      null
+    ],
+    [
+      "in the distance",
+      "在远处",
+      "coll",
+      "The mountains are ____ the distance.",
+      "in",
+      [
+        "in",
+        "the",
+        "distance"
+      ]
+    ],
+    [
+      "keep one's distance from sb.",
+      "与某人保持距离",
+      "prep",
+      "keep one's distance ____ strangers",
+      "from",
+      [
+        "keep",
+        "one's distance",
+        "from sb."
+      ]
+    ],
+    [
+      "integrate ... with ...",
+      "把……与……合并",
+      "prep",
+      "integrate theory ____ practice",
+      "with",
+      null
+    ],
+    [
+      "common sense",
+      "常识",
+      "coll",
+      "It is ____ sense to lock the door.",
+      "common",
+      [
+        "common",
+        "sense"
+      ]
+    ],
+    [
+      "be sensitive to",
+      "对……敏感",
+      "prep",
+      "be sensitive ____ others' feelings",
+      "to",
+      [
+        "be",
+        "sensitive",
+        "to"
+      ]
+    ],
+    [
+      "a mode of transport",
+      "一种交通方式",
+      "coll",
+      "Bikes are a mode ____ transport.",
+      "of",
+      null
+    ],
+    [
+      "daily routine",
+      "日常惯例",
+      "coll",
+      "Keep your ____ routine simple.",
+      "daily",
+      [
+        "daily",
+        "routine"
+      ]
+    ],
+    [
+      "break a routine",
+      "打破常规",
+      "coll",
+      "establish or ____ a routine（确立或打破常规）",
+      "break",
+      null
+    ],
+    [
+      "have a preference for",
+      "偏爱；喜爱",
+      "prep",
+      "have a preference ____ jazz",
+      "for",
+      null
+    ],
+    [
+      "prefer A to B",
+      "更喜欢A而不是B",
+      "prep",
+      "I prefer tea ____ coffee.",
+      "to",
+      null
+    ],
+    [
+      "in an instant",
+      "立刻；马上",
+      "coll",
+      "He was gone ____ an instant.",
+      "in",
+      [
+        "in",
+        "an",
+        "instant"
+      ]
+    ],
+    [
+      "the instant ...",
+      "一……就……",
+      "phr",
+      "____ instant I saw her, I recognized her.",
+      "the",
+      null
+    ],
+    [
+      "instant noodles",
+      "方便面",
+      "coll",
+      "instant ____（方便面）",
+      "noodles",
+      null
+    ],
+    [
+      "have a good command of",
+      "掌握；精通",
+      "prep",
+      "have a good command ____ English",
+      "of",
+      [
+        "have",
+        "a good command",
+        "of"
+      ]
+    ],
+    [
+      "under one's command",
+      "由……指挥",
+      "prep",
+      "The army is ____ the king's command.",
+      "under",
+      null
+    ],
+    [
+      "warn sb. against doing sth.",
+      "警告某人不要做某事",
+      "prep",
+      "warn sb. ____ doing sth.",
+      "against",
+      null
+    ],
+    [
+      "early on",
+      "在初期；早先",
+      "coll",
+      "____ on, the project went well.",
+      "early",
+      [
+        "early",
+        "on"
+      ]
+    ],
+    [
+      "be critical to",
+      "对……至关重要",
+      "prep",
+      "Sleep is critical ____ health.",
+      "to",
+      [
+        "be",
+        "critical",
+        "to"
+      ]
+    ],
+    [
+      "have the potential to do sth.",
+      "有潜力做某事",
+      "phr",
+      "have the potential ____ succeed",
+      "to",
+      null
+    ],
+    [
+      "achieve one's potential",
+      "发挥某人的潜力",
+      "coll",
+      "achieve one's ____（发挥潜力）",
+      "potential",
+      null
+    ],
+    [
+      "a gas leak",
+      "煤气泄漏",
+      "coll",
+      "a gas ____（煤气泄漏）",
+      "leak",
+      null
+    ],
+    [
+      "be relevant to",
+      "与……有关",
+      "prep",
+      "These comments are not relevant ____ the enquiry.",
+      "to",
+      null
+    ],
+    [
+      "put out the fire",
+      "扑灭火",
+      "phr",
+      "put ____ the fire",
+      "out",
+      [
+        "put out",
+        "the",
+        "fire"
+      ]
+    ],
+    [
+      "catch fire",
+      "着火",
+      "coll",
+      "catch ____（着火）",
+      "fire",
+      [
+        "catch",
+        "fire"
+      ]
+    ],
+    [
+      "be available to sb.",
+      "（某人）可获得",
+      "prep",
+      "The arts should be available ____ more people.",
+      "to",
+      null
+    ],
+    [
+      "be available for sth.",
+      "可用于做某事",
+      "prep",
+      "Tickets are available ____ booking online.",
+      "for",
+      null
+    ],
+    [
+      "make sense of",
+      "理解；明白",
+      "prep",
+      "make sense ____ the data",
+      "of",
+      [
+        "make",
+        "sense",
+        "of"
+      ]
+    ],
+    [
+      "in a sense",
+      "在某一方面；就某种意义来说",
+      "coll",
+      "____ a sense, it doesn't matter.",
+      "in",
+      null
+    ],
+    [
+      "a sense of security",
+      "安全感",
+      "coll",
+      "a sense ____ security",
+      "of",
+      [
+        "a sense",
+        "of",
+        "security"
+      ]
+    ],
+    [
+      "commit a crime",
+      "犯罪",
+      "coll",
+      "commit a ____（犯罪）",
+      "crime",
+      null
+    ],
+    [
+      "combine ... with ...",
+      "把……与……结合",
+      "prep",
+      "combine exercise ____ a balanced diet",
+      "with",
+      null
+    ],
+    [
+      "artificial intelligence",
+      "人工智能",
+      "coll",
+      "artificial ____（人工智能）",
+      "intelligence",
+      null
+    ],
+    [
+      "It is predicted that ...",
+      "据预测……",
+      "phr",
+      "It is ____ that prices will rise.",
+      "predicted",
+      [
+        "It is",
+        "predicted",
+        "that"
+      ]
+    ],
+    [
+      "weather forecast",
+      "天气预报",
+      "coll",
+      "weather ____（天气预报）",
+      "forecast",
+      [
+        "weather",
+        "forecast"
+      ]
+    ],
+    [
+      "be occupied with sth.",
+      "忙于某事",
+      "prep",
+      "be occupied ____ one's homework",
+      "with",
+      null
+    ],
+    [
+      "be opposed to",
+      "反对；抵制",
+      "prep",
+      "be opposed ____ the plan",
+      "to",
+      [
+        "be",
+        "opposed",
+        "to"
+      ]
+    ],
+    [
+      "cease to do / doing sth.",
+      "停止做某事",
+      "phr",
+      "cease ____ do sth.（停止做某事）",
+      "to",
+      null
+    ],
+    [
+      "be absent from",
+      "缺席",
+      "prep",
+      "be absent ____ the meeting",
+      "from",
+      [
+        "be",
+        "absent",
+        "from"
+      ]
+    ],
+    [
+      "in one's absence",
+      "当某人缺席时",
+      "coll",
+      "in my ____（当我不在的时候）",
+      "absence",
+      null
+    ],
+    [
+      "be present at",
+      "出席；在场",
+      "prep",
+      "be present ____ the ceremony",
+      "at",
+      null
+    ],
+    [
+      "with an emphasis on",
+      "强调；重视",
+      "prep",
+      "with an emphasis ____ healthy diet",
+      "on",
+      [
+        "with",
+        "an emphasis",
+        "on"
+      ]
+    ],
+    [
+      "put emphasis on",
+      "强调……的重要性",
+      "prep",
+      "put emphasis ____ critical thinking",
+      "on",
+      null
+    ],
+    [
+      "lose touch with sb.",
+      "与某人失去联系",
+      "prep",
+      "lose touch ____ classmates",
+      "with",
+      null
+    ],
+    [
+      "keep in touch with",
+      "与……保持联系",
+      "prep",
+      "keep in touch ____ your parents",
+      "with",
+      [
+        "keep",
+        "in touch",
+        "with"
+      ]
+    ],
+    [
+      "resist doing sth.",
+      "抵制做某事",
+      "phr",
+      "resist ____ sth.（抵制做某事）",
+      "doing",
+      null
+    ],
+    [
+      "be accurate in",
+      "在……方面准确",
+      "prep",
+      "be accurate ____ her judgement",
+      "in",
+      null
+    ],
+    [
+      "to be accurate",
+      "准确地说",
+      "phr",
+      "____ be accurate, the figure is 42.",
+      "to",
+      [
+        "to",
+        "be",
+        "accurate"
+      ]
+    ],
+    [
+      "rural areas",
+      "农村地区",
+      "coll",
+      "rural ____（农村地区）",
+      "areas",
+      null
+    ],
+    [
+      "a week hence",
+      "从现在起一星期后",
+      "coll",
+      "a week ____（一周后）",
+      "hence",
+      null
+    ]
   ]
 }

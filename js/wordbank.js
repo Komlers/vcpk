@@ -115,35 +115,35 @@ function chunkDistractCn(i){
 }
 /* 配对题干扰项：介词类取介词池，其余取同家族其他答案（保证 3 个互不相同且≠答案） */
 function pairDistract(i){
-  const key = CHUNKS[i][5], fam = CHUNKS[i][2];
+  const key = CHUNKS[i][4], fam = CHUNKS[i][2];
   const out = [];
   const push = v => { if(v && v!==key && !out.includes(v) && out.length<3) out.push(v); };
   if(fam !== "prep"){
-    CHUNKS.forEach((c,j)=>{ if(j!==i && c[2]===fam) push(c[5]); });
+    CHUNKS.forEach((c,j)=>{ if(j!==i && c[2]===fam) push(c[4]); });
   }
   shuffle(PAIR_POOL).forEach(push);
-  CHUNKS.forEach(c=>push(c[5]));
+  CHUNKS.forEach(c=>push(c[4]));
   while(out.length<3) out.push("—");
   return shuffle(out);
 }
 /* 重组题干扰片段 */
 function orderDecoys(i, n){
-  const out = [], own = CHUNKS[i][6];
-  const pool = shuffle(CHUNKS.map((c,j)=>j).filter(j=>j!==i && CHUNKS[j][6]));
+  const out = [], own = CHUNKS[i][5];
+  const pool = shuffle(CHUNKS.map((c,j)=>j).filter(j=>j!==i && CHUNKS[j][5]));
   for(const j of pool){
     if(out.length>=n) break;
-    const p = shuffle(CHUNKS[j][6])[0];
+    const p = shuffle(CHUNKS[j][5])[0];
     if(!out.includes(p) && !own.includes(p)) out.push(p);
   }
   while(out.length<n) out.push("……");
   return out;
 }
-/* 词块按能力分配续题题型：c2 需配对题干(c[4])、c3 需重组片段(c[6])，否则退回选义 */
+/* 词块按能力分配续题题型：c2 需配对题干(c[3])、c3 需重组片段(c[5])，否则退回选义 */
 function chunkKindFor(i, seq){
   const c = CHUNKS[i];
   if(seq % 3 === 0) return "c1";
-  if(c[4]) return "c2";
-  if(c[6]) return "c3";
+  if(c[3]) return "c2";
+  if(c[5]) return "c3";
   return "c1";
 }
 /* 单词题干扰项：同单元优先 → 全书兜底；保证 3 个干扰项互不相同且 != 答案 */
@@ -212,8 +212,8 @@ function buildPool(){
     const taken = new Set();
     const take = (k, n) => {
       if(!n) return;
-      const cand = k === "c2" ? cAll.filter(i=>CHUNKS[i][4])
-                 : k === "c3" ? cAll.filter(i=>CHUNKS[i][6]) : cAll;
+      const cand = k === "c2" ? cAll.filter(i=>CHUNKS[i][3])
+                 : k === "c3" ? cAll.filter(i=>CHUNKS[i][5]) : cAll;
       let c = 0;
       for(const i of cand){ if(c >= n) break; if(taken.has(i)) continue; taken.add(i); mk(open, {t:k, i:i}); c++; }
     };
