@@ -179,6 +179,11 @@ $("wordsOnlyChk").addEventListener("change", e=>{
   planInfo();
 });
 
+/* ================== 本次PK不计入战绩（临时赛，不持久化） ================== */
+$("noRecordChk").addEventListener("change", e=>{
+  S.noRecord = e.target.checked;
+});
+
 /* ================== 规则介绍弹窗 ================== */
 $("ruleBtn").addEventListener("click", ()=>$("ruleModal").classList.remove("hidden"));
 $("ruleClose").addEventListener("click", ()=>$("ruleModal").classList.add("hidden"));

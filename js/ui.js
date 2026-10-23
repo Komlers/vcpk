@@ -246,6 +246,9 @@ function restoreCfg(){
      勾选「只加载纯单词」时强制不使用词块 */
   S.useChunks = !S.wordsOnly && S.units.includes("U2");
   $("wordsOnlyChk").checked = S.wordsOnly;
+  /* 临时赛选项不持久化，每次恢复配置时重置 */
+  S.noRecord = false;
+  $("noRecordChk").checked = false;
   updateDurBtn();
   updateLibBtn();
 }

@@ -167,7 +167,8 @@ function answer(k, e){
 function endBattle(){
   clearInterval(S.timer);
   const [a,b] = S.scores;
-  if(!S.revival){
+  /* 临时赛（noRecord）不记录战绩、不统计错题、不更新擂主 */
+  if(!S.revival && !S.noRecord){
     const h = loadHis(S.cls);
     h.matches.push({t:Date.now(), p1:S.p1, p2:S.p2, s1:a, s2:b, unit:S.units.join("+")});
     [S.p1, S.p2].forEach((n,i)=>{
@@ -175,7 +176,7 @@ function endBattle(){
     });
     saveHis(S.cls, h);
   }
-  {
+  if(!S.noRecord){
     /* 错词账本更新（加时赛同样生效）：复现词答对即出本，再错次数+1；新错词计入 */
     const h = loadHis(S.cls);
     (S.reviewList||[]).forEach(word=>{
@@ -189,7 +190,7 @@ function endBattle(){
     });
     saveHis(S.cls, h);
   }
-  if(!S.revival){
+  if(!S.revival && !S.noRecord){
     /* 守擂规则：
        1) 有胜负 → 败者成为下期擂主（红方）
        2) 平局 → 连击纪录低者做下期擂主
