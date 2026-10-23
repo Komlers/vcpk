@@ -4,74 +4,410 @@
   "label": "选必一 U1",
   "name": "选必一U1单词",
   "words": [
-    ["physiology", "生理学；生理机能"],
-    ["artemisinin", "青蒿素"],
-    ["malaria", "疟疾"],
-    ["crucial", "至关重要的；关键性的"],
-    ["vital", "必不可少的；极其重要的"],
-    ["committed", "尽心尽力的；坚定的"],
-    ["commit", "承诺；忠于"],
-    ["commit oneself to", "承诺；致力于"],
-    ["academy", "研究院；学会；专科院校"],
-    ["academic", "学业的；学术的"],
-    ["objective", "目标；客观的"],
-    ["botanical", "植物学的"],
-    ["evaluate", "评价；评估"],
-    ["property", "性质；特性"],
-    ["distinct", "清晰的；明显的；截然不同的"],
-    ["extract", "提取；提炼；提取物"],
-    ["boil", "煮沸；烧开"],
-    ["liquid", "液体；液体的"],
-    ["obtain", "获得；得到"],
-    ["defeat", "击败；战胜；失败"],
-    ["analyse", "分析"],
-    ["apparently", "显然；显而易见地"],
-    ["scientific", "科学(上)的"],
-    ["mostly", "大部分；主要地"],
-    ["wear and tear", "磨损；损耗"],
-    ["insist", "坚持；坚决要求"],
-    ["insist on", "坚决要求"],
-    ["evidence", "证据；证明"],
-    ["remarkable", "非凡的；显著的"],
-    ["gradual", "逐渐的；渐进的"],
-    ["gradually", "逐渐地；逐步地"],
-    ["breakthrough", "突破；重大进展"],
-    ["substantial", "大量的；价值巨大的；重大的"],
-    ["survive", "生存；存活；幸存"],
-    ["survival", "生存；幸存"],
-    ["disease", "疾病"],
-    ["establish", "建立；设立"],
-    ["institute", "机构；研究院"],
-    ["fame", "名声；声誉"],
-    ["widespread", "普遍的；广泛的"],
-    ["furthermore", "此外；再者"],
-    ["consequence", "结果；后果"],
-    ["come to power", "掌权；上台"],
-    ["take up a position", "担任；任职"],
-    ["political", "政治的"],
-    ["struggle", "斗争；奋斗"],
-    ["poverty", "贫穷；贫困"],
-    ["reform", "改革；改进"],
-    ["wormwood", "苦艾；蒿"],
-    ["chart", "图表"],
-    ["flow chart", "流程图"],
-    ["formula", "公式；配方"],
-    ["genius", "天才"],
-    ["patent", "专利；专利权"],
-    ["doctorate", "博士学位"],
-    ["extraordinary", "非凡的；意想不到的"],
-    ["draft", "草稿；起草"],
-    ["encounter", "偶然碰到；邂逅"],
-    ["mourn", "哀悼；忧伤"],
-    ["passion", "酷爱；激情"],
-    ["have a passion for", "对……充满热情"],
-    ["device", "装置；方法；技巧"],
-    ["sum", "总结；总和；金额"],
-    ["sum up", "总结；概括"],
-    ["substance", "物质；物品"],
-    ["numerous", "众多的；许多的"],
-    ["theory", "理论；学说"],
-    ["flee", "迅速离开；逃跑"],
-    ["circumstance", "条件；环境；状况"]
+    [
+      "physiology",
+      "生理学；生理机能"
+    ],
+    [
+      "artemisinin",
+      "青蒿素"
+    ],
+    [
+      "malaria",
+      "疟疾"
+    ],
+    [
+      "crucial",
+      "至关重要的；关键性的"
+    ],
+    [
+      "vital",
+      "必不可少的；极其重要的"
+    ],
+    [
+      "committed",
+      "尽心尽力的；坚定的"
+    ],
+    [
+      "commit",
+      "承诺；忠于"
+    ],
+    [
+      "commit oneself to",
+      "承诺；致力于"
+    ],
+    [
+      "academy",
+      "研究院；学会；专科院校"
+    ],
+    [
+      "academic",
+      "学业的；学术的"
+    ],
+    [
+      "objective",
+      "目标；客观的"
+    ],
+    [
+      "botanical",
+      "植物学的"
+    ],
+    [
+      "evaluate",
+      "评价；评估"
+    ],
+    [
+      "property",
+      "性质；特性"
+    ],
+    [
+      "distinct",
+      "清晰的；明显的；截然不同的"
+    ],
+    [
+      "extract",
+      "提取；提炼；提取物"
+    ],
+    [
+      "boil",
+      "煮沸；烧开"
+    ],
+    [
+      "liquid",
+      "液体；液体的"
+    ],
+    [
+      "obtain",
+      "获得；得到"
+    ],
+    [
+      "defeat",
+      "击败；战胜；失败"
+    ],
+    [
+      "analyse",
+      "分析"
+    ],
+    [
+      "apparently",
+      "显然；显而易见地"
+    ],
+    [
+      "scientific",
+      "科学(上)的"
+    ],
+    [
+      "mostly",
+      "大部分；主要地"
+    ],
+    [
+      "wear and tear",
+      "磨损；损耗"
+    ],
+    [
+      "insist",
+      "坚持；坚决要求"
+    ],
+    [
+      "insist on",
+      "坚决要求"
+    ],
+    [
+      "evidence",
+      "证据；证明"
+    ],
+    [
+      "remarkable",
+      "非凡的；显著的"
+    ],
+    [
+      "gradual",
+      "逐渐的；渐进的"
+    ],
+    [
+      "gradually",
+      "逐渐地；逐步地"
+    ],
+    [
+      "breakthrough",
+      "突破；重大进展"
+    ],
+    [
+      "substantial",
+      "大量的；价值巨大的；重大的"
+    ],
+    [
+      "survive",
+      "生存；存活；幸存"
+    ],
+    [
+      "survival",
+      "生存；幸存"
+    ],
+    [
+      "disease",
+      "疾病"
+    ],
+    [
+      "establish",
+      "建立；设立"
+    ],
+    [
+      "institute",
+      "机构；研究院"
+    ],
+    [
+      "fame",
+      "名声；声誉"
+    ],
+    [
+      "widespread",
+      "普遍的；广泛的"
+    ],
+    [
+      "furthermore",
+      "此外；再者"
+    ],
+    [
+      "consequence",
+      "结果；后果"
+    ],
+    [
+      "come to power",
+      "掌权；上台"
+    ],
+    [
+      "take up a position",
+      "担任；任职"
+    ],
+    [
+      "political",
+      "政治的"
+    ],
+    [
+      "struggle",
+      "斗争；奋斗"
+    ],
+    [
+      "poverty",
+      "贫穷；贫困"
+    ],
+    [
+      "reform",
+      "改革；改进"
+    ],
+    [
+      "wormwood",
+      "苦艾；蒿"
+    ],
+    [
+      "chart",
+      "图表"
+    ],
+    [
+      "flow chart",
+      "流程图"
+    ],
+    [
+      "formula",
+      "公式；配方"
+    ],
+    [
+      "genius",
+      "天才"
+    ],
+    [
+      "patent",
+      "专利；专利权"
+    ],
+    [
+      "doctorate",
+      "博士学位"
+    ],
+    [
+      "extraordinary",
+      "非凡的；意想不到的"
+    ],
+    [
+      "draft",
+      "草稿；起草"
+    ],
+    [
+      "encounter",
+      "偶然碰到；邂逅"
+    ],
+    [
+      "mourn",
+      "哀悼；忧伤"
+    ],
+    [
+      "passion",
+      "酷爱；激情"
+    ],
+    [
+      "have a passion for",
+      "对……充满热情"
+    ],
+    [
+      "device",
+      "装置；方法；技巧"
+    ],
+    [
+      "sum",
+      "总结；总和；金额"
+    ],
+    [
+      "sum up",
+      "总结；概括"
+    ],
+    [
+      "substance",
+      "物质；物品"
+    ],
+    [
+      "numerous",
+      "众多的；许多的"
+    ],
+    [
+      "theory",
+      "理论；学说"
+    ],
+    [
+      "flee",
+      "迅速离开；逃跑"
+    ],
+    [
+      "circumstance",
+      "条件；环境；状况"
+    ]
+  ],
+  "chunks": [
+    [
+      "commit oneself to",
+      "致力于；承诺",
+      "prep",
+      "commit oneself ____ a project",
+      "to",
+      null
+    ],
+    [
+      "be committed to",
+      "致力于；尽心尽力于",
+      "prep",
+      "be committed ____ the research",
+      "to",
+      null
+    ],
+    [
+      "insist on",
+      "坚决要求；坚持",
+      "prep",
+      "insist ____ doing sth.",
+      "on",
+      null
+    ],
+    [
+      "come to power",
+      "掌权；上台",
+      "phr",
+      "The leader came ____ power in 1949.",
+      "to",
+      null
+    ],
+    [
+      "take up a position",
+      "担任；任职",
+      "phr",
+      "take ____ a position as a manager",
+      "up",
+      null
+    ],
+    [
+      "have a passion for",
+      "对……充满热情",
+      "prep",
+      "have a passion ____ science",
+      "for",
+      null
+    ],
+    [
+      "sum up",
+      "总结；概括",
+      "phr",
+      "____ up the main points",
+      "sum",
+      [
+        "sum",
+        "up"
+      ]
+    ],
+    [
+      "wear and tear",
+      "磨损；损耗",
+      "coll",
+      "normal wear and ____（正常磨损）",
+      "tear",
+      [
+        "wear",
+        "and",
+        "tear"
+      ]
+    ],
+    [
+      "flow chart",
+      "流程图",
+      "coll",
+      "draw a ____ chart（画流程图）",
+      "flow",
+      null
+    ],
+    [
+      "be crucial to",
+      "对……至关重要",
+      "prep",
+      "be crucial ____ the success",
+      "to",
+      null
+    ],
+    [
+      "be vital to",
+      "对……必不可少",
+      "prep",
+      "be vital ____ survival",
+      "to",
+      null
+    ],
+    [
+      "make a breakthrough",
+      "取得突破",
+      "coll",
+      "make a major ____（取得重大突破）",
+      "breakthrough",
+      null
+    ],
+    [
+      "be recognised as",
+      "被公认为",
+      "prep",
+      "be recognised ____ a pioneer",
+      "as",
+      null
+    ],
+    [
+      "be distinct from",
+      "与……截然不同",
+      "prep",
+      "be distinct ____ each other",
+      "from",
+      null
+    ],
+    [
+      "win a Nobel Prize",
+      "获得诺贝尔奖",
+      "coll",
+      "win a Nobel ____（获得诺贝尔奖）",
+      "Prize",
+      null
+    ]
   ]
 }

@@ -4,70 +4,400 @@
   "label": "选必一 U3",
   "name": "选必一U3单词",
   "words": [
-    ["buffet", "自助餐；连续猛击"],
-    ["cloth", "(一块)布；织物；布料"],
-    ["valley", "山谷；溪谷"],
-    ["glacier", "冰川"],
-    ["reindeer", "驯鹿"],
-    ["territory", "领土；版图；领域"],
-    ["ban", "明令禁止；取缔；禁令"],
-    ["boundary", "边界；界限；分界线"],
-    ["cottage", "小屋；村舍"],
-    ["visible", "看得见的；可见的"],
-    ["invisible", "看不见的"],
-    ["on the move", "在行进中；在移动中"],
-    ["adopt", "采用；采取；采纳；领养"],
-    ["sour", "酸的；有酸味的"],
-    ["set out", "出发；启程"],
-    ["bless", "祝福"],
-    ["blessing", "幸事；祝福"],
-    ["prohibit", "(尤指以法令)禁止；阻止"],
-    ["prohibition", "禁止；阻止；禁令"],
-    ["journalist", "记者；新闻工作者"],
-    ["sneeze", "打喷嚏；喷嚏"],
-    ["teapot", "茶壶"],
-    ["label", "标签；标记；贴标签"],
-    ["cream", "奶油；乳脂；奶油色的"],
-    ["leopard", "豹"],
-    ["stretch", "延伸；延续；伸展"],
-    ["rewarding", "值得做的；有益的"],
-    ["bush", "灌木"],
-    ["lung", "肺"],
-    ["cycle", "自行车；循环；骑自行车"],
-    ["cyclist", "骑自行车的人"],
-    ["corridor", "狭长地带；走廊；通道"],
-    ["pedal", "踏板；骑自行车；踩踏板"],
-    ["fountain", "喷泉；喷水池"],
-    ["route", "路线；路途；途径"],
-    ["ahead", "向前；在前面；提前"],
-    ["theme", "主题；有特定主题的"],
-    ["theme park", "主题公园"],
-    ["roller coaster", "过山车"],
-    ["incredible", "极好的；极大的；难以置信的"],
-    ["appeal", "有吸引力；呼吁；吸引力"],
-    ["appeal to", "有吸引力；打动"],
-    ["pirate", "海盗；盗版者"],
-    ["adorable", "可爱的；讨人喜爱的"],
-    ["wander", "游荡；闲逛；漫游"],
-    ["amusement", "娱乐(活动)；愉悦"],
-    ["amuse", "使娱乐；逗笑"],
-    ["enormous", "巨大的；极大的"],
-    ["swing", "(使)摆动；摇摆；突然转向"],
-    ["iron", "铁；铁器；熨；烫"],
-    ["fashion", "时尚；流行款式"],
-    ["fashionable", "时尚的"],
-    ["rare", "稀少的；珍贵的；(肉)半熟的"],
-    ["rarely", "罕有；很少"],
-    ["steam", "蒸汽；冒水汽"],
-    ["superb", "极佳的；卓越的"],
-    ["aquarium", "水族馆"],
-    ["up to", "达到；直到；能胜任"],
-    ["polar", "(近)极地的"],
-    ["upside down", "颠倒；倒转"],
-    ["splendid", "壮丽的；雄伟的；极佳的"],
-    ["display", "展览；陈列；显示"],
-    ["appetite", "食欲；胃口；强烈欲望"],
-    ["entertainment", "娱乐；招待"],
-    ["column", "栏；专栏；柱形物"]
+    [
+      "buffet",
+      "自助餐；连续猛击"
+    ],
+    [
+      "cloth",
+      "(一块)布；织物；布料"
+    ],
+    [
+      "valley",
+      "山谷；溪谷"
+    ],
+    [
+      "glacier",
+      "冰川"
+    ],
+    [
+      "reindeer",
+      "驯鹿"
+    ],
+    [
+      "territory",
+      "领土；版图；领域"
+    ],
+    [
+      "ban",
+      "明令禁止；取缔；禁令"
+    ],
+    [
+      "boundary",
+      "边界；界限；分界线"
+    ],
+    [
+      "cottage",
+      "小屋；村舍"
+    ],
+    [
+      "visible",
+      "看得见的；可见的"
+    ],
+    [
+      "invisible",
+      "看不见的"
+    ],
+    [
+      "on the move",
+      "在行进中；在移动中"
+    ],
+    [
+      "adopt",
+      "采用；采取；采纳；领养"
+    ],
+    [
+      "sour",
+      "酸的；有酸味的"
+    ],
+    [
+      "set out",
+      "出发；启程"
+    ],
+    [
+      "bless",
+      "祝福"
+    ],
+    [
+      "blessing",
+      "幸事；祝福"
+    ],
+    [
+      "prohibit",
+      "(尤指以法令)禁止；阻止"
+    ],
+    [
+      "prohibition",
+      "禁止；阻止；禁令"
+    ],
+    [
+      "journalist",
+      "记者；新闻工作者"
+    ],
+    [
+      "sneeze",
+      "打喷嚏；喷嚏"
+    ],
+    [
+      "teapot",
+      "茶壶"
+    ],
+    [
+      "label",
+      "标签；标记；贴标签"
+    ],
+    [
+      "cream",
+      "奶油；乳脂；奶油色的"
+    ],
+    [
+      "leopard",
+      "豹"
+    ],
+    [
+      "stretch",
+      "延伸；延续；伸展"
+    ],
+    [
+      "rewarding",
+      "值得做的；有益的"
+    ],
+    [
+      "bush",
+      "灌木"
+    ],
+    [
+      "lung",
+      "肺"
+    ],
+    [
+      "cycle",
+      "自行车；循环；骑自行车"
+    ],
+    [
+      "cyclist",
+      "骑自行车的人"
+    ],
+    [
+      "corridor",
+      "狭长地带；走廊；通道"
+    ],
+    [
+      "pedal",
+      "踏板；骑自行车；踩踏板"
+    ],
+    [
+      "fountain",
+      "喷泉；喷水池"
+    ],
+    [
+      "route",
+      "路线；路途；途径"
+    ],
+    [
+      "ahead",
+      "向前；在前面；提前"
+    ],
+    [
+      "theme",
+      "主题；有特定主题的"
+    ],
+    [
+      "theme park",
+      "主题公园"
+    ],
+    [
+      "roller coaster",
+      "过山车"
+    ],
+    [
+      "incredible",
+      "极好的；极大的；难以置信的"
+    ],
+    [
+      "appeal",
+      "有吸引力；呼吁；吸引力"
+    ],
+    [
+      "appeal to",
+      "有吸引力；打动"
+    ],
+    [
+      "pirate",
+      "海盗；盗版者"
+    ],
+    [
+      "adorable",
+      "可爱的；讨人喜爱的"
+    ],
+    [
+      "wander",
+      "游荡；闲逛；漫游"
+    ],
+    [
+      "amusement",
+      "娱乐(活动)；愉悦"
+    ],
+    [
+      "amuse",
+      "使娱乐；逗笑"
+    ],
+    [
+      "enormous",
+      "巨大的；极大的"
+    ],
+    [
+      "swing",
+      "(使)摆动；摇摆；突然转向"
+    ],
+    [
+      "iron",
+      "铁；铁器；熨；烫"
+    ],
+    [
+      "fashion",
+      "时尚；流行款式"
+    ],
+    [
+      "fashionable",
+      "时尚的"
+    ],
+    [
+      "rare",
+      "稀少的；珍贵的；(肉)半熟的"
+    ],
+    [
+      "rarely",
+      "罕有；很少"
+    ],
+    [
+      "steam",
+      "蒸汽；冒水汽"
+    ],
+    [
+      "superb",
+      "极佳的；卓越的"
+    ],
+    [
+      "aquarium",
+      "水族馆"
+    ],
+    [
+      "up to",
+      "达到；直到；能胜任"
+    ],
+    [
+      "polar",
+      "(近)极地的"
+    ],
+    [
+      "upside down",
+      "颠倒；倒转"
+    ],
+    [
+      "splendid",
+      "壮丽的；雄伟的；极佳的"
+    ],
+    [
+      "display",
+      "展览；陈列；显示"
+    ],
+    [
+      "appetite",
+      "食欲；胃口；强烈欲望"
+    ],
+    [
+      "entertainment",
+      "娱乐；招待"
+    ],
+    [
+      "column",
+      "栏；专栏；柱形物"
+    ]
+  ],
+  "chunks": [
+    [
+      "on the move",
+      "在行进中；在移动中",
+      "coll",
+      "The army is ____ the move.",
+      "on",
+      [
+        "on",
+        "the",
+        "move"
+      ]
+    ],
+    [
+      "set out",
+      "出发；启程",
+      "phr",
+      "____ out early in the morning",
+      "set",
+      [
+        "set",
+        "out"
+      ]
+    ],
+    [
+      "appeal to",
+      "有吸引力；打动",
+      "prep",
+      "appeal ____ young people",
+      "to",
+      null
+    ],
+    [
+      "up to",
+      "达到；直到",
+      "prep",
+      "up ____ 100 people",
+      "to",
+      null
+    ],
+    [
+      "upside down",
+      "颠倒；倒转",
+      "coll",
+      "turn the box upside ____",
+      "down",
+      [
+        "upside",
+        "down"
+      ]
+    ],
+    [
+      "theme park",
+      "主题公园",
+      "coll",
+      "a famous ____ park（著名主题公园）",
+      "theme",
+      null
+    ],
+    [
+      "roller coaster",
+      "过山车",
+      "coll",
+      "ride a ____ coaster（坐过山车）",
+      "roller",
+      [
+        "roller",
+        "coaster"
+      ]
+    ],
+    [
+      "be familiar with",
+      "熟悉",
+      "prep",
+      "be familiar ____ the rules",
+      "with",
+      null
+    ],
+    [
+      "be home to",
+      "是……的家园",
+      "prep",
+      "The park is home ____ many animals.",
+      "to",
+      null
+    ],
+    [
+      "be known as",
+      "作为……而出名",
+      "prep",
+      "be known ____ the City of Gardens",
+      "as",
+      null
+    ],
+    [
+      "be located in",
+      "位于",
+      "prep",
+      "be located ____ the mountains",
+      "in",
+      null
+    ],
+    [
+      "be blessed with",
+      "有幸拥有",
+      "prep",
+      "be blessed ____ good health",
+      "with",
+      null
+    ],
+    [
+      "be prohibited from",
+      "被禁止",
+      "prep",
+      "be prohibited ____ entering",
+      "from",
+      null
+    ],
+    [
+      "be visible to",
+      "对……可见",
+      "prep",
+      "be visible ____ the naked eye",
+      "to",
+      null
+    ],
+    [
+      "be up to",
+      "由……决定；能胜任",
+      "prep",
+      "It's ____ to you to decide.",
+      "up",
+      null
+    ]
   ]
 }

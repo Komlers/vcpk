@@ -4,77 +4,430 @@
   "label": "选必二 U4",
   "name": "选必二U4单词",
   "words": [
-    ["airline", "航空公司"],
-    ["bay", "海（或湖）的湾"],
-    ["craft", "手艺；工艺；技艺"],
-    ["antique", "古物；古董（n.）；古老的；古董的（adj.）"],
-    ["pleasant", "令人愉快的；友好的"],
-    ["arise", "起身；出现；由……引起"],
-    ["massive", "巨大的；非常严重的"],
-    ["literally", "字面上；真正地"],
-    ["breath", "呼吸的空气"],
-    ["take sb's breath away", "令人惊叹"],
-    ["bound", "准备前往（某地）；一定会"],
-    ["scenery", "风景；景色"],
-    ["awesome", "令人惊叹的；可怕的；很好的"],
-    ["spectacular", "壮观的；壮丽的；惊人的（adj.）；壮丽的场面；精彩的表演（n.）"],
-    ["peak", "顶峰；山峰；尖形"],
-    ["highlight", "最好或最精彩的部分（n.）；突出；强调；使醒目（v.）"],
-    ["goat", "山羊"],
-    ["grizzly bear", "灰熊"],
-    ["drill", "钻（孔）；打（眼）（v.）；钻（头）；训练；演习（n.）"],
-    ["freezing", "极冷的；冰冻的"],
-    ["freezing cold", "冰冷的"],
-    ["freeze", "结冰；（使）冻住"],
-    ["mall", "购物商场；购物广场"],
-    ["prairie", "北美草原"],
-    ["anticipate", "预料；预见；期望"],
-    ["bunch", "束；串；捆"],
-    ["a bunch of", "一束；一串；大量"],
-    ["thunder", "打雷；轰隆隆地响（v.）；雷声；轰隆声（n.）"],
-    ["frost", "霜；严寒天气；霜冻"],
-    ["curtain", "帘；窗帘"],
-    ["border", "国界；边界（地区）"],
-    ["duration", "持续时间；期间"],
-    ["harbour", "（海）港；港口"],
-    ["enrol", "（使）加入；注册；登记"],
-    ["quarry", "采石场"],
-    ["idiom", "习语；成语"],
-    ["contrary", "相反的；相对立的（adj.）；相反的事实（或事情）（n.）"],
-    ["contrary to", "相反的；相对立的"],
-    ["anyhow", "（结束交谈或转换话题时）不过；反正"],
-    ["alongside", "在……旁边；与……一起（prep.）；在旁边（adv.）"],
-    ["proceed", "行进；继续做"],
-    ["proceed to sth", "进而做（参加）"],
-    ["shore", "（海、湖、河）岸"],
-    ["astonish", "使十分惊讶；使吃惊"],
-    ["misty", "多雾的；模糊的"],
-    ["mist", "薄雾；水汽"],
-    ["steel", "钢；钢铁工业"],
-    ["dusk", "黄昏；傍晚"],
-    ["advertisement", "广告；启事"],
-    ["accent", "口音"],
-    ["photographer", "摄影师；拍照者"],
-    ["owe", "欠（债等）；欠（人情等）"],
-    ["owe sth to sb", "欠（某人情）；把……归功于某人"],
-    ["toast", "烤面包片；吐司；干杯（n.）；为……干杯（v.）"],
-    ["cobblestone", "铺有鹅卵石的"],
-    ["coherent", "有条理的；清楚易懂的"],
-    ["Halifax", "哈利法克斯（加拿大城市）"],
-    ["Vancouver", "温哥华（加拿大城市）"],
-    ["Lake Louise", "路易斯湖"],
-    ["Jasper", "贾斯珀（加拿大城市）"],
-    ["Toronto", "多伦多（加拿大城市）"],
-    ["Edmonton", "埃德蒙顿（加拿大城市）"],
-    ["Winnipeg", "温尼伯（加拿大城市）"],
-    ["Ontario", "安大略省（加拿大）"],
-    ["Butchart Gardens", "布查特花园"],
-    ["Lake Huron", "休伦湖"],
-    ["Quebec City", "魁北克市（加拿大城市）"],
-    ["Montreal", "蒙特利尔（加拿大城市）"],
-    ["Niagara Falls", "尼亚加拉瀑布"],
-    ["St Lawrence River", "圣劳伦斯河"],
-    ["Jean-Philippe", "让-菲利普"],
-    ["Nova Scotia", "新斯科舍省（加拿大）"]
+    [
+      "airline",
+      "航空公司"
+    ],
+    [
+      "bay",
+      "海（或湖）的湾"
+    ],
+    [
+      "craft",
+      "手艺；工艺；技艺"
+    ],
+    [
+      "antique",
+      "古物；古董（n.）；古老的；古董的（adj.）"
+    ],
+    [
+      "pleasant",
+      "令人愉快的；友好的"
+    ],
+    [
+      "arise",
+      "起身；出现；由……引起"
+    ],
+    [
+      "massive",
+      "巨大的；非常严重的"
+    ],
+    [
+      "literally",
+      "字面上；真正地"
+    ],
+    [
+      "breath",
+      "呼吸的空气"
+    ],
+    [
+      "take sb's breath away",
+      "令人惊叹"
+    ],
+    [
+      "bound",
+      "准备前往（某地）；一定会"
+    ],
+    [
+      "scenery",
+      "风景；景色"
+    ],
+    [
+      "awesome",
+      "令人惊叹的；可怕的；很好的"
+    ],
+    [
+      "spectacular",
+      "壮观的；壮丽的；惊人的（adj.）；壮丽的场面；精彩的表演（n.）"
+    ],
+    [
+      "peak",
+      "顶峰；山峰；尖形"
+    ],
+    [
+      "highlight",
+      "最好或最精彩的部分（n.）；突出；强调；使醒目（v.）"
+    ],
+    [
+      "goat",
+      "山羊"
+    ],
+    [
+      "grizzly bear",
+      "灰熊"
+    ],
+    [
+      "drill",
+      "钻（孔）；打（眼）（v.）；钻（头）；训练；演习（n.）"
+    ],
+    [
+      "freezing",
+      "极冷的；冰冻的"
+    ],
+    [
+      "freezing cold",
+      "冰冷的"
+    ],
+    [
+      "freeze",
+      "结冰；（使）冻住"
+    ],
+    [
+      "mall",
+      "购物商场；购物广场"
+    ],
+    [
+      "prairie",
+      "北美草原"
+    ],
+    [
+      "anticipate",
+      "预料；预见；期望"
+    ],
+    [
+      "bunch",
+      "束；串；捆"
+    ],
+    [
+      "a bunch of",
+      "一束；一串；大量"
+    ],
+    [
+      "thunder",
+      "打雷；轰隆隆地响（v.）；雷声；轰隆声（n.）"
+    ],
+    [
+      "frost",
+      "霜；严寒天气；霜冻"
+    ],
+    [
+      "curtain",
+      "帘；窗帘"
+    ],
+    [
+      "border",
+      "国界；边界（地区）"
+    ],
+    [
+      "duration",
+      "持续时间；期间"
+    ],
+    [
+      "harbour",
+      "（海）港；港口"
+    ],
+    [
+      "enrol",
+      "（使）加入；注册；登记"
+    ],
+    [
+      "quarry",
+      "采石场"
+    ],
+    [
+      "idiom",
+      "习语；成语"
+    ],
+    [
+      "contrary",
+      "相反的；相对立的（adj.）；相反的事实（或事情）（n.）"
+    ],
+    [
+      "contrary to",
+      "相反的；相对立的"
+    ],
+    [
+      "anyhow",
+      "（结束交谈或转换话题时）不过；反正"
+    ],
+    [
+      "alongside",
+      "在……旁边；与……一起（prep.）；在旁边（adv.）"
+    ],
+    [
+      "proceed",
+      "行进；继续做"
+    ],
+    [
+      "proceed to sth",
+      "进而做（参加）"
+    ],
+    [
+      "shore",
+      "（海、湖、河）岸"
+    ],
+    [
+      "astonish",
+      "使十分惊讶；使吃惊"
+    ],
+    [
+      "misty",
+      "多雾的；模糊的"
+    ],
+    [
+      "mist",
+      "薄雾；水汽"
+    ],
+    [
+      "steel",
+      "钢；钢铁工业"
+    ],
+    [
+      "dusk",
+      "黄昏；傍晚"
+    ],
+    [
+      "advertisement",
+      "广告；启事"
+    ],
+    [
+      "accent",
+      "口音"
+    ],
+    [
+      "photographer",
+      "摄影师；拍照者"
+    ],
+    [
+      "owe",
+      "欠（债等）；欠（人情等）"
+    ],
+    [
+      "owe sth to sb",
+      "欠（某人情）；把……归功于某人"
+    ],
+    [
+      "toast",
+      "烤面包片；吐司；干杯（n.）；为……干杯（v.）"
+    ],
+    [
+      "cobblestone",
+      "铺有鹅卵石的"
+    ],
+    [
+      "coherent",
+      "有条理的；清楚易懂的"
+    ],
+    [
+      "Halifax",
+      "哈利法克斯（加拿大城市）"
+    ],
+    [
+      "Vancouver",
+      "温哥华（加拿大城市）"
+    ],
+    [
+      "Lake Louise",
+      "路易斯湖"
+    ],
+    [
+      "Jasper",
+      "贾斯珀（加拿大城市）"
+    ],
+    [
+      "Toronto",
+      "多伦多（加拿大城市）"
+    ],
+    [
+      "Edmonton",
+      "埃德蒙顿（加拿大城市）"
+    ],
+    [
+      "Winnipeg",
+      "温尼伯（加拿大城市）"
+    ],
+    [
+      "Ontario",
+      "安大略省（加拿大）"
+    ],
+    [
+      "Butchart Gardens",
+      "布查特花园"
+    ],
+    [
+      "Lake Huron",
+      "休伦湖"
+    ],
+    [
+      "Quebec City",
+      "魁北克市（加拿大城市）"
+    ],
+    [
+      "Montreal",
+      "蒙特利尔（加拿大城市）"
+    ],
+    [
+      "Niagara Falls",
+      "尼亚加拉瀑布"
+    ],
+    [
+      "St Lawrence River",
+      "圣劳伦斯河"
+    ],
+    [
+      "Jean-Philippe",
+      "让-菲利普"
+    ],
+    [
+      "Nova Scotia",
+      "新斯科舍省（加拿大）"
+    ]
+  ],
+  "chunks": [
+    [
+      "take sb's breath away",
+      "令人惊叹",
+      "phr",
+      "The view took my ____ away.",
+      "breath",
+      [
+        "take",
+        "sb's",
+        "breath",
+        "away"
+      ]
+    ],
+    [
+      "a bunch of",
+      "一束；一串；大量",
+      "coll",
+      "a ____ of flowers",
+      "bunch",
+      [
+        "a",
+        "bunch",
+        "of"
+      ]
+    ],
+    [
+      "contrary to",
+      "与……相反",
+      "prep",
+      "contrary ____ popular belief",
+      "to",
+      null
+    ],
+    [
+      "proceed to",
+      "进而做；前往",
+      "prep",
+      "proceed ____ the next stage",
+      "to",
+      null
+    ],
+    [
+      "be bound for",
+      "准备前往",
+      "prep",
+      "be bound ____ the city",
+      "for",
+      null
+    ],
+    [
+      "freezing cold",
+      "冰冷的",
+      "coll",
+      "It's freezing ____.",
+      "cold",
+      [
+        "freezing",
+        "cold"
+      ]
+    ],
+    [
+      "be anticipated to",
+      "预计",
+      "prep",
+      "be anticipated ____ arrive soon",
+      "to",
+      null
+    ],
+    [
+      "be astonished at",
+      "对……感到惊讶",
+      "prep",
+      "be astonished ____ the news",
+      "at",
+      null
+    ],
+    [
+      "be impressed with",
+      "对……印象深刻",
+      "prep",
+      "be impressed ____ the scenery",
+      "with",
+      null
+    ],
+    [
+      "owe ... to ...",
+      "把……归功于",
+      "prep",
+      "owe one's success ____ hard work",
+      "to",
+      null
+    ],
+    [
+      "be enrolled in",
+      "加入；注册",
+      "prep",
+      "be enrolled ____ the course",
+      "in",
+      null
+    ],
+    [
+      "at dusk",
+      "黄昏时",
+      "coll",
+      "____ dusk, the lights come on.",
+      "At",
+      [
+        "at",
+        "dusk"
+      ]
+    ],
+    [
+      "alongside",
+      "在……旁边",
+      "prep",
+      "walk ____ the river",
+      "alongside",
+      null
+    ],
+    [
+      "be contrary to",
+      "与……相反",
+      "prep",
+      "be contrary ____ the rules",
+      "to",
+      null
+    ],
+    [
+      "be literally",
+      "真正地；字面上",
+      "coll",
+      "be ____ amazed（真正地惊讶）",
+      "literally",
+      null
+    ]
   ]
 }

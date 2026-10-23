@@ -4,43 +4,283 @@
   "label": "选必一 U4",
   "name": "选必一U4单词",
   "words": [
-    ["interaction", "交流；相互作用"],
-    ["gesture", "手势；姿势；做手势"],
-    ["witness", "目击；见证；目击者"],
-    ["employ", "使用；雇用"],
-    ["identical", "相同的"],
-    ["cheek", "面颊；脸颊"],
-    ["favour", "帮助；恩惠；较喜欢"],
-    ["bow", "鞠躬；点头；弓；蝴蝶结"],
-    ["waist", "腰；腰部"],
-    ["make inferences", "推理；推断"],
-    ["interpret", "诠释；说明；口译"],
-    ["twin", "双胞胎之一的；双胞胎之一"],
-    ["nonverbal", "非语言的"],
-    ["perceive", "察觉；看待"],
-    ["distinguish", "区分；辨别"],
-    ["anxiety", "焦虑；担心"],
-    ["embarrassed", "尴尬的；难堪的"],
-    ["ashamed", "羞愧的；惭愧的"],
-    ["adjust", "调整；调节"],
-    ["intervene", "干预；介入"],
-    ["react", "作出反应；回应"],
-    ["component", "组成部分；部件"],
-    ["tone", "语气；音调"],
-    ["crisis", "危机；危急关头"],
-    ["characteristic", "特征；特点；典型的"],
-    ["conventional", "传统的；常规的"],
-    ["assumption", "假定；假设"],
-    ["stare", "盯着看；凝视"],
-    ["stare at", "凝视；盯着看"],
-    ["imply", "暗示；表明"],
-    ["barrier", "隔阂；障碍"],
-    ["fake", "假的；冒充的"],
-    ["anger", "愤怒；怒气"],
-    ["reliable", "可靠的；可信赖的"],
-    ["incident", "发生的事情；严重事件"],
-    ["trial", "审讯；试验"],
-    ["slight", "轻微的；略微的"],
-    ["slightly", "略微；稍微"]
+    [
+      "interaction",
+      "交流；相互作用"
+    ],
+    [
+      "gesture",
+      "手势；姿势；做手势"
+    ],
+    [
+      "witness",
+      "目击；见证；目击者"
+    ],
+    [
+      "employ",
+      "使用；雇用"
+    ],
+    [
+      "identical",
+      "相同的"
+    ],
+    [
+      "cheek",
+      "面颊；脸颊"
+    ],
+    [
+      "favour",
+      "帮助；恩惠；较喜欢"
+    ],
+    [
+      "bow",
+      "鞠躬；点头；弓；蝴蝶结"
+    ],
+    [
+      "waist",
+      "腰；腰部"
+    ],
+    [
+      "make inferences",
+      "推理；推断"
+    ],
+    [
+      "interpret",
+      "诠释；说明；口译"
+    ],
+    [
+      "twin",
+      "双胞胎之一的；双胞胎之一"
+    ],
+    [
+      "nonverbal",
+      "非语言的"
+    ],
+    [
+      "perceive",
+      "察觉；看待"
+    ],
+    [
+      "distinguish",
+      "区分；辨别"
+    ],
+    [
+      "anxiety",
+      "焦虑；担心"
+    ],
+    [
+      "embarrassed",
+      "尴尬的；难堪的"
+    ],
+    [
+      "ashamed",
+      "羞愧的；惭愧的"
+    ],
+    [
+      "adjust",
+      "调整；调节"
+    ],
+    [
+      "intervene",
+      "干预；介入"
+    ],
+    [
+      "react",
+      "作出反应；回应"
+    ],
+    [
+      "component",
+      "组成部分；部件"
+    ],
+    [
+      "tone",
+      "语气；音调"
+    ],
+    [
+      "crisis",
+      "危机；危急关头"
+    ],
+    [
+      "characteristic",
+      "特征；特点；典型的"
+    ],
+    [
+      "conventional",
+      "传统的；常规的"
+    ],
+    [
+      "assumption",
+      "假定；假设"
+    ],
+    [
+      "stare",
+      "盯着看；凝视"
+    ],
+    [
+      "stare at",
+      "凝视；盯着看"
+    ],
+    [
+      "imply",
+      "暗示；表明"
+    ],
+    [
+      "barrier",
+      "隔阂；障碍"
+    ],
+    [
+      "fake",
+      "假的；冒充的"
+    ],
+    [
+      "anger",
+      "愤怒；怒气"
+    ],
+    [
+      "reliable",
+      "可靠的；可信赖的"
+    ],
+    [
+      "incident",
+      "发生的事情；严重事件"
+    ],
+    [
+      "trial",
+      "审讯；试验"
+    ],
+    [
+      "slight",
+      "轻微的；略微的"
+    ],
+    [
+      "slightly",
+      "略微；稍微"
+    ]
+  ],
+  "chunks": [
+    [
+      "make inferences",
+      "推理；推断",
+      "phr",
+      "make ____ from the data",
+      "inferences",
+      null
+    ],
+    [
+      "stare at",
+      "凝视；盯着看",
+      "prep",
+      "stare ____ the screen",
+      "at",
+      null
+    ],
+    [
+      "be identical to",
+      "与……相同",
+      "prep",
+      "be identical ____ the original",
+      "to",
+      null
+    ],
+    [
+      "be ashamed of",
+      "对……感到羞愧",
+      "prep",
+      "be ashamed ____ one's mistake",
+      "of",
+      null
+    ],
+    [
+      "adjust to",
+      "适应；调整",
+      "prep",
+      "adjust ____ the new environment",
+      "to",
+      null
+    ],
+    [
+      "react to",
+      "对……作出反应",
+      "prep",
+      "react ____ the news",
+      "to",
+      null
+    ],
+    [
+      "intervene in",
+      "干预；介入",
+      "prep",
+      "intervene ____ the conflict",
+      "in",
+      null
+    ],
+    [
+      "be distinguished for",
+      "因……而著名",
+      "prep",
+      "be distinguished ____ its design",
+      "for",
+      null
+    ],
+    [
+      "be anxious about",
+      "对……感到焦虑",
+      "prep",
+      "be anxious ____ the exam",
+      "about",
+      null
+    ],
+    [
+      "be embarrassed about",
+      "对……感到尴尬",
+      "prep",
+      "be embarrassed ____ the mistake",
+      "about",
+      null
+    ],
+    [
+      "be perceived as",
+      "被看作；被认为",
+      "prep",
+      "be perceived ____ a threat",
+      "as",
+      null
+    ],
+    [
+      "be regarded as",
+      "被认为是",
+      "prep",
+      "be regarded ____ the best",
+      "as",
+      null
+    ],
+    [
+      "in favour of",
+      "赞成；支持",
+      "prep",
+      "be ____ favour of the plan",
+      "in",
+      [
+        "in",
+        "favour",
+        "of"
+      ]
+    ],
+    [
+      "by contrast",
+      "相比之下",
+      "coll",
+      "____ contrast, he is much taller.",
+      "By",
+      null
+    ],
+    [
+      "be confused about",
+      "对……感到困惑",
+      "prep",
+      "be confused ____ the question",
+      "about",
+      null
+    ]
   ]
 }

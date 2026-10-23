@@ -4,82 +4,461 @@
   "label": "选必二 U2",
   "name": "选必二U2单词",
   "words": [
-    ["complex", "复杂的；难懂的；（语法）复合的"],
-    ["recall", "记起；回想起"],
-    ["qualification", "（通过考试或学习课程取得的）资格；学历"],
-    ["qualify", "（使）具备资格；（使）合格"],
-    ["ambition", "追求的目标；夙愿；野心；抱负"],
-    ["ambitious", "有野心的；有雄心的"],
-    ["adaptation", "适应；改编本"],
-    ["comfort", "安慰；令人感到安慰的人或事物；舒服；安逸（n.）；安慰；抚慰（v.）"],
-    ["tutor", "（英国大学中的）助教；导师；家庭教师"],
-    ["cite", "引用；引述"],
-    ["participation", "参加；参与"],
-    ["participate", "参加；参与"],
-    ["participate in", "参加；参与"],
-    ["presentation", "报告；陈述；出示；拿出"],
-    ["speak up", "大声点说；明确表态"],
-    ["feel at home", "舒服自在；不拘束"],
-    ["engage", "参加；参与（活动）（vi.）；吸引（注意力、兴趣）（vt.）"],
-    ["engage in", "（使）从事；参加"],
-    ["involve", "包含；需要；涉及；影响；（使）参加"],
-    ["get involved in", "参与；卷入；与……有关联"],
-    ["messenger", "送信人；信使"],
-    ["edition", "（报纸、杂志）一份；（广播、电视节目）一期、一辑；版次"],
-    ["culture shock", "文化冲击"],
-    ["zone", "（有特殊用途的）地区；地带；区域"],
-    ["comfort zone", "舒适区；舒适范围"],
-    ["overwhelming", "无法抗拒的；巨大的；压倒性的"],
-    ["homesickness", "思乡病；乡愁"],
-    ["motivated", "积极的；主动的"],
-    ["motivation", "动力；积极性；动机"],
-    ["motivate", "成为……的动机；激发；激励"],
-    ["adviser", "顾问"],
-    ["reasonable", "有道理的；合情理的"],
-    ["expectation", "期望；预期；期待"],
-    ["applicant", "申请人"],
-    ["firm", "商行；公司；事务所（n.）；结实的；牢固的；坚定的（adj.）"],
-    ["exposure", "接触；体验；暴露；揭露"],
-    ["expose", "使体验；使暴露；使接触（险境）"],
-    ["insight", "洞察力；眼光"],
-    ["departure", "离开；启程；出发"],
-    ["setting", "环境；背景；（小说等的）情节背景"],
-    ["grasp", "理解；领会；抓紧"],
-    ["dramatic", "巨大的；突然的；急剧的；戏剧（般）的"],
-    ["expense", "费用；花费；开销"],
-    ["cost an arm and a leg", "（俚语）花一大笔钱"],
-    ["tremendous", "巨大的；极大的"],
-    ["behave", "表现；表现得体；有礼貌"],
-    ["surroundings", "环境；周围的事物"],
-    ["surrounding", "周围的；附近的"],
-    ["mature", "成熟的"],
-    ["depressed", "沮丧的；意志消沉的"],
-    ["depress", "使沮丧；使忧愁"],
-    ["boom", "迅速发展；繁荣"],
-    ["strengthen", "加强；增强；巩固"],
-    ["deny", "否认；否定；拒绝"],
-    ["optimistic", "乐观的"],
-    ["gain", "获得；赢得；取得；增加（v.）；好处；增加（n.）"],
-    ["perspective", "（思考问题的）角度；观点"],
-    ["competence", "能力；胜任；本领"],
-    ["competent", "有能力的；称职的"],
-    ["envoy", "使者；使节；代表"],
-    ["cooperate", "合作；协作；配合"],
-    ["angle", "角度；立场"],
-    ["outlook", "前景；可能性；观点"],
-    ["belt", "腰带；地带"],
-    ["initiative", "倡议；新方案"],
-    ["sincerely", "真诚地；诚实地"],
-    ["budget", "预算"],
-    ["side with", "站在……一边"],
-    ["logical", "合乎逻辑的；合情合理的"],
-    ["as far as I know", "据我所知"],
-    ["as far as I am concerned", "就我而言；依我看来"],
-    ["in summary", "总的来说；总之"],
-    ["generally speaking", "一般来说"],
-    ["outcome", "结果；效果"],
-    ["Rome", "罗马（意大利首都）；罗马城；罗马帝国"],
-    ["Aisha", "艾莎"],
-    ["the Belt and Road Initiative", "“一带一路”倡议"]
+    [
+      "complex",
+      "复杂的；难懂的；（语法）复合的"
+    ],
+    [
+      "recall",
+      "记起；回想起"
+    ],
+    [
+      "qualification",
+      "（通过考试或学习课程取得的）资格；学历"
+    ],
+    [
+      "qualify",
+      "（使）具备资格；（使）合格"
+    ],
+    [
+      "ambition",
+      "追求的目标；夙愿；野心；抱负"
+    ],
+    [
+      "ambitious",
+      "有野心的；有雄心的"
+    ],
+    [
+      "adaptation",
+      "适应；改编本"
+    ],
+    [
+      "comfort",
+      "安慰；令人感到安慰的人或事物；舒服；安逸（n.）；安慰；抚慰（v.）"
+    ],
+    [
+      "tutor",
+      "（英国大学中的）助教；导师；家庭教师"
+    ],
+    [
+      "cite",
+      "引用；引述"
+    ],
+    [
+      "participation",
+      "参加；参与"
+    ],
+    [
+      "participate",
+      "参加；参与"
+    ],
+    [
+      "participate in",
+      "参加；参与"
+    ],
+    [
+      "presentation",
+      "报告；陈述；出示；拿出"
+    ],
+    [
+      "speak up",
+      "大声点说；明确表态"
+    ],
+    [
+      "feel at home",
+      "舒服自在；不拘束"
+    ],
+    [
+      "engage",
+      "参加；参与（活动）（vi.）；吸引（注意力、兴趣）（vt.）"
+    ],
+    [
+      "engage in",
+      "（使）从事；参加"
+    ],
+    [
+      "involve",
+      "包含；需要；涉及；影响；（使）参加"
+    ],
+    [
+      "get involved in",
+      "参与；卷入；与……有关联"
+    ],
+    [
+      "messenger",
+      "送信人；信使"
+    ],
+    [
+      "edition",
+      "（报纸、杂志）一份；（广播、电视节目）一期、一辑；版次"
+    ],
+    [
+      "culture shock",
+      "文化冲击"
+    ],
+    [
+      "zone",
+      "（有特殊用途的）地区；地带；区域"
+    ],
+    [
+      "comfort zone",
+      "舒适区；舒适范围"
+    ],
+    [
+      "overwhelming",
+      "无法抗拒的；巨大的；压倒性的"
+    ],
+    [
+      "homesickness",
+      "思乡病；乡愁"
+    ],
+    [
+      "motivated",
+      "积极的；主动的"
+    ],
+    [
+      "motivation",
+      "动力；积极性；动机"
+    ],
+    [
+      "motivate",
+      "成为……的动机；激发；激励"
+    ],
+    [
+      "adviser",
+      "顾问"
+    ],
+    [
+      "reasonable",
+      "有道理的；合情理的"
+    ],
+    [
+      "expectation",
+      "期望；预期；期待"
+    ],
+    [
+      "applicant",
+      "申请人"
+    ],
+    [
+      "firm",
+      "商行；公司；事务所（n.）；结实的；牢固的；坚定的（adj.）"
+    ],
+    [
+      "exposure",
+      "接触；体验；暴露；揭露"
+    ],
+    [
+      "expose",
+      "使体验；使暴露；使接触（险境）"
+    ],
+    [
+      "insight",
+      "洞察力；眼光"
+    ],
+    [
+      "departure",
+      "离开；启程；出发"
+    ],
+    [
+      "setting",
+      "环境；背景；（小说等的）情节背景"
+    ],
+    [
+      "grasp",
+      "理解；领会；抓紧"
+    ],
+    [
+      "dramatic",
+      "巨大的；突然的；急剧的；戏剧（般）的"
+    ],
+    [
+      "expense",
+      "费用；花费；开销"
+    ],
+    [
+      "cost an arm and a leg",
+      "（俚语）花一大笔钱"
+    ],
+    [
+      "tremendous",
+      "巨大的；极大的"
+    ],
+    [
+      "behave",
+      "表现；表现得体；有礼貌"
+    ],
+    [
+      "surroundings",
+      "环境；周围的事物"
+    ],
+    [
+      "surrounding",
+      "周围的；附近的"
+    ],
+    [
+      "mature",
+      "成熟的"
+    ],
+    [
+      "depressed",
+      "沮丧的；意志消沉的"
+    ],
+    [
+      "depress",
+      "使沮丧；使忧愁"
+    ],
+    [
+      "boom",
+      "迅速发展；繁荣"
+    ],
+    [
+      "strengthen",
+      "加强；增强；巩固"
+    ],
+    [
+      "deny",
+      "否认；否定；拒绝"
+    ],
+    [
+      "optimistic",
+      "乐观的"
+    ],
+    [
+      "gain",
+      "获得；赢得；取得；增加（v.）；好处；增加（n.）"
+    ],
+    [
+      "perspective",
+      "（思考问题的）角度；观点"
+    ],
+    [
+      "competence",
+      "能力；胜任；本领"
+    ],
+    [
+      "competent",
+      "有能力的；称职的"
+    ],
+    [
+      "envoy",
+      "使者；使节；代表"
+    ],
+    [
+      "cooperate",
+      "合作；协作；配合"
+    ],
+    [
+      "angle",
+      "角度；立场"
+    ],
+    [
+      "outlook",
+      "前景；可能性；观点"
+    ],
+    [
+      "belt",
+      "腰带；地带"
+    ],
+    [
+      "initiative",
+      "倡议；新方案"
+    ],
+    [
+      "sincerely",
+      "真诚地；诚实地"
+    ],
+    [
+      "budget",
+      "预算"
+    ],
+    [
+      "side with",
+      "站在……一边"
+    ],
+    [
+      "logical",
+      "合乎逻辑的；合情合理的"
+    ],
+    [
+      "as far as I know",
+      "据我所知"
+    ],
+    [
+      "as far as I am concerned",
+      "就我而言；依我看来"
+    ],
+    [
+      "in summary",
+      "总的来说；总之"
+    ],
+    [
+      "generally speaking",
+      "一般来说"
+    ],
+    [
+      "outcome",
+      "结果；效果"
+    ],
+    [
+      "Rome",
+      "罗马（意大利首都）；罗马城；罗马帝国"
+    ],
+    [
+      "Aisha",
+      "艾莎"
+    ],
+    [
+      "the Belt and Road Initiative",
+      "“一带一路”倡议"
+    ]
+  ],
+  "chunks": [
+    [
+      "participate in",
+      "参加；参与",
+      "prep",
+      "participate ____ the activity",
+      "in",
+      null
+    ],
+    [
+      "speak up",
+      "大声点说；明确表态",
+      "phr",
+      "Please speak ____.",
+      "up",
+      null
+    ],
+    [
+      "feel at home",
+      "舒服自在；不拘束",
+      "coll",
+      "feel ____ home in the new place",
+      "at",
+      [
+        "feel",
+        "at",
+        "home"
+      ]
+    ],
+    [
+      "engage in",
+      "从事；参加",
+      "prep",
+      "engage ____ the project",
+      "in",
+      null
+    ],
+    [
+      "get involved in",
+      "参与；卷入",
+      "prep",
+      "get involved ____ the event",
+      "in",
+      null
+    ],
+    [
+      "culture shock",
+      "文化冲击",
+      "coll",
+      "experience culture ____（经历文化冲击）",
+      "shock",
+      [
+        "culture",
+        "shock"
+      ]
+    ],
+    [
+      "comfort zone",
+      "舒适区",
+      "coll",
+      "step out of your ____ zone",
+      "comfort",
+      [
+        "comfort",
+        "zone"
+      ]
+    ],
+    [
+      "be qualified for",
+      "有资格",
+      "prep",
+      "be qualified ____ the job",
+      "for",
+      null
+    ],
+    [
+      "be adapted to",
+      "适应",
+      "prep",
+      "be adapted ____ the new life",
+      "to",
+      null
+    ],
+    [
+      "be exposed to",
+      "接触；暴露于",
+      "prep",
+      "be exposed ____ different cultures",
+      "to",
+      null
+    ],
+    [
+      "be surrounded by",
+      "被……包围",
+      "prep",
+      "be surrounded ____ friends",
+      "by",
+      null
+    ],
+    [
+      "side with",
+      "站在……一边",
+      "phr",
+      "side ____ the majority",
+      "with",
+      null
+    ],
+    [
+      "as far as I know",
+      "据我所知",
+      "coll",
+      "As ____ as I know, he is right.",
+      "far",
+      [
+        "as",
+        "far",
+        "as",
+        "I",
+        "know"
+      ]
+    ],
+    [
+      "as far as I am concerned",
+      "就我而言",
+      "coll",
+      "As far as I am ____, it's fine.",
+      "concerned",
+      [
+        "as",
+        "far",
+        "as",
+        "I",
+        "am",
+        "concerned"
+      ]
+    ],
+    [
+      "in summary",
+      "总的来说；总之",
+      "coll",
+      "____ summary, it was a success.",
+      "In",
+      [
+        "in",
+        "summary"
+      ]
+    ]
   ]
 }

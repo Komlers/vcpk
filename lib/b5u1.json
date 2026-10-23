@@ -4,84 +4,458 @@
   "label": "选必二 U1",
   "name": "选必二U1单词",
   "words": [
-    ["cholera", "霍乱"],
-    ["severe", "极恶劣的；十分严重的；严厉的"],
-    ["diarrhoea", "腹泻"],
-    ["dehydration", "脱水"],
-    ["frustrated", "懊恼的；沮丧的；失意的"],
-    ["attend to", "照顾；照料；处理"],
-    ["once and for all", "最终地；彻底地"],
-    ["contradictory", "相互矛盾的；对立的；不一致的"],
-    ["infection", "感染；传染"],
-    ["infect", "使感染；传染"],
-    ["germ", "微生物；细菌；病菌"],
-    ["subscribe", "认购（股份）；定期订购；定期交纳（会费）"],
-    ["subscribe to", "同意；赞同"],
-    ["proof", "证明；证据"],
-    ["multiple", "数量多的；多种多样的"],
-    ["pump", "泵；抽水机；打气筒"],
-    ["water pump", "水泵"],
-    ["household", "一家人；家庭；同住一所（套）房子的人"],
-    ["suspect", "怀疑；疑有；不信任（v.）；犯罪嫌疑人（n.）"],
-    ["blame", "把……归咎于；责怪；指责（v.）；责备；指责（n.）"],
-    ["handle", "把手；拉手；柄（n.）；处理；搬动；操纵（v.）"],
-    ["intervention", "介入；出面；干涉"],
-    ["link", "联系；纽带（n.）；把……连接起来；相关联（v.）"],
-    ["raw", "未煮的；生的；未经处理的；原始的"],
-    ["pure", "干净的；纯的；纯粹的"],
-    ["substantial", "大量的；价值巨大的；重大的"],
-    ["decrease", "减少；降低；减少量"],
-    ["thanks to", "幸亏；由于"],
-    ["statistic", "统计数字；统计资料；统计学"],
-    ["transform", "使改观；使改变形态；改变；转变"],
-    ["epidemiology", "流行病学"],
-    ["microscope", "显微镜"],
-    ["thinking", "思想；思维；见解"],
-    ["protein", "蛋白质"],
-    ["cell", "细胞；小房间；单间牢房"],
-    ["virus", "病毒"],
-    ["finding", "发现；调查结果；（法律）判决"],
-    ["initial", "最初的；开始的；第一的"],
-    ["vaccine", "疫苗"],
-    ["framework", "框架；结构"],
-    ["theoretical framework", "理论框架"],
-    ["solid", "可靠的；固体的；坚实的（adj.）；固体（n.）"],
-    ["cast", "投射；向……投以（视线、笑容等）；投掷"],
-    ["shadow", "阴影；影子；背光处"],
-    ["rainbow", "彩虹"],
-    ["pour", "倒出；倾泻；斟（饮料）"],
-    ["concrete", "混凝土（n.）；混凝土制的；确实的；具体的（adj.）"],
-    ["plasma", "等离子体；血浆"],
-    ["aerospace", "航空航天工业"],
-    ["patriotic", "爱国的"],
-    ["mechanical", "机械的；机器的"],
-    ["mechanic", "机械师；机械修理工"],
-    ["break out", "（战争、打斗等不愉快的事情）突然开始；爆发"],
-    ["aggression", "侵略；挑衅"],
-    ["aviation", "航空业；航空；飞行"],
-    ["in charge of", "主管；掌管"],
-    ["missile", "导弹"],
-    ["leadership", "领导；领导地位；领导才能"],
-    ["trace", "追溯；追踪；查出（v.）；痕迹；遗迹；踪迹（n.）"],
-    ["outstanding", "优秀的；杰出的；明显的"],
-    ["gifted", "有天赋的；有天才的；天资聪慧的"],
-    ["come down with", "患（病）；染上（小病）"],
-    ["abstract", "抽象的；理性的（adj.）；（文章等的）摘要（n.）"],
-    ["steady", "稳定的；平稳的；稳步的"],
-    ["concept", "概念；观念"],
-    ["astronomer", "天文学家"],
-    ["besides", "除……之外（还）（prep.）；而且；此外（adv.）"],
-    ["furthermore", "此外；再者"],
-    ["above all", "最重要的是；尤其是"],
-    ["fault", "弱点；过错"],
-    ["shift", "转移；移动；转向"],
-    ["vivid", "生动的；鲜明的；丰富的"],
-    ["Queen Victoria", "维多利亚女王（英国女王）"],
-    ["Cambridge", "剑桥（英国城市）"],
-    ["non-Newtonian fluid", "非牛顿流体"],
-    ["the Jet Propulsion Laboratory", "喷气推进实验室（美国）"],
-    ["Stephen Hawking", "史蒂芬·霍金（英国物理学家）"],
-    ["the big bang theory", "大爆炸宇宙论"],
-    ["Fred Hoyle", "弗雷德·霍伊尔（英国天文学家）"]
+    [
+      "cholera",
+      "霍乱"
+    ],
+    [
+      "severe",
+      "极恶劣的；十分严重的；严厉的"
+    ],
+    [
+      "diarrhoea",
+      "腹泻"
+    ],
+    [
+      "dehydration",
+      "脱水"
+    ],
+    [
+      "frustrated",
+      "懊恼的；沮丧的；失意的"
+    ],
+    [
+      "attend to",
+      "照顾；照料；处理"
+    ],
+    [
+      "once and for all",
+      "最终地；彻底地"
+    ],
+    [
+      "contradictory",
+      "相互矛盾的；对立的；不一致的"
+    ],
+    [
+      "infection",
+      "感染；传染"
+    ],
+    [
+      "infect",
+      "使感染；传染"
+    ],
+    [
+      "germ",
+      "微生物；细菌；病菌"
+    ],
+    [
+      "subscribe",
+      "认购（股份）；定期订购；定期交纳（会费）"
+    ],
+    [
+      "subscribe to",
+      "同意；赞同"
+    ],
+    [
+      "proof",
+      "证明；证据"
+    ],
+    [
+      "multiple",
+      "数量多的；多种多样的"
+    ],
+    [
+      "pump",
+      "泵；抽水机；打气筒"
+    ],
+    [
+      "water pump",
+      "水泵"
+    ],
+    [
+      "household",
+      "一家人；家庭；同住一所（套）房子的人"
+    ],
+    [
+      "suspect",
+      "怀疑；疑有；不信任（v.）；犯罪嫌疑人（n.）"
+    ],
+    [
+      "blame",
+      "把……归咎于；责怪；指责（v.）；责备；指责（n.）"
+    ],
+    [
+      "handle",
+      "把手；拉手；柄（n.）；处理；搬动；操纵（v.）"
+    ],
+    [
+      "intervention",
+      "介入；出面；干涉"
+    ],
+    [
+      "link",
+      "联系；纽带（n.）；把……连接起来；相关联（v.）"
+    ],
+    [
+      "raw",
+      "未煮的；生的；未经处理的；原始的"
+    ],
+    [
+      "pure",
+      "干净的；纯的；纯粹的"
+    ],
+    [
+      "substantial",
+      "大量的；价值巨大的；重大的"
+    ],
+    [
+      "decrease",
+      "减少；降低；减少量"
+    ],
+    [
+      "thanks to",
+      "幸亏；由于"
+    ],
+    [
+      "statistic",
+      "统计数字；统计资料；统计学"
+    ],
+    [
+      "transform",
+      "使改观；使改变形态；改变；转变"
+    ],
+    [
+      "epidemiology",
+      "流行病学"
+    ],
+    [
+      "microscope",
+      "显微镜"
+    ],
+    [
+      "thinking",
+      "思想；思维；见解"
+    ],
+    [
+      "protein",
+      "蛋白质"
+    ],
+    [
+      "cell",
+      "细胞；小房间；单间牢房"
+    ],
+    [
+      "virus",
+      "病毒"
+    ],
+    [
+      "finding",
+      "发现；调查结果；（法律）判决"
+    ],
+    [
+      "initial",
+      "最初的；开始的；第一的"
+    ],
+    [
+      "vaccine",
+      "疫苗"
+    ],
+    [
+      "framework",
+      "框架；结构"
+    ],
+    [
+      "theoretical framework",
+      "理论框架"
+    ],
+    [
+      "solid",
+      "可靠的；固体的；坚实的（adj.）；固体（n.）"
+    ],
+    [
+      "cast",
+      "投射；向……投以（视线、笑容等）；投掷"
+    ],
+    [
+      "shadow",
+      "阴影；影子；背光处"
+    ],
+    [
+      "rainbow",
+      "彩虹"
+    ],
+    [
+      "pour",
+      "倒出；倾泻；斟（饮料）"
+    ],
+    [
+      "concrete",
+      "混凝土（n.）；混凝土制的；确实的；具体的（adj.）"
+    ],
+    [
+      "plasma",
+      "等离子体；血浆"
+    ],
+    [
+      "aerospace",
+      "航空航天工业"
+    ],
+    [
+      "patriotic",
+      "爱国的"
+    ],
+    [
+      "mechanical",
+      "机械的；机器的"
+    ],
+    [
+      "mechanic",
+      "机械师；机械修理工"
+    ],
+    [
+      "break out",
+      "（战争、打斗等不愉快的事情）突然开始；爆发"
+    ],
+    [
+      "aggression",
+      "侵略；挑衅"
+    ],
+    [
+      "aviation",
+      "航空业；航空；飞行"
+    ],
+    [
+      "in charge of",
+      "主管；掌管"
+    ],
+    [
+      "missile",
+      "导弹"
+    ],
+    [
+      "leadership",
+      "领导；领导地位；领导才能"
+    ],
+    [
+      "trace",
+      "追溯；追踪；查出（v.）；痕迹；遗迹；踪迹（n.）"
+    ],
+    [
+      "outstanding",
+      "优秀的；杰出的；明显的"
+    ],
+    [
+      "gifted",
+      "有天赋的；有天才的；天资聪慧的"
+    ],
+    [
+      "come down with",
+      "患（病）；染上（小病）"
+    ],
+    [
+      "abstract",
+      "抽象的；理性的（adj.）；（文章等的）摘要（n.）"
+    ],
+    [
+      "steady",
+      "稳定的；平稳的；稳步的"
+    ],
+    [
+      "concept",
+      "概念；观念"
+    ],
+    [
+      "astronomer",
+      "天文学家"
+    ],
+    [
+      "besides",
+      "除……之外（还）（prep.）；而且；此外（adv.）"
+    ],
+    [
+      "furthermore",
+      "此外；再者"
+    ],
+    [
+      "above all",
+      "最重要的是；尤其是"
+    ],
+    [
+      "fault",
+      "弱点；过错"
+    ],
+    [
+      "shift",
+      "转移；移动；转向"
+    ],
+    [
+      "vivid",
+      "生动的；鲜明的；丰富的"
+    ],
+    [
+      "Queen Victoria",
+      "维多利亚女王（英国女王）"
+    ],
+    [
+      "Cambridge",
+      "剑桥（英国城市）"
+    ],
+    [
+      "non-Newtonian fluid",
+      "非牛顿流体"
+    ],
+    [
+      "the Jet Propulsion Laboratory",
+      "喷气推进实验室（美国）"
+    ],
+    [
+      "Stephen Hawking",
+      "史蒂芬·霍金（英国物理学家）"
+    ],
+    [
+      "the big bang theory",
+      "大爆炸宇宙论"
+    ],
+    [
+      "Fred Hoyle",
+      "弗雷德·霍伊尔（英国天文学家）"
+    ]
+  ],
+  "chunks": [
+    [
+      "attend to",
+      "照顾；照料；处理",
+      "prep",
+      "attend ____ the patient",
+      "to",
+      null
+    ],
+    [
+      "once and for all",
+      "最终地；彻底地",
+      "coll",
+      "solve the problem once and ____ all",
+      "for",
+      [
+        "once",
+        "and",
+        "for",
+        "all"
+      ]
+    ],
+    [
+      "subscribe to",
+      "同意；赞同；订阅",
+      "prep",
+      "subscribe ____ the view",
+      "to",
+      null
+    ],
+    [
+      "thanks to",
+      "幸亏；由于",
+      "prep",
+      "thanks ____ your help",
+      "to",
+      null
+    ],
+    [
+      "break out",
+      "（战争、疾病）爆发",
+      "phr",
+      "A fire broke ____ last night.",
+      "out",
+      [
+        "break",
+        "out"
+      ]
+    ],
+    [
+      "in charge of",
+      "主管；掌管",
+      "prep",
+      "be ____ charge of the project",
+      "in",
+      [
+        "in",
+        "charge",
+        "of"
+      ]
+    ],
+    [
+      "come down with",
+      "患（病）；染上",
+      "phr",
+      "come ____ with a cold",
+      "down",
+      null
+    ],
+    [
+      "be infected with",
+      "感染",
+      "prep",
+      "be infected ____ the virus",
+      "with",
+      null
+    ],
+    [
+      "be linked to",
+      "与……有关联",
+      "prep",
+      "be linked ____ the disease",
+      "to",
+      null
+    ],
+    [
+      "be to blame",
+      "应受责备",
+      "phr",
+      "be ____ blame for the accident",
+      "to",
+      null
+    ],
+    [
+      "be frustrated at",
+      "对……感到沮丧",
+      "prep",
+      "be frustrated ____ the result",
+      "at",
+      null
+    ],
+    [
+      "be contradictory to",
+      "与……矛盾",
+      "prep",
+      "be contradictory ____ the facts",
+      "to",
+      null
+    ],
+    [
+      "above all",
+      "最重要的是；尤其是",
+      "coll",
+      "Above ____, stay calm.",
+      "all",
+      [
+        "above",
+        "all"
+      ]
+    ],
+    [
+      "be gifted in",
+      "在……方面有天赋",
+      "prep",
+      "be gifted ____ music",
+      "in",
+      null
+    ],
+    [
+      "be severe with",
+      "对……严厉",
+      "prep",
+      "be severe ____ the students",
+      "with",
+      null
+    ]
   ]
 }
