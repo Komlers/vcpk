@@ -1,0 +1,14 @@
+{
+  "name": "我的自定义词库",
+  "title": "我的自定义词库",
+  "words": [
+    ["abandon", "抛弃；放弃"],
+    ["ability", "能力；才能"],
+    ["absent", "缺席的；心不在焉的"]
+  ],
+  "chunks": [
+    ["be able to", "能够", "phr", "be ____ to solve the problem", "able", null],
+    ["be about to", "即将；正要", "phr", "be ____ to leave", "about", null],
+    ["be absent from", "缺席", "prep", "be absent ____ the meeting", "from", null]
+  ]
+}
