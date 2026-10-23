@@ -233,15 +233,19 @@ function restoreCfg(){
   /* 先按当前班级重置，避免沿用上一个班级的词库/时长 */
   S.units = [];
   S.dur = 60;
+  S.wordsOnly = false;
   try{
     const c = JSON.parse(localStorage.getItem("vpk_cfg_" + S.cls));
     if(c){
       if(Array.isArray(c.units) && c.units.length) S.units = c.units.filter(t => LIB_INFO[t]);
       if(c.dur) S.dur = c.dur;
+      if(c.wordsOnly !== undefined) S.wordsOnly = !!c.wordsOnly;
     }
   }catch(e){}
-  /* 首次使用不默认勾选任何词库，由用户手动选择 */
-  S.useChunks = S.units.includes("U2");
+  /* 首次使用不默认勾选任何词库，由用户手动选择；
+     勾选「只加载纯单词」时强制不使用词块 */
+  S.useChunks = !S.wordsOnly && S.units.includes("U2");
+  $("wordsOnlyChk").checked = S.wordsOnly;
   updateDurBtn();
   updateLibBtn();
 }

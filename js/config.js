@@ -39,7 +39,7 @@ let CHUNK_ENS = new Set();  /* 词块英文集合（避免词块与同名单词�
 const $ = id => document.getElementById(id);
 let S = {
   cls:"", p1:"红方选手", p2:"蓝方选手",
-  units:[], useChunks:false, dur:60, mode:"mix",
+  units:[], useChunks:false, dur:60, wordsOnly:false, mode:"mix",
   pool:[], qi:0, round:1, scores:[0,0], streak:[0,0], maxStreak:[0,0],
   locked:[false,false], timer:null, left:0, pendingNext:false,
   wrongSet:new Set(), revival:false, basePoints:10, curQ:null, reviewList:[]

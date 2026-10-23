@@ -316,6 +316,11 @@
   .libDel:hover{background:var(--red);color:#fff;}
   .importLibRow{display:flex;align-items:center;gap:16px;margin-top:18px;flex-wrap:wrap;}
 
+  /* 只加载纯单词复选框 */
+  .wordsOnlyLabel{display:flex;align-items:center;gap:12px;margin-top:16px;
+                  font-size:23px;color:var(--ink2);cursor:pointer;user-select:none;}
+  .wordsOnlyLabel input{width:22px;height:22px;cursor:pointer;accent-color:var(--blue);}
+
   /* ============ 限时滚轮 ============ */
   .card.center{display:flex;flex-direction:column;align-items:center;}
   .timerPicker{display:flex;align-items:center;gap:20px;margin:16px 0 8px;}

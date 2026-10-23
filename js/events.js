@@ -164,11 +164,19 @@ $("libFile").addEventListener("change", e=>{
 $("libConfirm").addEventListener("click", ()=>{
   if(!tempUnits.length){ alert("请至少选择一个词库！"); return; }
   S.units = tempUnits;
-  S.useChunks = S.units.includes("U2");
+  S.useChunks = !S.wordsOnly && S.units.includes("U2");
   saveCfg();
   updateLibBtn();
   planInfo();
   $("libModal").classList.add("hidden");
+});
+
+/* ================== 只加载纯单词 ================== */
+$("wordsOnlyChk").addEventListener("change", e=>{
+  S.wordsOnly = e.target.checked;
+  S.useChunks = !S.wordsOnly && S.units.includes("U2");
+  saveCfg();
+  planInfo();
 });
 
 /* ================== 规则介绍弹窗 ================== */
@@ -192,7 +200,7 @@ $("hisModal").addEventListener("click", e=>{
 $("startBtn").addEventListener("click", ()=>{
   if(!redName || !blueName){ alert("请先抽取（或手输）红蓝双方选手！"); return; }
   if(!S.units.length){ alert("请先选择词库！"); return; }
-  S.useChunks = S.units.includes("U2");
+  S.useChunks = !S.wordsOnly && S.units.includes("U2");
   saveCfg();
   S.p1 = redName; S.p2 = blueName;
   /* 未全屏则自动进入全屏，保证对战体验 */
