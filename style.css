@@ -316,6 +316,25 @@
   .libDel:hover{background:var(--red);color:#fff;}
   .importLibRow{display:flex;align-items:center;gap:16px;margin-top:18px;flex-wrap:wrap;}
 
+  /* ============ 词库选项卡 ============ */
+  .libTabs{display:flex;gap:8px;margin-bottom:18px;border-bottom:2px solid var(--line);}
+  .libTab{padding:12px 28px;font-size:22px;font-weight:700;border:none;background:transparent;
+          color:var(--muted);cursor:pointer;border-radius:12px 12px 0 0;
+          border-bottom:3px solid transparent;transition:all .15s;margin-bottom:-2px;}
+  .libTab:hover{color:var(--blue);background:var(--blue-bg);}
+  .libTab.active{color:var(--blue);border-bottom-color:var(--blue);}
+  .libTabPanel{max-height:60vh;overflow-y:auto;padding-right:6px;}
+
+  /* ============ 内置词库按册分组 ============ */
+  .libGroup{margin-bottom:22px;}
+  .libGroup:last-child{margin-bottom:0;}
+  .libGroupTitle{font-size:21px;font-weight:800;color:var(--ink);
+                 padding:6px 14px;margin-bottom:12px;
+                 border-left:5px solid var(--blue);
+                 background:linear-gradient(90deg,var(--blue-bg),transparent);
+                 border-radius:0 8px 8px 0;}
+  .libGroup .libChips{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
+
   /* 只加载纯单词复选框 */
   .wordsOnlyLabel{display:flex;align-items:center;gap:12px;margin-top:16px;
                   font-size:23px;color:var(--ink2);cursor:pointer;user-select:none;}

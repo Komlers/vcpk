@@ -181,37 +181,68 @@ function renderPickGrid(){
 }
 
 /* ================== 词库弹窗与限时 ================== */
+/* 创建一个词库 chip（含选中状态和删除按钮） */
+function createLibChip(tag, file, displayText){
+  const chip = document.createElement("div");
+  chip.className = "libChip" + (tempUnits.includes(tag) ? " on" : "");
+  chip.dataset.tag = tag;
+  chip.textContent = displayText || file;
+  if(file === "custom"){
+    chip.classList.add("customLib");
+    const del = document.createElement("span");
+    del.className = "libDel";
+    del.textContent = "×";
+    del.title = "删除此自定义词库";
+    del.addEventListener("click", e=>{
+      e.stopPropagation();
+      if(!confirm("确定删除自定义词库「" + (LIB_INFO[tag]?.name || tag) + "」吗？此操作不可恢复。")) return;
+      deleteCustomLib(tag);
+      tempUnits = tempUnits.filter(t => t !== tag);
+      renderLibChips();
+    });
+    chip.appendChild(del);
+  }
+  return chip;
+}
+
 function renderLibChips(){
-  const box = $("libChips");
-  box.innerHTML = "";
-  WORD_BANK_FILES.forEach(({file, tag}) => {
-    const chip = document.createElement("div");
-    chip.className = "libChip" + (tempUnits.includes(tag) ? " on" : "");
-    chip.dataset.tag = tag;
-    const info = LIB_INFO[tag];
-    if(info){
-      chip.textContent = info.label ? (info.label + " - " + info.name) : info.name;
-    }else{
-      chip.textContent = file;
-    }
-    /* 自定义词库：右上角显示删除按钮 */
-    if(file === "custom"){
-      chip.classList.add("customLib");
-      const del = document.createElement("span");
-      del.className = "libDel";
-      del.textContent = "×";
-      del.title = "删除此自定义词库";
-      del.addEventListener("click", e=>{
-        e.stopPropagation();
-        if(!confirm("确定删除自定义词库「" + (LIB_INFO[tag]?.name || tag) + "」吗？此操作不可恢复。")) return;
-        deleteCustomLib(tag);
-        tempUnits = tempUnits.filter(t => t !== tag);
-        renderLibChips();
-      });
-      chip.appendChild(del);
-    }
-    box.appendChild(chip);
+  /* ===== 内置词库：按册分组 ===== */
+  const groupsBox = $("builtinGroups");
+  groupsBox.innerHTML = "";
+  const bookNames = { b1:"必修1", b2:"必修2", b3:"必修3", b4:"选必1", b5:"选必2" };
+  const builtin = WORD_BANK_FILES.filter(x => x.file !== "custom");
+  ["b1","b2","b3","b4","b5"].forEach(bk => {
+    const items = builtin.filter(x => x.file.startsWith(bk));
+    if(!items.length) return;
+    const group = document.createElement("div");
+    group.className = "libGroup";
+    const heading = document.createElement("div");
+    heading.className = "libGroupTitle";
+    heading.textContent = bookNames[bk];
+    group.appendChild(heading);
+    const chipsBox = document.createElement("div");
+    chipsBox.className = "libChips";
+    items.forEach(({file, tag}) => {
+      const info = LIB_INFO[tag];
+      const uNum = "U" + file.replace(/^b\d+u/, "");
+      const text = info ? (uNum + " - " + info.name) : file;
+      chipsBox.appendChild(createLibChip(tag, file, text));
+    });
+    group.appendChild(chipsBox);
+    groupsBox.appendChild(group);
   });
+  /* ===== 自定义词库 ===== */
+  const customBox = $("customChips");
+  customBox.innerHTML = "";
+  const custom = WORD_BANK_FILES.filter(x => x.file === "custom");
+  if(!custom.length){
+    customBox.innerHTML = '<div style="color:#999;font-size:18px;padding:24px 0;text-align:center">暂无自定义词库，点击上方按钮导入</div>';
+  }else{
+    custom.forEach(({file, tag}) => {
+      const info = LIB_INFO[tag];
+      customBox.appendChild(createLibChip(tag, file, info ? info.name : tag));
+    });
+  }
   $("libHint").textContent = tempUnits.length === 0 ? "未选择词库（请至少选一个）"
     : (tempUnits.length === 1 ? "当前单词库" : "当前多词库（已选 " + tempUnits.length + " 个）");
 }

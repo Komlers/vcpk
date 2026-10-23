@@ -126,13 +126,27 @@ $("clearBtn").addEventListener("click", ()=>{
 $("openLibModal").addEventListener("click", ()=>{
   tempUnits = S.units.slice();
   renderLibChips();
+  /* 每次打开默认显示内置词库选项卡 */
+  switchLibTab("builtin");
   $("libModal").classList.remove("hidden");
 });
 $("libCancel").addEventListener("click", ()=>$("libModal").classList.add("hidden"));
 $("libModal").addEventListener("click", e=>{
   if(e.target.classList.contains("modalMask")) $("libModal").classList.add("hidden");
 });
-$("libChips").addEventListener("click", e=>{
+
+/* ================== 词库选项卡切换 ================== */
+function switchLibTab(name){
+  document.querySelectorAll(".libTab").forEach(t => t.classList.toggle("active", t.dataset.tab === name));
+  $("builtinPanel").classList.toggle("hidden", name !== "builtin");
+  $("customPanel").classList.toggle("hidden", name !== "custom");
+}
+document.querySelectorAll(".libTab").forEach(tab => {
+  tab.addEventListener("click", () => switchLibTab(tab.dataset.tab));
+});
+
+/* chip 点击（事件委托到整个弹窗，覆盖内置和自定义两个面板） */
+$("libModal").addEventListener("click", e=>{
   const chip = e.target.closest(".libChip");
   if(!chip) return;
   const tag = chip.dataset.tag;

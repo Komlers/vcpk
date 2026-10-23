@@ -84,10 +84,22 @@
   <div class="modalMask"></div>
   <div class="modalBox">
     <h3>选择题库<span class="hint" id="libHint">点击切换选中，支持多选</span></h3>
-    <div class="libChips" id="libChips"></div>
-    <div class="importLibRow">
-      <button class="drawBtn" id="importLibBtn" style="font-size:22px;padding:12px 24px">📥 导入本地词库（JSON）</button>
-      <input type="file" id="libFile" accept=".json,application/json" style="display:none">
+    <!-- 选项卡切换 -->
+    <div class="libTabs">
+      <button class="libTab active" data-tab="builtin">📚 内置词库</button>
+      <button class="libTab" data-tab="custom">📥 自定义词库</button>
+    </div>
+    <!-- 内置词库面板（按册分组） -->
+    <div class="libTabPanel" id="builtinPanel">
+      <div class="libGroups" id="builtinGroups"></div>
+    </div>
+    <!-- 自定义词库面板 -->
+    <div class="libTabPanel hidden" id="customPanel">
+      <div class="importLibRow">
+        <button class="drawBtn" id="importLibBtn" style="font-size:20px;padding:10px 20px">📥 导入本地词库（JSON）</button>
+        <input type="file" id="libFile" accept=".json,application/json" style="display:none">
+      </div>
+      <div class="libChips" id="customChips" style="margin-top:16px"></div>
     </div>
     <div class="btnRow" style="margin-top:20px">
       <button class="drawBtn" id="libCancel">取消</button>
