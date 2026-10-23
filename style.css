@@ -265,6 +265,11 @@
   .modalBox{position:relative;background:#fff;border-radius:22px;padding:28px 30px;
             max-width:720px;width:92%;max-height:82vh;overflow-y:auto;
             box-shadow:0 20px 60px rgba(28,39,72,.25);}
+  /* 弹窗内部隐藏滚动条（保留滚动功能），圆角完整显示 */
+  .modalBox::-webkit-scrollbar,
+  .libTabPanel::-webkit-scrollbar,
+  .pickGrid::-webkit-scrollbar{width:0;height:0;}
+  .modalBox, .libTabPanel, .pickGrid{scrollbar-width:none;-ms-overflow-style:none;}
   .modalBox h3{font-size:27px;color:var(--ink2);font-weight:700;margin-bottom:18px;
                display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
   .modalBox h3 .hint{font-size:21px;font-weight:400;color:var(--muted2);margin-left:auto;}
@@ -323,7 +328,10 @@
           border-bottom:3px solid transparent;transition:all .15s;margin-bottom:-2px;}
   .libTab:hover{color:var(--blue);background:var(--blue-bg);}
   .libTab.active{color:var(--blue);border-bottom-color:var(--blue);}
-  .libTabPanel{max-height:60vh;overflow-y:auto;padding-right:6px;}
+  .libTabPanel{flex:1;min-height:0;overflow-y:auto;padding-right:6px;}
+  /* 词库弹窗：flex 列布局，标题/选项卡/按钮固定，中间面板自适应滚动 */
+  .libModalBox{display:flex;flex-direction:column;overflow:hidden;max-height:82vh;}
+  .libModalBox .btnRow{flex:none;}
 
   /* ============ 内置词库按册分组 ============ */
   .libGroup{margin-bottom:22px;}
