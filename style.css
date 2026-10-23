@@ -114,6 +114,12 @@
   .startBtn:hover{box-shadow:0 12px 32px rgba(74,127,224,.42);filter:brightness(1.03);}
   .startBtn:active{transform:scale(.985);}
 
+  /* 主界面底部版权 */
+  .mainFooter{text-align:center;font-size:15px;color:var(--muted2);
+              padding:18px 0 10px;user-select:none;}
+  .mainFooter a{color:var(--blue);text-decoration:none;font-weight:600;}
+  .mainFooter a:hover{text-decoration:underline;}
+
   /* 标题下功能按钮 */
   .heroBtns{display:flex;gap:16px;justify-content:center;margin-top:18px;}
   .heroBtn{padding:12px 28px;border-radius:14px;border:2px solid var(--line);
