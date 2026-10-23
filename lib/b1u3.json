@@ -1,0 +1,323 @@
+{
+  "book": "b1",
+  "unit": "u3",
+  "label": "必修一 U3",
+  "name": "必修一U3 Sports and Fitness",
+  "words": [
+    [
+      "fitness",
+      "健康；健身"
+    ],
+    [
+      "soccer",
+      "足球"
+    ],
+    [
+      "boxing",
+      "拳击"
+    ],
+    [
+      "badminton",
+      "羽毛球"
+    ],
+    [
+      "marathon",
+      "马拉松"
+    ],
+    [
+      "champion",
+      "冠军"
+    ],
+    [
+      "ski",
+      "滑雪"
+    ],
+    [
+      "host",
+      "主办；主人"
+    ],
+    [
+      "track",
+      "跑道；追踪"
+    ],
+    [
+      "track and field",
+      "田径"
+    ],
+    [
+      "gym",
+      "健身房"
+    ],
+    [
+      "gymnastics",
+      "体操"
+    ],
+    [
+      "sweat",
+      "汗水；出汗"
+    ],
+    [
+      "athlete",
+      "运动员"
+    ],
+    [
+      "master",
+      "大师；掌握"
+    ],
+    [
+      "honour",
+      "荣誉；尊敬"
+    ],
+    [
+      "glory",
+      "荣耀"
+    ],
+    [
+      "medal",
+      "奖牌"
+    ],
+    [
+      "championship",
+      "锦标赛"
+    ],
+    [
+      "audience",
+      "观众"
+    ],
+    [
+      "positive",
+      "积极的"
+    ],
+    [
+      "slim",
+      "苗条的"
+    ],
+    [
+      "diet",
+      "节食；饮食"
+    ],
+    [
+      "rather",
+      "相当"
+    ],
+    [
+      "rather than",
+      "而不是"
+    ],
+    [
+      "jog",
+      "慢跑"
+    ],
+    [
+      "stress",
+      "压力；强调"
+    ],
+    [
+      "error",
+      "错误"
+    ],
+    [
+      "determination",
+      "决心"
+    ],
+    [
+      "injure",
+      "使受伤"
+    ],
+    [
+      "injury",
+      "伤害"
+    ],
+    [
+      "captain",
+      "队长"
+    ],
+    [
+      "strength",
+      "力量"
+    ],
+    [
+      "failure",
+      "失败"
+    ],
+    [
+      "compete",
+      "竞争"
+    ],
+    [
+      "competition",
+      "比赛"
+    ],
+    [
+      "competitor",
+      "竞争者"
+    ],
+    [
+      "cheer",
+      "欢呼"
+    ],
+    [
+      "cheer up",
+      "振作起来"
+    ],
+    [
+      "work out",
+      "锻炼"
+    ],
+    [
+      "give up",
+      "放弃"
+    ],
+    [
+      "come along",
+      "一起来"
+    ],
+    [
+      "set an example",
+      "树立榜样"
+    ],
+    [
+      "be proud of",
+      "为……骄傲"
+    ],
+    [
+      "fall apart",
+      "崩溃；破裂"
+    ]
+  ],
+  "chunks": [
+    [
+      "work out",
+      "锻炼",
+      "phr",
+      "work ____ at the gym",
+      "out",
+      null
+    ],
+    [
+      "give up",
+      "放弃",
+      "phr",
+      "never give ____",
+      "up",
+      null
+    ],
+    [
+      "cheer up",
+      "振作起来",
+      "phr",
+      "cheer ____!",
+      "up",
+      null
+    ],
+    [
+      "fall apart",
+      "崩溃；破裂",
+      "phr",
+      "fall ____ under pressure",
+      "apart",
+      null
+    ],
+    [
+      "rather than",
+      "而不是",
+      "prep",
+      "choose tea rather ____ coffee",
+      "than",
+      null
+    ],
+    [
+      "be proud of",
+      "为……骄傲",
+      "prep",
+      "be proud ____ the team",
+      "of",
+      null
+    ],
+    [
+      "set an example",
+      "树立榜样",
+      "coll",
+      "set a good ____（树立好榜样）",
+      "example",
+      [
+        "set",
+        "an",
+        "example"
+      ]
+    ],
+    [
+      "track and field",
+      "田径",
+      "coll",
+      "track and ____ events（田径项目）",
+      "field",
+      [
+        "track",
+        "and",
+        "field"
+      ]
+    ],
+    [
+      "win a gold medal",
+      "赢得金牌",
+      "coll",
+      "win a gold ____（赢得金牌）",
+      "medal",
+      [
+        "win",
+        "a",
+        "gold",
+        "medal"
+      ]
+    ],
+    [
+      "be determined to",
+      "决心",
+      "phr",
+      "be determined ____ win",
+      "to",
+      null
+    ],
+    [
+      "come along",
+      "一起来",
+      "phr",
+      "come ____ with us",
+      "along",
+      null
+    ],
+    [
+      "be under stress",
+      "处于压力下",
+      "prep",
+      "be under ____（处于压力下）",
+      "stress",
+      null
+    ],
+    [
+      "compete against",
+      "与……竞争",
+      "prep",
+      "compete ____ each other",
+      "against",
+      null
+    ],
+    [
+      "build up strength",
+      "增强力量",
+      "phr",
+      "build up ____（增强力量）",
+      "strength",
+      null
+    ],
+    [
+      "cheer for",
+      "为……欢呼",
+      "prep",
+      "cheer ____ the champion",
+      "for",
+      null
+    ]
+  ]
+}

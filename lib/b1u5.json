@@ -1,0 +1,323 @@
+{
+  "book": "b1",
+  "unit": "u5",
+  "label": "必修一 U5",
+  "name": "必修一U5 Languages Around the World",
+  "words": [
+    [
+      "billion",
+      "十亿"
+    ],
+    [
+      "native",
+      "本地的；本族人"
+    ],
+    [
+      "attitude",
+      "态度"
+    ],
+    [
+      "reference",
+      "参考；查阅"
+    ],
+    [
+      "refer",
+      "提到；参考"
+    ],
+    [
+      "system",
+      "系统"
+    ],
+    [
+      "despite",
+      "尽管"
+    ],
+    [
+      "factor",
+      "因素"
+    ],
+    [
+      "symbol",
+      "符号；象征"
+    ],
+    [
+      "carve",
+      "雕刻"
+    ],
+    [
+      "dynasty",
+      "朝代"
+    ],
+    [
+      "civilisation",
+      "文明"
+    ],
+    [
+      "means",
+      "手段；方法"
+    ],
+    [
+      "classic",
+      "经典的；经典作品"
+    ],
+    [
+      "regard",
+      "把……视为"
+    ],
+    [
+      "character",
+      "文字；角色；性格"
+    ],
+    [
+      "handwriting",
+      "书写；书法"
+    ],
+    [
+      "appreciate",
+      "欣赏；感激"
+    ],
+    [
+      "specific",
+      "具体的；特定的"
+    ],
+    [
+      "struggle",
+      "挣扎；斗争"
+    ],
+    [
+      "global",
+      "全球的"
+    ],
+    [
+      "official",
+      "官方的"
+    ],
+    [
+      "fluent",
+      "流利的"
+    ],
+    [
+      "fluency",
+      "流利"
+    ],
+    [
+      "majority",
+      "大多数"
+    ],
+    [
+      "equal",
+      "平等的；等于"
+    ],
+    [
+      "communicate",
+      "交流"
+    ],
+    [
+      "communication",
+      "交流"
+    ],
+    [
+      "various",
+      "各种各样的"
+    ],
+    [
+      "variety",
+      "多样性"
+    ],
+    [
+      "origin",
+      "起源"
+    ],
+    [
+      "ancient",
+      "古代的"
+    ],
+    [
+      "date back",
+      "追溯到"
+    ],
+    [
+      "point of view",
+      "观点"
+    ],
+    [
+      "ups and downs",
+      "沉浮；兴衰"
+    ],
+    [
+      "refer to",
+      "指的是；参考"
+    ],
+    [
+      "regard ... as",
+      "把……视为"
+    ],
+    [
+      "be native to",
+      "原产于"
+    ],
+    [
+      "a variety of",
+      "各种各样的"
+    ],
+    [
+      "be based on",
+      "基于"
+    ],
+    [
+      "communicate with",
+      "与……交流"
+    ],
+    [
+      "date back to",
+      "追溯到"
+    ],
+    [
+      "no matter",
+      "无论"
+    ],
+    [
+      "be equal to",
+      "等于；胜任"
+    ]
+  ],
+  "chunks": [
+    [
+      "refer to",
+      "指的是；参考",
+      "prep",
+      "What does this refer ____?",
+      "to",
+      null
+    ],
+    [
+      "regard ... as",
+      "把……视为",
+      "prep",
+      "regard it ____ a treasure",
+      "as",
+      null
+    ],
+    [
+      "a variety of",
+      "各种各样的",
+      "coll",
+      "a variety ____ reasons",
+      "of",
+      null
+    ],
+    [
+      "be based on",
+      "基于",
+      "prep",
+      "be based ____ facts",
+      "on",
+      null
+    ],
+    [
+      "communicate with",
+      "与……交流",
+      "prep",
+      "communicate ____ foreigners",
+      "with",
+      null
+    ],
+    [
+      "date back to",
+      "追溯到",
+      "prep",
+      "date back ____ ancient times",
+      "to",
+      null
+    ],
+    [
+      "be equal to",
+      "等于；胜任",
+      "prep",
+      "be equal ____ the task",
+      "to",
+      null
+    ],
+    [
+      "ups and downs",
+      "沉浮；兴衰",
+      "coll",
+      "the ups and ____ of life",
+      "downs",
+      [
+        "ups",
+        "and",
+        "downs"
+      ]
+    ],
+    [
+      "a native speaker",
+      "母语者",
+      "coll",
+      "a native ____（母语者）",
+      "speaker",
+      [
+        "a",
+        "native",
+        "speaker"
+      ]
+    ],
+    [
+      "be fluent in",
+      "在……方面流利",
+      "prep",
+      "be fluent ____ Chinese",
+      "in",
+      null
+    ],
+    [
+      "the majority of",
+      "大多数",
+      "coll",
+      "the majority ____ people",
+      "of",
+      null
+    ],
+    [
+      "point of view",
+      "观点",
+      "coll",
+      "my point of ____（我的观点）",
+      "view",
+      [
+        "point",
+        "of",
+        "view"
+      ]
+    ],
+    [
+      "no matter how",
+      "无论多么",
+      "phr",
+      "no matter ____ hard",
+      "how",
+      null
+    ],
+    [
+      "be specific to",
+      "为……所特有",
+      "prep",
+      "be specific ____ this culture",
+      "to",
+      null
+    ],
+    [
+      "a means of communication",
+      "交流方式",
+      "coll",
+      "a means of ____（交流方式）",
+      "communication",
+      [
+        "a",
+        "means",
+        "of",
+        "communication"
+      ]
+    ]
+  ]
+}

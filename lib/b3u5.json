@@ -1,0 +1,335 @@
+{
+  "book": "b3",
+  "unit": "u5",
+  "label": "必修三 U5",
+  "name": "必修三U5 The Value of Money",
+  "words": [
+    [
+      "basis",
+      "基础；根据"
+    ],
+    [
+      "loan",
+      "贷款"
+    ],
+    [
+      "plastic",
+      "塑料的；塑料"
+    ],
+    [
+      "apologise",
+      "道歉"
+    ],
+    [
+      "ignore",
+      "忽视"
+    ],
+    [
+      "judge",
+      "判断；法官"
+    ],
+    [
+      "scene",
+      "场景"
+    ],
+    [
+      "narrator",
+      "叙述者"
+    ],
+    [
+      "narration",
+      "叙述"
+    ],
+    [
+      "bet",
+      "打赌；赌注"
+    ],
+    [
+      "servant",
+      "仆人"
+    ],
+    [
+      "sail",
+      "航行；帆船"
+    ],
+    [
+      "spot",
+      "发现；地点"
+    ],
+    [
+      "consulate",
+      "领事馆"
+    ],
+    [
+      "dare",
+      "胆敢"
+    ],
+    [
+      "sort",
+      "种类；整理"
+    ],
+    [
+      "mining",
+      "采矿"
+    ],
+    [
+      "patience",
+      "耐心"
+    ],
+    [
+      "rude",
+      "粗鲁的"
+    ],
+    [
+      "indeed",
+      "确实；真正地"
+    ],
+    [
+      "bow",
+      "鞠躬"
+    ],
+    [
+      "wealthy",
+      "富有的"
+    ],
+    [
+      "banknote",
+      "钞票"
+    ],
+    [
+      "poverty",
+      "贫穷"
+    ],
+    [
+      "honesty",
+      "诚实"
+    ],
+    [
+      "genuine",
+      "真正的；真诚的"
+    ],
+    [
+      "charity",
+      "慈善"
+    ],
+    [
+      "take out a loan",
+      "取得贷款"
+    ],
+    [
+      "be about to",
+      "即将"
+    ],
+    [
+      "be willing to",
+      "愿意"
+    ],
+    [
+      "in return",
+      "作为回报"
+    ],
+    [
+      "be based on",
+      "基于"
+    ],
+    [
+      "be judged by",
+      "由……判断"
+    ],
+    [
+      "be apologise to",
+      "向……道歉"
+    ],
+    [
+      "be patient with",
+      "对……耐心"
+    ],
+    [
+      "be honest with",
+      "对……诚实"
+    ],
+    [
+      "be rude to",
+      "对……粗鲁"
+    ],
+    [
+      "be lucky to",
+      "幸运地"
+    ],
+    [
+      "be supposed to",
+      "应该"
+    ],
+    [
+      "be able to",
+      "能够"
+    ],
+    [
+      "be about to do",
+      "即将做"
+    ],
+    [
+      "be in debt",
+      "负债"
+    ],
+    [
+      "be of help",
+      "有帮助"
+    ],
+    [
+      "make a bet",
+      "打赌"
+    ],
+    [
+      "be lost in thought",
+      "陷入沉思"
+    ]
+  ],
+  "chunks": [
+    [
+      "take out a loan",
+      "取得贷款",
+      "coll",
+      "take out a loan from the bank",
+      "out",
+      [
+        "take",
+        "out",
+        "a",
+        "loan"
+      ]
+    ],
+    [
+      "be about to",
+      "即将",
+      "phr",
+      "be about to leave",
+      "to",
+      null
+    ],
+    [
+      "in return",
+      "作为回报",
+      "coll",
+      "in return for kindness",
+      "return",
+      [
+        "in",
+        "return"
+      ]
+    ],
+    [
+      "be based on",
+      "基于",
+      "prep",
+      "be based on a true story",
+      "on",
+      null
+    ],
+    [
+      "be patient with",
+      "对……耐心",
+      "prep",
+      "be patient with the servant",
+      "with",
+      null
+    ],
+    [
+      "be honest with",
+      "对……诚实",
+      "prep",
+      "be honest with oneself",
+      "with",
+      null
+    ],
+    [
+      "be rude to",
+      "对……粗鲁",
+      "prep",
+      "be rude to the waiter",
+      "to",
+      null
+    ],
+    [
+      "be supposed to",
+      "应该",
+      "phr",
+      "be supposed to pay",
+      "to",
+      null
+    ],
+    [
+      "be in debt",
+      "负债",
+      "coll",
+      "be in debt to the bank",
+      "debt",
+      [
+        "be",
+        "in",
+        "debt"
+      ]
+    ],
+    [
+      "make a bet",
+      "打赌",
+      "coll",
+      "make a bet with friends",
+      "bet",
+      [
+        "make",
+        "a",
+        "bet"
+      ]
+    ],
+    [
+      "be lost in thought",
+      "陷入沉思",
+      "coll",
+      "be lost in thought",
+      "thought",
+      [
+        "be",
+        "lost",
+        "in",
+        "thought"
+      ]
+    ],
+    [
+      "be of help",
+      "有帮助",
+      "coll",
+      "be of great help",
+      "help",
+      [
+        "be",
+        "of",
+        "help"
+      ]
+    ],
+    [
+      "be lucky to",
+      "幸运地",
+      "phr",
+      "be lucky to survive",
+      "to",
+      null
+    ],
+    [
+      "be willing to",
+      "愿意",
+      "phr",
+      "be willing to help",
+      "to",
+      null
+    ],
+    [
+      "be able to",
+      "能够",
+      "phr",
+      "be able to pay",
+      "to",
+      null
+    ]
+  ]
+}

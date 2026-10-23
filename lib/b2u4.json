@@ -1,0 +1,302 @@
+{
+  "book": "b2",
+  "unit": "u4",
+  "label": "必修二 U4",
+  "name": "必修二U4 History and Traditions",
+  "words": [
+    [
+      "Confucius",
+      "孔子"
+    ],
+    [
+      "mansion",
+      "公馆；宅邸"
+    ],
+    [
+      "cemetery",
+      "墓地"
+    ],
+    [
+      "philosophy",
+      "哲学"
+    ],
+    [
+      "individual",
+      "个人；个别的"
+    ],
+    [
+      "heel",
+      "脚后跟"
+    ],
+    [
+      "kingdom",
+      "王国"
+    ],
+    [
+      "chief",
+      "主要的；首领"
+    ],
+    [
+      "puzzle",
+      "谜；使困惑"
+    ],
+    [
+      "defence",
+      "防御"
+    ],
+    [
+      "legal",
+      "法律的"
+    ],
+    [
+      "surround",
+      "包围"
+    ],
+    [
+      "evidence",
+      "证据"
+    ],
+    [
+      "achievement",
+      "成就"
+    ],
+    [
+      "location",
+      "位置"
+    ],
+    [
+      "conquer",
+      "征服"
+    ],
+    [
+      "battle",
+      "战役"
+    ],
+    [
+      "port",
+      "港口"
+    ],
+    [
+      "belong",
+      "属于"
+    ],
+    [
+      "belong to",
+      "属于"
+    ],
+    [
+      "as well as",
+      "以及"
+    ],
+    [
+      "break away",
+      "脱离"
+    ],
+    [
+      "break away from",
+      "脱离"
+    ],
+    [
+      "join ... to",
+      "连接"
+    ],
+    [
+      "be surrounded by",
+      "被……包围"
+    ],
+    [
+      "in defence of",
+      "为了保卫"
+    ],
+    [
+      "be proud of",
+      "为……骄傲"
+    ],
+    [
+      "be evidence of",
+      "作为……证据"
+    ],
+    [
+      "date back to",
+      "追溯到"
+    ],
+    [
+      "be located in",
+      "位于"
+    ],
+    [
+      "be known as",
+      "作为……闻名"
+    ],
+    [
+      "be similar to",
+      "与……相似"
+    ],
+    [
+      "be home to",
+      "是……的家园"
+    ],
+    [
+      "take over",
+      "接管"
+    ],
+    [
+      "be regarded as",
+      "被认为是"
+    ],
+    [
+      "share with",
+      "与……分享"
+    ],
+    [
+      "be connected with",
+      "与……有关"
+    ],
+    [
+      "be of great value",
+      "极有价值"
+    ]
+  ],
+  "chunks": [
+    [
+      "belong to",
+      "属于",
+      "prep",
+      "belong ____ the UK",
+      "to",
+      null
+    ],
+    [
+      "as well as",
+      "以及",
+      "coll",
+      "England as well ____ Wales",
+      "as",
+      [
+        "as",
+        "well",
+        "as"
+      ]
+    ],
+    [
+      "break away from",
+      "脱离",
+      "prep",
+      "break away ____ the kingdom",
+      "from",
+      [
+        "break",
+        "away",
+        "from"
+      ]
+    ],
+    [
+      "be surrounded by",
+      "被……包围",
+      "prep",
+      "be surrounded ____ the sea",
+      "by",
+      null
+    ],
+    [
+      "in defence of",
+      "为了保卫",
+      "coll",
+      "in defence ____ the kingdom",
+      "of",
+      [
+        "in",
+        "defence",
+        "of"
+      ]
+    ],
+    [
+      "be proud of",
+      "为……骄傲",
+      "prep",
+      "be proud ____ its history",
+      "of",
+      null
+    ],
+    [
+      "date back to",
+      "追溯到",
+      "prep",
+      "date back to the 1st century",
+      "to",
+      null
+    ],
+    [
+      "be located in",
+      "位于",
+      "prep",
+      "be located ____ Europe",
+      "in",
+      null
+    ],
+    [
+      "be known as",
+      "作为……闻名",
+      "prep",
+      "be known ____ the Emerald Isle",
+      "as",
+      null
+    ],
+    [
+      "be similar to",
+      "与……相似",
+      "prep",
+      "be similar ____ each other",
+      "to",
+      null
+    ],
+    [
+      "take over",
+      "接管",
+      "phr",
+      "take over the island",
+      "over",
+      null
+    ],
+    [
+      "be regarded as",
+      "被认为是",
+      "prep",
+      "be regarded ____ the best",
+      "as",
+      null
+    ],
+    [
+      "Achilles' heel",
+      "致命弱点",
+      "coll",
+      "Achilles' ____（致命弱点）",
+      "heel",
+      [
+        "Achilles'",
+        "heel"
+      ]
+    ],
+    [
+      "be of great value",
+      "极有价值",
+      "coll",
+      "be of great ____（极有价值）",
+      "value",
+      [
+        "be",
+        "of",
+        "great",
+        "value"
+      ]
+    ],
+    [
+      "join ... to",
+      "连接",
+      "prep",
+      "join England ____ Scotland",
+      "to",
+      null
+    ]
+  ]
+}

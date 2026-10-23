@@ -1,0 +1,318 @@
+{
+  "book": "b2",
+  "unit": "u5",
+  "label": "必修二 U5",
+  "name": "必修二U5 Music",
+  "words": [
+    [
+      "classical",
+      "古典的"
+    ],
+    [
+      "hip-hop",
+      "嘻哈音乐"
+    ],
+    [
+      "techno",
+      "电子音乐"
+    ],
+    [
+      "energy",
+      "能量；精力"
+    ],
+    [
+      "soul",
+      "灵魂"
+    ],
+    [
+      "virtual",
+      "虚拟的"
+    ],
+    [
+      "virtual choir",
+      "虚拟合唱团"
+    ],
+    [
+      "composition",
+      "作品；作曲"
+    ],
+    [
+      "opportunity",
+      "机会"
+    ],
+    [
+      "perform",
+      "表演"
+    ],
+    [
+      "performance",
+      "表演"
+    ],
+    [
+      "ordinary",
+      "普通的"
+    ],
+    [
+      "enable",
+      "使能够"
+    ],
+    [
+      "prove",
+      "证明"
+    ],
+    [
+      "award",
+      "奖项；授予"
+    ],
+    [
+      "composer",
+      "作曲家"
+    ],
+    [
+      "conductor",
+      "指挥"
+    ],
+    [
+      "original",
+      "原来的；原创的"
+    ],
+    [
+      "phenomenon",
+      "现象"
+    ],
+    [
+      "stage",
+      "舞台；阶段"
+    ],
+    [
+      "altogether",
+      "总共"
+    ],
+    [
+      "thus",
+      "因此"
+    ],
+    [
+      "band",
+      "乐队"
+    ],
+    [
+      "relief",
+      "缓解；宽慰"
+    ],
+    [
+      "cure",
+      "治愈"
+    ],
+    [
+      "impact",
+      "影响"
+    ],
+    [
+      "outline",
+      "概述；轮廓"
+    ],
+    [
+      "previous",
+      "以前的"
+    ],
+    [
+      "romantic",
+      "浪漫的"
+    ],
+    [
+      "album",
+      "专辑"
+    ],
+    [
+      "be capable of",
+      "能够"
+    ],
+    [
+      "fall in love with",
+      "爱上"
+    ],
+    [
+      "be faced with",
+      "面对"
+    ],
+    [
+      "be known as",
+      "作为……闻名"
+    ],
+    [
+      "be original in",
+      "在……方面有原创性"
+    ],
+    [
+      "be awarded for",
+      "因……获奖"
+    ],
+    [
+      "prove to be",
+      "证明是"
+    ],
+    [
+      "be absorbed in",
+      "全神贯注于"
+    ],
+    [
+      "have an impact on",
+      "对……有影响"
+    ],
+    [
+      "be grateful for",
+      "感激"
+    ],
+    [
+      "come up with",
+      "想出"
+    ],
+    [
+      "be set in",
+      "以……为背景"
+    ],
+    [
+      "take part in",
+      "参加"
+    ],
+    [
+      "be moved by",
+      "被……感动"
+    ]
+  ],
+  "chunks": [
+    [
+      "be capable of",
+      "能够",
+      "prep",
+      "be capable ____ creating music",
+      "of",
+      null
+    ],
+    [
+      "fall in love with",
+      "爱上",
+      "prep",
+      "fall in love ____ music",
+      "with",
+      [
+        "fall",
+        "in",
+        "love",
+        "with"
+      ]
+    ],
+    [
+      "be faced with",
+      "面对",
+      "prep",
+      "be faced with challenges",
+      "with",
+      null
+    ],
+    [
+      "be awarded for",
+      "因……获奖",
+      "prep",
+      "be awarded ____ the composition",
+      "for",
+      null
+    ],
+    [
+      "prove to be",
+      "证明是",
+      "phr",
+      "prove to be a success",
+      "be",
+      null
+    ],
+    [
+      "be absorbed in",
+      "全神贯注于",
+      "prep",
+      "be absorbed in the performance",
+      "in",
+      null
+    ],
+    [
+      "have an impact on",
+      "对……有影响",
+      "prep",
+      "have an impact ____ listeners",
+      "on",
+      null
+    ],
+    [
+      "be grateful for",
+      "感激",
+      "prep",
+      "be grateful for the opportunity",
+      "for",
+      null
+    ],
+    [
+      "come up with",
+      "想出",
+      "prep",
+      "come up with an idea",
+      "with",
+      null
+    ],
+    [
+      "take part in",
+      "参加",
+      "prep",
+      "take part in the virtual choir",
+      "in",
+      null
+    ],
+    [
+      "virtual choir",
+      "虚拟合唱团",
+      "coll",
+      "a virtual ____（虚拟合唱团）",
+      "choir",
+      [
+        "virtual",
+        "choir"
+      ]
+    ],
+    [
+      "a live performance",
+      "现场演出",
+      "coll",
+      "a live performance（现场演出）",
+      "performance",
+      [
+        "a",
+        "live",
+        "performance"
+      ]
+    ],
+    [
+      "be set in",
+      "以……为背景",
+      "prep",
+      "be set in Vienna",
+      "in",
+      null
+    ],
+    [
+      "be moved by",
+      "被……感动",
+      "prep",
+      "be moved by the song",
+      "by",
+      null
+    ],
+    [
+      "enable sb. to",
+      "使某人能够",
+      "prep",
+      "enable people ____ connect",
+      "to",
+      null
+    ]
+  ]
+}

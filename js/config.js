@@ -2,14 +2,23 @@
 
 /* ================== 词库：从 lib/ 目录加载 ==================
    文件命名：lib/{书号}{单元}.json
-     b4u1~b4u5 = 选择性必修一（高中第四册）Unit 1~5
-     b5u1~b5u5 = 选择性必修二（高中第五册）Unit 1~5
-   仅 b4u2.json 含 chunks 词块表。词库随仓库维护，部署后由浏览器 fetch 读取；
+     b1u1~b1u5 = 必修一 Unit 1~5
+     b2u1~b2u5 = 必修二 Unit 1~5
+     b3u1~b3u5 = 必修三 Unit 1~5
+     b4u1~b4u5 = 选择性必修一 Unit 1~5
+     b5u1~b5u5 = 选择性必修二 Unit 1~5
+   词库随仓库维护，部署后由浏览器 fetch 读取；
    直接双击 index.html（file://）会被浏览器拦截本地 JSON 请求，请用 http:// 访问。 */
 let LIB = [];      // [英文, 中文, 单元标签]
 let CHUNKS = [];   // 词块表 [英文,中文,家族,题干,答案,重组片段]
 let LIB_INFO = {}; // tag -> { name, file } 词库展示名
 const WORD_BANK_FILES = [
+  { file:"b1u1", tag:"B1U1" }, { file:"b1u2", tag:"B1U2" }, { file:"b1u3", tag:"B1U3" },
+  { file:"b1u4", tag:"B1U4" }, { file:"b1u5", tag:"B1U5" },
+  { file:"b2u1", tag:"B2U1" }, { file:"b2u2", tag:"B2U2" }, { file:"b2u3", tag:"B2U3" },
+  { file:"b2u4", tag:"B2U4" }, { file:"b2u5", tag:"B2U5" },
+  { file:"b3u1", tag:"B3U1" }, { file:"b3u2", tag:"B3U2" }, { file:"b3u3", tag:"B3U3" },
+  { file:"b3u4", tag:"B3U4" }, { file:"b3u5", tag:"B3U5" },
   { file:"b4u1", tag:"U1" }, { file:"b4u2", tag:"U2" }, { file:"b4u3", tag:"U3" },
   { file:"b4u4", tag:"U4" }, { file:"b4u5", tag:"U5" },
   { file:"b5u1", tag:"X2U1" }, { file:"b5u2", tag:"X2U2" }, { file:"b5u3", tag:"X2U3" },

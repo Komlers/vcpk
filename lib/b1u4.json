@@ -1,0 +1,333 @@
+{
+  "book": "b1",
+  "unit": "u4",
+  "label": "必修一 U4",
+  "name": "必修一U4 Natural Disasters",
+  "words": [
+    [
+      "disaster",
+      "灾难"
+    ],
+    [
+      "tornado",
+      "龙卷风"
+    ],
+    [
+      "hurricane",
+      "飓风"
+    ],
+    [
+      "flood",
+      "洪水；淹没"
+    ],
+    [
+      "drought",
+      "干旱"
+    ],
+    [
+      "landslide",
+      "山体滑坡"
+    ],
+    [
+      "tsunami",
+      "海啸"
+    ],
+    [
+      "volcano",
+      "火山"
+    ],
+    [
+      "eruption",
+      "喷发"
+    ],
+    [
+      "wildfire",
+      "野火"
+    ],
+    [
+      "magnitude",
+      "震级"
+    ],
+    [
+      "rescue",
+      "营救"
+    ],
+    [
+      "damage",
+      "损害；损失"
+    ],
+    [
+      "destroy",
+      "摧毁"
+    ],
+    [
+      "evacuate",
+      "疏散"
+    ],
+    [
+      "emergency",
+      "紧急情况"
+    ],
+    [
+      "shelter",
+      "避难所；庇护"
+    ],
+    [
+      "survive",
+      "幸存"
+    ],
+    [
+      "survivor",
+      "幸存者"
+    ],
+    [
+      "ruin",
+      "废墟；毁坏"
+    ],
+    [
+      "affect",
+      "影响"
+    ],
+    [
+      "crash",
+      "碰撞；坠毁"
+    ],
+    [
+      "debris",
+      "碎片；残骸"
+    ],
+    [
+      "aid",
+      "援助"
+    ],
+    [
+      "calm",
+      "平静的"
+    ],
+    [
+      "effort",
+      "努力"
+    ],
+    [
+      "suffer",
+      "遭受"
+    ],
+    [
+      "suffer from",
+      "遭受"
+    ],
+    [
+      "recover",
+      "恢复"
+    ],
+    [
+      "rebuild",
+      "重建"
+    ],
+    [
+      "bury",
+      "埋葬"
+    ],
+    [
+      "trap",
+      "困住；陷阱"
+    ],
+    [
+      "power",
+      "电力；力量"
+    ],
+    [
+      "supply",
+      "供应；物资"
+    ],
+    [
+      "survive",
+      "幸存"
+    ],
+    [
+      "shock",
+      "震惊；休克"
+    ],
+    [
+      "shake",
+      "摇晃"
+    ],
+    [
+      "strike",
+      "袭击；打击"
+    ],
+    [
+      "warn",
+      "警告"
+    ],
+    [
+      "danger",
+      "危险"
+    ],
+    [
+      "in ruins",
+      "成为废墟"
+    ],
+    [
+      "first aid",
+      "急救"
+    ],
+    [
+      "be trapped in",
+      "被困在"
+    ],
+    [
+      "make an effort",
+      "做出努力"
+    ],
+    [
+      "calm down",
+      "冷静下来"
+    ]
+  ],
+  "chunks": [
+    [
+      "in ruins",
+      "成为废墟",
+      "coll",
+      "The city lay in ____.（城市成为废墟）",
+      "ruins",
+      [
+        "in",
+        "ruins"
+      ]
+    ],
+    [
+      "first aid",
+      "急救",
+      "coll",
+      "give first ____（进行急救）",
+      "aid",
+      [
+        "first",
+        "aid"
+      ]
+    ],
+    [
+      "be trapped in",
+      "被困在",
+      "prep",
+      "be trapped ____ the ruins",
+      "in",
+      null
+    ],
+    [
+      "make an effort",
+      "做出努力",
+      "coll",
+      "make every ____（尽一切努力）",
+      "effort",
+      [
+        "make",
+        "an",
+        "effort"
+      ]
+    ],
+    [
+      "calm down",
+      "冷静下来",
+      "phr",
+      "calm ____ and stay safe",
+      "down",
+      null
+    ],
+    [
+      "suffer from",
+      "遭受",
+      "prep",
+      "suffer ____ injuries",
+      "from",
+      null
+    ],
+    [
+      "be affected by",
+      "受……影响",
+      "prep",
+      "be affected ____ the flood",
+      "by",
+      null
+    ],
+    [
+      "rescue workers",
+      "救援人员",
+      "coll",
+      "rescue ____（救援人员）",
+      "workers",
+      [
+        "rescue",
+        "workers"
+      ]
+    ],
+    [
+      "emergency supplies",
+      "应急物资",
+      "coll",
+      "emergency ____（应急物资）",
+      "supplies",
+      [
+        "emergency",
+        "supplies"
+      ]
+    ],
+    [
+      "warn sb. of",
+      "警告某人",
+      "prep",
+      "warn people ____ danger",
+      "of",
+      null
+    ],
+    [
+      "be struck by",
+      "被……袭击",
+      "prep",
+      "be struck ____ the hurricane",
+      "by",
+      null
+    ],
+    [
+      "recover from",
+      "从……恢复",
+      "prep",
+      "recover ____ the disaster",
+      "from",
+      null
+    ],
+    [
+      "come to one's rescue",
+      "营救某人",
+      "phr",
+      "come to her ____（营救她）",
+      "rescue",
+      null
+    ],
+    [
+      "be in danger",
+      "处于危险中",
+      "coll",
+      "be in ____（处于危险中）",
+      "danger",
+      [
+        "be",
+        "in",
+        "danger"
+      ]
+    ],
+    [
+      "power cut",
+      "停电",
+      "coll",
+      "a power ____（停电）",
+      "cut",
+      [
+        "power",
+        "cut"
+      ]
+    ]
+  ]
+}

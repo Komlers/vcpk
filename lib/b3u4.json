@@ -1,0 +1,324 @@
+{
+  "book": "b3",
+  "unit": "u4",
+  "label": "必修三 U4",
+  "name": "必修三U4 Space Exploration",
+  "words": [
+    [
+      "astronaut",
+      "宇航员"
+    ],
+    [
+      "capsule",
+      "太空舱"
+    ],
+    [
+      "rocket",
+      "火箭"
+    ],
+    [
+      "gravity",
+      "重力；引力"
+    ],
+    [
+      "launch",
+      "发射；发起"
+    ],
+    [
+      "orbit",
+      "轨道；环绕"
+    ],
+    [
+      "spacecraft",
+      "航天器"
+    ],
+    [
+      "agency",
+      "机构；代理处"
+    ],
+    [
+      "transmit",
+      "传输；发射"
+    ],
+    [
+      "planet",
+      "行星"
+    ],
+    [
+      "solar",
+      "太阳的"
+    ],
+    [
+      "solar system",
+      "太阳系"
+    ],
+    [
+      "mankind",
+      "人类"
+    ],
+    [
+      "dock",
+      "对接；码头"
+    ],
+    [
+      "universe",
+      "宇宙"
+    ],
+    [
+      "astronomy",
+      "天文学"
+    ],
+    [
+      "astronomer",
+      "天文学家"
+    ],
+    [
+      "galaxy",
+      "星系"
+    ],
+    [
+      "telescope",
+      "望远镜"
+    ],
+    [
+      "satellite",
+      "卫星"
+    ],
+    [
+      "shuttle",
+      "航天飞机"
+    ],
+    [
+      "explore",
+      "探索"
+    ],
+    [
+      "exploration",
+      "探索"
+    ],
+    [
+      "spacewalk",
+      "太空行走"
+    ],
+    [
+      "frontier",
+      "前沿；边界"
+    ],
+    [
+      "determine",
+      "决心；确定"
+    ],
+    [
+      "disappointed",
+      "失望的"
+    ],
+    [
+      "desire",
+      "渴望；欲望"
+    ],
+    [
+      "ongoing",
+      "持续的"
+    ],
+    [
+      "independently",
+      "独立地"
+    ],
+    [
+      "spacecraft",
+      "航天器"
+    ],
+    [
+      "be disappointed at",
+      "对……失望"
+    ],
+    [
+      "be determined to",
+      "决心"
+    ],
+    [
+      "carry on",
+      "继续"
+    ],
+    [
+      "in the hope of",
+      "抱着……希望"
+    ],
+    [
+      "solar system",
+      "太阳系"
+    ],
+    [
+      "be known as",
+      "作为……闻名"
+    ],
+    [
+      "lead to",
+      "导致"
+    ],
+    [
+      "be proud of",
+      "为……骄傲"
+    ],
+    [
+      "make progress",
+      "取得进步"
+    ],
+    [
+      "be faced with",
+      "面对"
+    ],
+    [
+      "be capable of",
+      "能够"
+    ],
+    [
+      "be aware of",
+      "意识到"
+    ],
+    [
+      "be curious about",
+      "对……好奇"
+    ],
+    [
+      "be connected to",
+      "连接到"
+    ]
+  ],
+  "chunks": [
+    [
+      "carry on",
+      "继续",
+      "phr",
+      "carry on the exploration",
+      "on",
+      null
+    ],
+    [
+      "in the hope of",
+      "抱着……希望",
+      "coll",
+      "in the hope of finding life",
+      "of",
+      [
+        "in",
+        "the",
+        "hope",
+        "of"
+      ]
+    ],
+    [
+      "be known as",
+      "作为……闻名",
+      "prep",
+      "be known as a space pioneer",
+      "as",
+      null
+    ],
+    [
+      "lead to",
+      "导致",
+      "prep",
+      "lead to new discoveries",
+      "to",
+      null
+    ],
+    [
+      "make progress",
+      "取得进步",
+      "coll",
+      "make progress in space travel",
+      "progress",
+      [
+        "make",
+        "progress"
+      ]
+    ],
+    [
+      "be capable of",
+      "能够",
+      "prep",
+      "be capable of reaching Mars",
+      "of",
+      null
+    ],
+    [
+      "be curious about",
+      "对……好奇",
+      "prep",
+      "be curious about the universe",
+      "about",
+      null
+    ],
+    [
+      "be connected to",
+      "连接到",
+      "prep",
+      "be connected to the spacecraft",
+      "to",
+      null
+    ],
+    [
+      "be determined to",
+      "决心",
+      "phr",
+      "be determined to explore space",
+      "to",
+      null
+    ],
+    [
+      "be disappointed at",
+      "对……失望",
+      "prep",
+      "be disappointed at the failure",
+      "at",
+      null
+    ],
+    [
+      "be faced with",
+      "面对",
+      "prep",
+      "be faced with challenges",
+      "with",
+      null
+    ],
+    [
+      "be aware of",
+      "意识到",
+      "prep",
+      "be aware of the risks",
+      "of",
+      null
+    ],
+    [
+      "be proud of",
+      "为……骄傲",
+      "prep",
+      "be proud of the astronauts",
+      "of",
+      null
+    ],
+    [
+      "solar system",
+      "太阳系",
+      "coll",
+      "the solar system",
+      "system",
+      [
+        "solar",
+        "system"
+      ]
+    ],
+    [
+      "zero gravity",
+      "零重力",
+      "coll",
+      "in zero gravity（在零重力下）",
+      "gravity",
+      [
+        "zero",
+        "gravity"
+      ]
+    ]
+  ]
+}

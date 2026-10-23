@@ -1,0 +1,323 @@
+{
+  "book": "b3",
+  "unit": "u1",
+  "label": "必修三 U1",
+  "name": "必修三U1 Festivals and Celebrations",
+  "words": [
+    [
+      "lantern",
+      "灯笼"
+    ],
+    [
+      "carnival",
+      "狂欢节"
+    ],
+    [
+      "costume",
+      "服装；戏服"
+    ],
+    [
+      "dress up",
+      "盛装打扮"
+    ],
+    [
+      "march",
+      "游行；行进"
+    ],
+    [
+      "ceremony",
+      "典礼；仪式"
+    ],
+    [
+      "congratulation",
+      "祝贺"
+    ],
+    [
+      "congratulate",
+      "祝贺"
+    ],
+    [
+      "riddle",
+      "谜语"
+    ],
+    [
+      "samba",
+      "桑巴舞"
+    ],
+    [
+      "makeup",
+      "化妆品"
+    ],
+    [
+      "after all",
+      "毕竟；终究"
+    ],
+    [
+      "except for",
+      "除了……以外"
+    ],
+    [
+      "range",
+      "范围；变化"
+    ],
+    [
+      "origin",
+      "起源"
+    ],
+    [
+      "religion",
+      "宗教"
+    ],
+    [
+      "figure",
+      "人物；数字；认为"
+    ],
+    [
+      "joy",
+      "欢乐"
+    ],
+    [
+      "firecracker",
+      "鞭炮"
+    ],
+    [
+      "evil",
+      "邪恶的；邪恶"
+    ],
+    [
+      "agricultural",
+      "农业的"
+    ],
+    [
+      "decorate",
+      "装饰"
+    ],
+    [
+      "decoration",
+      "装饰"
+    ],
+    [
+      "church",
+      "教堂"
+    ],
+    [
+      "feast",
+      "盛宴；节日"
+    ],
+    [
+      "custom",
+      "习俗"
+    ],
+    [
+      "gather",
+      "聚集"
+    ],
+    [
+      "ancestor",
+      "祖先"
+    ],
+    [
+      "grateful",
+      "感激的"
+    ],
+    [
+      "festival",
+      "节日"
+    ],
+    [
+      "independence",
+      "独立"
+    ],
+    [
+      "reflect",
+      "反射；反思"
+    ],
+    [
+      "reflect on",
+      "反思"
+    ],
+    [
+      "go off",
+      "爆炸；响起"
+    ],
+    [
+      "let off",
+      "燃放"
+    ],
+    [
+      "on display",
+      "展览"
+    ],
+    [
+      "range from ... to",
+      "从……到……范围"
+    ],
+    [
+      "be covered with",
+      "被……覆盖"
+    ],
+    [
+      "be meant to",
+      "旨在"
+    ],
+    [
+      "take place",
+      "发生"
+    ],
+    [
+      "in memory of",
+      "纪念"
+    ],
+    [
+      "be dressed in",
+      "穿着"
+    ],
+    [
+      "be proud of",
+      "为……骄傲"
+    ],
+    [
+      "look forward to",
+      "期待"
+    ],
+    [
+      "regardless of",
+      "不管"
+    ]
+  ],
+  "chunks": [
+    [
+      "dress up",
+      "盛装打扮",
+      "phr",
+      "dress ____ for the carnival",
+      "up",
+      null
+    ],
+    [
+      "after all",
+      "毕竟；终究",
+      "coll",
+      "after ____, it's a festival",
+      "all",
+      [
+        "after",
+        "all"
+      ]
+    ],
+    [
+      "except for",
+      "除了……以外",
+      "coll",
+      "except ____ the weather",
+      "for",
+      null
+    ],
+    [
+      "range from ... to",
+      "从……到……范围",
+      "prep",
+      "range ____ spring to winter",
+      "from",
+      null
+    ],
+    [
+      "go off",
+      "爆炸；响起",
+      "phr",
+      "firecrackers went ____",
+      "off",
+      null
+    ],
+    [
+      "let off",
+      "燃放",
+      "phr",
+      "let off fireworks",
+      "off",
+      null
+    ],
+    [
+      "on display",
+      "展览",
+      "coll",
+      "on ____ at the gallery",
+      "display",
+      [
+        "on",
+        "display"
+      ]
+    ],
+    [
+      "take place",
+      "发生",
+      "phr",
+      "the ceremony takes ____ in spring",
+      "place",
+      [
+        "take",
+        "place"
+      ]
+    ],
+    [
+      "in memory of",
+      "纪念",
+      "prep",
+      "in memory ____ the ancestors",
+      "of",
+      [
+        "in",
+        "memory",
+        "of"
+      ]
+    ],
+    [
+      "look forward to",
+      "期待",
+      "prep",
+      "look forward to the festival",
+      "to",
+      null
+    ],
+    [
+      "regardless of",
+      "不管",
+      "prep",
+      "regardless of the weather",
+      "of",
+      null
+    ],
+    [
+      "be dressed in",
+      "穿着",
+      "prep",
+      "be dressed in costume",
+      "in",
+      null
+    ],
+    [
+      "be covered with",
+      "被……覆盖",
+      "prep",
+      "be covered with decorations",
+      "with",
+      null
+    ],
+    [
+      "gather together",
+      "聚集",
+      "phr",
+      "family gather ____（家人团聚）",
+      "together",
+      null
+    ],
+    [
+      "be meant to",
+      "旨在",
+      "phr",
+      "be meant to celebrate harvest",
+      "to",
+      null
+    ]
+  ]
+}

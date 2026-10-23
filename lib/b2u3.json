@@ -1,0 +1,333 @@
+{
+  "book": "b2",
+  "unit": "u3",
+  "label": "必修二 U3",
+  "name": "必修二U3 The Internet",
+  "words": [
+    [
+      "blog",
+      "博客"
+    ],
+    [
+      "blog post",
+      "博文"
+    ],
+    [
+      "engine",
+      "引擎"
+    ],
+    [
+      "chat",
+      "聊天"
+    ],
+    [
+      "stream",
+      "流；流媒体"
+    ],
+    [
+      "identity",
+      "身份"
+    ],
+    [
+      "convenient",
+      "方便的"
+    ],
+    [
+      "cash",
+      "现金"
+    ],
+    [
+      "update",
+      "更新"
+    ],
+    [
+      "database",
+      "数据库"
+    ],
+    [
+      "software",
+      "软件"
+    ],
+    [
+      "network",
+      "网络"
+    ],
+    [
+      "stuck",
+      "卡住的"
+    ],
+    [
+      "surf",
+      "冲浪"
+    ],
+    [
+      "benefit",
+      "益处；受益"
+    ],
+    [
+      "distance",
+      "距离"
+    ],
+    [
+      "inspire",
+      "激励"
+    ],
+    [
+      "access",
+      "通道；访问"
+    ],
+    [
+      "charity",
+      "慈善"
+    ],
+    [
+      "tough",
+      "困难的"
+    ],
+    [
+      "province",
+      "省"
+    ],
+    [
+      "conference",
+      "会议"
+    ],
+    [
+      "resident",
+      "居民"
+    ],
+    [
+      "plus",
+      "加上；加号"
+    ],
+    [
+      "battery",
+      "电池"
+    ],
+    [
+      "WiFi",
+      "无线网络"
+    ],
+    [
+      "button",
+      "按钮"
+    ],
+    [
+      "file",
+      "文件"
+    ],
+    [
+      "click",
+      "点击"
+    ],
+    [
+      "online",
+      "在线的"
+    ],
+    [
+      "offline",
+      "离线的"
+    ],
+    [
+      "privacy",
+      "隐私"
+    ],
+    [
+      "keep sb. company",
+      "陪伴某人"
+    ],
+    [
+      "surf the Internet",
+      "上网"
+    ],
+    [
+      "benefit from",
+      "从……受益"
+    ],
+    [
+      "at a distance",
+      "在远处"
+    ],
+    [
+      "access to",
+      "访问；接近"
+    ],
+    [
+      "go through",
+      "经历"
+    ],
+    [
+      "be stuck in",
+      "被困在"
+    ],
+    [
+      "keep track of",
+      "记录"
+    ],
+    [
+      "inspire sb. to",
+      "激励某人"
+    ],
+    [
+      "be connected to",
+      "连接到"
+    ],
+    [
+      "sign off",
+      "下线"
+    ],
+    [
+      "be addicted to",
+      "沉迷于"
+    ],
+    [
+      "out of work",
+      "失业"
+    ]
+  ],
+  "chunks": [
+    [
+      "keep sb. company",
+      "陪伴某人",
+      "coll",
+      "keep her ____（陪伴她）",
+      "company",
+      [
+        "keep",
+        "sb.",
+        "company"
+      ]
+    ],
+    [
+      "surf the Internet",
+      "上网",
+      "coll",
+      "surf the ____（上网）",
+      "Internet",
+      [
+        "surf",
+        "the",
+        "Internet"
+      ]
+    ],
+    [
+      "benefit from",
+      "从……受益",
+      "prep",
+      "benefit ____ online learning",
+      "from",
+      null
+    ],
+    [
+      "at a distance",
+      "在远处",
+      "coll",
+      "at a ____（在远处）",
+      "distance",
+      [
+        "at",
+        "a",
+        "distance"
+      ]
+    ],
+    [
+      "access to",
+      "访问；接近",
+      "prep",
+      "have access ____ the network",
+      "to",
+      null
+    ],
+    [
+      "go through",
+      "经历",
+      "prep",
+      "go through hard times",
+      "through",
+      null
+    ],
+    [
+      "be stuck in",
+      "被困在",
+      "prep",
+      "be stuck ____ a traffic jam",
+      "in",
+      null
+    ],
+    [
+      "keep track of",
+      "记录",
+      "prep",
+      "keep track ____ expenses",
+      "of",
+      null
+    ],
+    [
+      "be connected to",
+      "连接到",
+      "prep",
+      "be connected ____ WiFi",
+      "to",
+      null
+    ],
+    [
+      "be addicted to",
+      "沉迷于",
+      "prep",
+      "be addicted ____ online games",
+      "to",
+      null
+    ],
+    [
+      "out of work",
+      "失业",
+      "coll",
+      "be out of ____（失业）",
+      "work",
+      [
+        "out",
+        "of",
+        "work"
+      ]
+    ],
+    [
+      "search engine",
+      "搜索引擎",
+      "coll",
+      "a search ____（搜索引擎）",
+      "engine",
+      [
+        "search",
+        "engine"
+      ]
+    ],
+    [
+      "cashless payment",
+      "无现金支付",
+      "coll",
+      "cashless ____（无现金支付）",
+      "payment",
+      null
+    ],
+    [
+      "in the distance",
+      "在远处",
+      "coll",
+      "see it in the ____",
+      "distance",
+      [
+        "in",
+        "the",
+        "distance"
+      ]
+    ],
+    [
+      "sign off",
+      "下线",
+      "phr",
+      "sign ____ for the night",
+      "off",
+      null
+    ]
+  ]
+}

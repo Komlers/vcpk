@@ -1,0 +1,324 @@
+{
+  "book": "b2",
+  "unit": "u1",
+  "label": "必修二 U1",
+  "name": "必修二U1 Cultural Heritage",
+  "words": [
+    [
+      "heritage",
+      "遗产"
+    ],
+    [
+      "temple",
+      "寺庙"
+    ],
+    [
+      "relic",
+      "遗迹；文物"
+    ],
+    [
+      "preserve",
+      "保护；保存"
+    ],
+    [
+      "prevent",
+      "阻止"
+    ],
+    [
+      "balance",
+      "平衡"
+    ],
+    [
+      "former",
+      "以前的"
+    ],
+    [
+      "protest",
+      "抗议"
+    ],
+    [
+      "committee",
+      "委员会"
+    ],
+    [
+      "establish",
+      "建立"
+    ],
+    [
+      "document",
+      "文件；记录"
+    ],
+    [
+      "limit",
+      "限制"
+    ],
+    [
+      "loss",
+      "损失；丧失"
+    ],
+    [
+      "contribute",
+      "贡献；捐助"
+    ],
+    [
+      "department",
+      "部门"
+    ],
+    [
+      "fund",
+      "基金；资助"
+    ],
+    [
+      "investigate",
+      "调查"
+    ],
+    [
+      "issue",
+      "问题；发行"
+    ],
+    [
+      "conduct",
+      "进行；指挥"
+    ],
+    [
+      "donate",
+      "捐赠"
+    ],
+    [
+      "sheet",
+      "床单；一张"
+    ],
+    [
+      "parade",
+      "游行"
+    ],
+    [
+      "mount",
+      "登上；山"
+    ],
+    [
+      "fort",
+      "堡垒"
+    ],
+    [
+      "gallery",
+      "画廊"
+    ],
+    [
+      "digital",
+      "数字的"
+    ],
+    [
+      "image",
+      "图像"
+    ],
+    [
+      "cave",
+      "洞穴"
+    ],
+    [
+      "quote",
+      "引用"
+    ],
+    [
+      "paraphrase",
+      "释义"
+    ],
+    [
+      "comparison",
+      "比较"
+    ],
+    [
+      "contrast",
+      "对比"
+    ],
+    [
+      "identify",
+      "识别"
+    ],
+    [
+      "identify",
+      "识别"
+    ],
+    [
+      "in danger of",
+      "处于……危险中"
+    ],
+    [
+      "give way to",
+      "让步于；被……取代"
+    ],
+    [
+      "keep balance",
+      "保持平衡"
+    ],
+    [
+      "lead to",
+      "导致"
+    ],
+    [
+      "make a proposal",
+      "提出建议"
+    ],
+    [
+      "turn to",
+      "求助于"
+    ],
+    [
+      "be familiar with",
+      "熟悉"
+    ],
+    [
+      "contribute to",
+      "贡献；促成"
+    ],
+    [
+      "be in danger",
+      "处于危险中"
+    ],
+    [
+      "take part in",
+      "参加"
+    ],
+    [
+      "put forward",
+      "提出"
+    ]
+  ],
+  "chunks": [
+    [
+      "in danger of",
+      "处于……危险中",
+      "prep",
+      "in danger ____ collapse",
+      "of",
+      null
+    ],
+    [
+      "give way to",
+      "让步于；被……取代",
+      "prep",
+      "give way ____ the new building",
+      "to",
+      null
+    ],
+    [
+      "keep balance",
+      "保持平衡",
+      "coll",
+      "keep the ____ between ...",
+      "balance",
+      [
+        "keep",
+        "balance"
+      ]
+    ],
+    [
+      "lead to",
+      "导致",
+      "prep",
+      "lead ____ damage",
+      "to",
+      null
+    ],
+    [
+      "make a proposal",
+      "提出建议",
+      "coll",
+      "make a ____（提出建议）",
+      "proposal",
+      [
+        "make",
+        "a",
+        "proposal"
+      ]
+    ],
+    [
+      "turn to",
+      "求助于",
+      "prep",
+      "turn ____ experts for help",
+      "to",
+      null
+    ],
+    [
+      "contribute to",
+      "贡献；促成",
+      "prep",
+      "contribute ____ the project",
+      "to",
+      null
+    ],
+    [
+      "take part in",
+      "参加",
+      "prep",
+      "take part ____ the restoration",
+      "in",
+      null
+    ],
+    [
+      "put forward",
+      "提出",
+      "phr",
+      "put forward a ____（提出建议）",
+      "forward",
+      null
+    ],
+    [
+      "be familiar with",
+      "熟悉",
+      "prep",
+      "be familiar ____ the site",
+      "with",
+      null
+    ],
+    [
+      "world heritage site",
+      "世界遗产",
+      "coll",
+      "world heritage ____（世界遗产地）",
+      "site",
+      [
+        "world",
+        "heritage",
+        "site"
+      ]
+    ],
+    [
+      "prevent ... from",
+      "阻止",
+      "prep",
+      "prevent damage ____ happening",
+      "from",
+      null
+    ],
+    [
+      "donate to",
+      "捐赠给",
+      "prep",
+      "donate money ____ the fund",
+      "to",
+      null
+    ],
+    [
+      "cultural relics",
+      "文物",
+      "coll",
+      "cultural ____（文物）",
+      "relics",
+      [
+        "cultural",
+        "relics"
+      ]
+    ],
+    [
+      "a matter of",
+      "……的问题",
+      "coll",
+      "a matter ____ time",
+      "of",
+      null
+    ]
+  ]
+}

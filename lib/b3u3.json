@@ -1,0 +1,318 @@
+{
+  "book": "b3",
+  "unit": "u3",
+  "label": "必修三 U3",
+  "name": "必修三U3 Diverse Cultures",
+  "words": [
+    [
+      "diverse",
+      "不同的；多种多样的"
+    ],
+    [
+      "fortune",
+      "机会；财富"
+    ],
+    [
+      "fortune cookie",
+      "幸运饼干"
+    ],
+    [
+      "gum",
+      "口香糖"
+    ],
+    [
+      "boot",
+      "靴子"
+    ],
+    [
+      "suit",
+      "适合；西装"
+    ],
+    [
+      "clothing",
+      "衣服"
+    ],
+    [
+      "immigrant",
+      "移民"
+    ],
+    [
+      "emigrate",
+      "移居国外"
+    ],
+    [
+      "ethnic",
+      "民族的；种族的"
+    ],
+    [
+      "district",
+      "地区；街区"
+    ],
+    [
+      "occur",
+      "发生"
+    ],
+    [
+      "downtown",
+      "市中心"
+    ],
+    [
+      "mission",
+      "传教区；任务"
+    ],
+    [
+      "series",
+      "一系列"
+    ],
+    [
+      "outside",
+      "在外面"
+    ],
+    [
+      "journal",
+      "日志；日记"
+    ],
+    [
+      "historic",
+      "历史上著名的"
+    ],
+    [
+      "settle",
+      "定居；解决"
+    ],
+    [
+      "settlement",
+      "定居点"
+    ],
+    [
+      "earn",
+      "挣得；获得"
+    ],
+    [
+      "immigrate",
+      "移入"
+    ],
+    [
+      "Chinatown",
+      "唐人街"
+    ],
+    [
+      "missionary",
+      "传教士"
+    ],
+    [
+      "escape",
+      "逃跑"
+    ],
+    [
+      "financial",
+      "财政的"
+    ],
+    [
+      "poet",
+      "诗人"
+    ],
+    [
+      "jazz",
+      "爵士乐"
+    ],
+    [
+      "bar",
+      "酒吧"
+    ],
+    [
+      "soup",
+      "汤"
+    ],
+    [
+      "taco",
+      "墨西哥玉米卷"
+    ],
+    [
+      "a series of",
+      "一系列"
+    ],
+    [
+      "occur to",
+      "想到"
+    ],
+    [
+      "be proud of",
+      "为……骄傲"
+    ],
+    [
+      "be home to",
+      "是……的家园"
+    ],
+    [
+      "settle down",
+      "定居"
+    ],
+    [
+      "be known as",
+      "作为……闻名"
+    ],
+    [
+      "earn a living",
+      "谋生"
+    ],
+    [
+      "be made up of",
+      "由……组成"
+    ],
+    [
+      "bring about",
+      "引起"
+    ],
+    [
+      "be covered with",
+      "被……覆盖"
+    ],
+    [
+      "be mixed with",
+      "与……混合"
+    ],
+    [
+      "be famous for",
+      "因……闻名"
+    ],
+    [
+      "be located in",
+      "位于"
+    ],
+    [
+      "be different from",
+      "与……不同"
+    ]
+  ],
+  "chunks": [
+    [
+      "a series of",
+      "一系列",
+      "coll",
+      "a series of events",
+      "of",
+      [
+        "a",
+        "series",
+        "of"
+      ]
+    ],
+    [
+      "occur to",
+      "想到",
+      "prep",
+      "It occurred to me that ...",
+      "to",
+      null
+    ],
+    [
+      "settle down",
+      "定居",
+      "phr",
+      "settle down in the district",
+      "down",
+      null
+    ],
+    [
+      "be made up of",
+      "由……组成",
+      "prep",
+      "be made up of diverse cultures",
+      "of",
+      null
+    ],
+    [
+      "bring about",
+      "引起",
+      "phr",
+      "bring about change",
+      "about",
+      null
+    ],
+    [
+      "earn a living",
+      "谋生",
+      "coll",
+      "earn a living as a chef",
+      "living",
+      [
+        "earn",
+        "a",
+        "living"
+      ]
+    ],
+    [
+      "be known as",
+      "作为……闻名",
+      "prep",
+      "be known as a melting pot",
+      "as",
+      null
+    ],
+    [
+      "be famous for",
+      "因……闻名",
+      "prep",
+      "be famous for its food",
+      "for",
+      null
+    ],
+    [
+      "be located in",
+      "位于",
+      "prep",
+      "be located in downtown",
+      "in",
+      null
+    ],
+    [
+      "be home to",
+      "是……的家园",
+      "prep",
+      "be home to immigrants",
+      "to",
+      null
+    ],
+    [
+      "be mixed with",
+      "与……混合",
+      "prep",
+      "be mixed with ethnic groups",
+      "with",
+      null
+    ],
+    [
+      "be different from",
+      "与……不同",
+      "prep",
+      "be different from other cities",
+      "from",
+      null
+    ],
+    [
+      "be proud of",
+      "为……骄傲",
+      "prep",
+      "be proud of the diversity",
+      "of",
+      null
+    ],
+    [
+      "escape from",
+      "逃离",
+      "prep",
+      "escape from poverty",
+      "from",
+      null
+    ],
+    [
+      "be situated in",
+      "位于",
+      "prep",
+      "be situated in the heart of the city",
+      "in",
+      null
+    ]
+  ]
+}

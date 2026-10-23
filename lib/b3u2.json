@@ -1,0 +1,318 @@
+{
+  "book": "b3",
+  "unit": "u2",
+  "label": "必修三 U2",
+  "name": "必修三U2 Morals and Virtues",
+  "words": [
+    [
+      "moral",
+      "道德的；寓意"
+    ],
+    [
+      "virtue",
+      "美德"
+    ],
+    [
+      "dilemma",
+      "进退两难的境地"
+    ],
+    [
+      "faint",
+      "晕倒；微弱的"
+    ],
+    [
+      "illustrate",
+      "说明；阐明"
+    ],
+    [
+      "precious",
+      "珍贵的"
+    ],
+    [
+      "entrust",
+      "委托"
+    ],
+    [
+      "marriage",
+      "婚姻"
+    ],
+    [
+      "majority",
+      "大多数"
+    ],
+    [
+      "complain",
+      "抱怨"
+    ],
+    [
+      "respond",
+      "回应；回答"
+    ],
+    [
+      "response",
+      "回应；回答"
+    ],
+    [
+      "union",
+      "联合会；工会"
+    ],
+    [
+      "scholarship",
+      "奖学金"
+    ],
+    [
+      "hire",
+      "雇佣"
+    ],
+    [
+      "physician",
+      "医生"
+    ],
+    [
+      "colleague",
+      "同事"
+    ],
+    [
+      "reject",
+      "拒绝"
+    ],
+    [
+      "reject",
+      "拒绝"
+    ],
+    [
+      "accept",
+      "接受"
+    ],
+    [
+      "appoint",
+      "任命"
+    ],
+    [
+      "elect",
+      "选举"
+    ],
+    [
+      "decade",
+      "十年"
+    ],
+    [
+      "elsewhere",
+      "在别处"
+    ],
+    [
+      "tend",
+      "照顾；倾向于"
+    ],
+    [
+      "tend to",
+      "倾向于；照顾"
+    ],
+    [
+      "be remembered as",
+      "作为……被铭记"
+    ],
+    [
+      "be responsible for",
+      "对……负责"
+    ],
+    [
+      "be faced with",
+      "面对"
+    ],
+    [
+      "be in need of",
+      "需要"
+    ],
+    [
+      "be willing to",
+      "愿意"
+    ],
+    [
+      "be committed to",
+      "致力于"
+    ],
+    [
+      "be devoted to",
+      "献身于"
+    ],
+    [
+      "care for",
+      "照顾"
+    ],
+    [
+      "carry sb. through",
+      "帮助某人度过"
+    ],
+    [
+      "be grateful to",
+      "感激某人"
+    ],
+    [
+      "make a choice",
+      "做出选择"
+    ],
+    [
+      "be known for",
+      "因……闻名"
+    ],
+    [
+      "be appointed as",
+      "被任命为"
+    ],
+    [
+      "first of all",
+      "首先"
+    ],
+    [
+      "be proud of",
+      "为……骄傲"
+    ],
+    [
+      "be patient with",
+      "对……耐心"
+    ],
+    [
+      "be kind to",
+      "对……友善"
+    ],
+    [
+      "be honest with",
+      "对……诚实"
+    ],
+    [
+      "be responsible to",
+      "对……负责"
+    ]
+  ],
+  "chunks": [
+    [
+      "be faced with",
+      "面对",
+      "prep",
+      "be faced with a dilemma",
+      "with",
+      null
+    ],
+    [
+      "be in need of",
+      "需要",
+      "prep",
+      "be in need of care",
+      "of",
+      null
+    ],
+    [
+      "be willing to",
+      "愿意",
+      "phr",
+      "be willing to help",
+      "to",
+      null
+    ],
+    [
+      "be committed to",
+      "致力于",
+      "prep",
+      "be committed to the cause",
+      "to",
+      null
+    ],
+    [
+      "care for",
+      "照顾",
+      "prep",
+      "care for the patient",
+      "for",
+      null
+    ],
+    [
+      "be grateful to",
+      "感激某人",
+      "prep",
+      "be grateful to the doctor",
+      "to",
+      null
+    ],
+    [
+      "make a choice",
+      "做出选择",
+      "coll",
+      "make a difficult ____（做出艰难选择）",
+      "choice",
+      [
+        "make",
+        "a",
+        "choice"
+      ]
+    ],
+    [
+      "be appointed as",
+      "被任命为",
+      "prep",
+      "be appointed as director",
+      "as",
+      null
+    ],
+    [
+      "first of all",
+      "首先",
+      "coll",
+      "first of all, ...",
+      "all",
+      [
+        "first",
+        "of",
+        "all"
+      ]
+    ],
+    [
+      "be patient with",
+      "对……耐心",
+      "prep",
+      "be patient with patients",
+      "with",
+      null
+    ],
+    [
+      "be honest with",
+      "对……诚实",
+      "prep",
+      "be honest with oneself",
+      "with",
+      null
+    ],
+    [
+      "carry sb. through",
+      "帮助某人度过",
+      "prep",
+      "carry her through the hard times",
+      "through",
+      null
+    ],
+    [
+      "be known for",
+      "因……闻名",
+      "prep",
+      "be known for her kindness",
+      "for",
+      null
+    ],
+    [
+      "respond to",
+      "回应",
+      "prep",
+      "respond to the call",
+      "to",
+      null
+    ],
+    [
+      "complain about",
+      "抱怨",
+      "prep",
+      "complain about the situation",
+      "about",
+      null
+    ]
+  ]
+}

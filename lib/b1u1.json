@@ -1,0 +1,319 @@
+{
+  "book": "b1",
+  "unit": "u1",
+  "label": "必修一 U1",
+  "name": "必修一U1 Teenage Life",
+  "words": [
+    [
+      "teenage",
+      "青少年的"
+    ],
+    [
+      "teenager",
+      "青少年"
+    ],
+    [
+      "ballet",
+      "芭蕾舞"
+    ],
+    [
+      "volunteer",
+      "志愿者；自愿做"
+    ],
+    [
+      "debate",
+      "辩论；争论"
+    ],
+    [
+      "prefer",
+      "更喜欢"
+    ],
+    [
+      "content",
+      "内容；目录"
+    ],
+    [
+      "movement",
+      "动作；运动"
+    ],
+    [
+      "greenhouse",
+      "温室"
+    ],
+    [
+      "clean up",
+      "打扫干净"
+    ],
+    [
+      "suitable",
+      "合适的"
+    ],
+    [
+      "actually",
+      "实际上"
+    ],
+    [
+      "challenge",
+      "挑战"
+    ],
+    [
+      "confusing",
+      "令人困惑的"
+    ],
+    [
+      "confuse",
+      "使困惑"
+    ],
+    [
+      "confused",
+      "困惑的"
+    ],
+    [
+      "fluent",
+      "流利的"
+    ],
+    [
+      "graduate",
+      "毕业；毕业生"
+    ],
+    [
+      "recommend",
+      "推荐"
+    ],
+    [
+      "advanced",
+      "高级的；先进的"
+    ],
+    [
+      "literature",
+      "文学"
+    ],
+    [
+      "extra-curricular",
+      "课外的"
+    ],
+    [
+      "obviously",
+      "显然"
+    ],
+    [
+      "schedule",
+      "日程安排"
+    ],
+    [
+      "editor",
+      "编辑"
+    ],
+    [
+      "plate",
+      "盘子；牌子"
+    ],
+    [
+      "adventure",
+      "冒险"
+    ],
+    [
+      "youth",
+      "青年；青春"
+    ],
+    [
+      "survive",
+      "生存；幸存"
+    ],
+    [
+      "title",
+      "标题；头衔"
+    ],
+    [
+      "topic",
+      "话题"
+    ],
+    [
+      "freshman",
+      "高一新生"
+    ],
+    [
+      "adult",
+      "成年人"
+    ],
+    [
+      "extra",
+      "额外的"
+    ],
+    [
+      "attract",
+      "吸引"
+    ],
+    [
+      "organise",
+      "组织"
+    ],
+    [
+      "sign up",
+      "报名"
+    ],
+    [
+      "hand out",
+      "分发"
+    ],
+    [
+      "be responsible for",
+      "对……负责"
+    ],
+    [
+      "be interested in",
+      "对……感兴趣"
+    ],
+    [
+      "sign up for",
+      "报名参加"
+    ],
+    [
+      "be good at",
+      "擅长"
+    ],
+    [
+      "keep up with",
+      "跟上"
+    ],
+    [
+      "get used to",
+      "习惯于"
+    ],
+    [
+      "be addicted to",
+      "对……上瘾"
+    ]
+  ],
+  "chunks": [
+    [
+      "sign up for",
+      "报名参加",
+      "phr",
+      "sign up ____ a course",
+      "for",
+      null
+    ],
+    [
+      "be responsible for",
+      "对……负责",
+      "prep",
+      "be responsible ____ the decision",
+      "for",
+      null
+    ],
+    [
+      "be good at",
+      "擅长",
+      "prep",
+      "be good ____ maths",
+      "at",
+      null
+    ],
+    [
+      "keep up with",
+      "跟上",
+      "prep",
+      "keep up ____ the class",
+      "with",
+      null
+    ],
+    [
+      "get used to",
+      "习惯于",
+      "prep",
+      "get used ____ the new school",
+      "to",
+      null
+    ],
+    [
+      "be addicted to",
+      "对……上瘾",
+      "prep",
+      "be addicted ____ games",
+      "to",
+      null
+    ],
+    [
+      "be interested in",
+      "对……感兴趣",
+      "prep",
+      "be interested ____ science",
+      "in",
+      null
+    ],
+    [
+      "hand out",
+      "分发",
+      "phr",
+      "hand ____ the papers",
+      "out",
+      null
+    ],
+    [
+      "clean up",
+      "打扫干净",
+      "phr",
+      "clean ____ the classroom",
+      "up",
+      null
+    ],
+    [
+      "prefer A to B",
+      "比起B更喜欢A",
+      "prep",
+      "prefer tea ____ coffee",
+      "to",
+      null
+    ],
+    [
+      "a heated debate",
+      "激烈的辩论",
+      "coll",
+      "a heated ____（激烈的辩论）",
+      "debate",
+      [
+        "a",
+        "heated",
+        "debate"
+      ]
+    ],
+    [
+      "be suitable for",
+      "适合",
+      "prep",
+      "be suitable ____ beginners",
+      "for",
+      null
+    ],
+    [
+      "graduate from",
+      "毕业于",
+      "prep",
+      "graduate ____ high school",
+      "from",
+      null
+    ],
+    [
+      "recommend sth. to sb.",
+      "向某人推荐",
+      "prep",
+      "recommend the book ____ students",
+      "to",
+      null
+    ],
+    [
+      "rise to the challenge",
+      "迎接挑战",
+      "phr",
+      "rise to the ____（迎接挑战）",
+      "challenge",
+      [
+        "rise",
+        "to",
+        "the",
+        "challenge"
+      ]
+    ]
+  ]
+}

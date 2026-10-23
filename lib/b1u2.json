@@ -1,0 +1,320 @@
+{
+  "book": "b1",
+  "unit": "u2",
+  "label": "必修一 U2",
+  "name": "必修一U2 Travelling Around",
+  "words": [
+    [
+      "castle",
+      "城堡"
+    ],
+    [
+      "visa",
+      "签证"
+    ],
+    [
+      "rent",
+      "租用；租金"
+    ],
+    [
+      "pack",
+      "收拾（行李）；打包"
+    ],
+    [
+      "source",
+      "来源；源头"
+    ],
+    [
+      "narrow",
+      "狭窄的"
+    ],
+    [
+      "flat",
+      "公寓；平坦的"
+    ],
+    [
+      "powerful",
+      "强大的"
+    ],
+    [
+      "empire",
+      "帝国"
+    ],
+    [
+      "official",
+      "官方的；官员"
+    ],
+    [
+      "sight",
+      "景象；视力"
+    ],
+    [
+      "type",
+      "类型；打字"
+    ],
+    [
+      "unique",
+      "独特的"
+    ],
+    [
+      "path",
+      "小路；路径"
+    ],
+    [
+      "destination",
+      "目的地"
+    ],
+    [
+      "brochure",
+      "小册子"
+    ],
+    [
+      "contact",
+      "联系；接触"
+    ],
+    [
+      "transport",
+      "交通；运输"
+    ],
+    [
+      "hike",
+      "徒步旅行"
+    ],
+    [
+      "credit card",
+      "信用卡"
+    ],
+    [
+      "check in",
+      "登记入住"
+    ],
+    [
+      "check out",
+      "结账离开"
+    ],
+    [
+      "detail",
+      "细节"
+    ],
+    [
+      "flight",
+      "航班；飞行"
+    ],
+    [
+      "request",
+      "请求；要求"
+    ],
+    [
+      "view",
+      "景色；观点"
+    ],
+    [
+      "statue",
+      "雕像"
+    ],
+    [
+      "comment",
+      "评论"
+    ],
+    [
+      "economy",
+      "经济"
+    ],
+    [
+      "economy class",
+      "经济舱"
+    ],
+    [
+      "amazing",
+      "令人惊叹的"
+    ],
+    [
+      "arrangement",
+      "安排"
+    ],
+    [
+      "extremely",
+      "极其"
+    ],
+    [
+      "destination",
+      "目的地"
+    ],
+    [
+      "accommodation",
+      "住宿"
+    ],
+    [
+      "admire",
+      "钦佩；欣赏"
+    ],
+    [
+      "explore",
+      "探索"
+    ],
+    [
+      "architect",
+      "建筑师"
+    ],
+    [
+      "civilisation",
+      "文明"
+    ],
+    [
+      "site",
+      "地点；遗址"
+    ],
+    [
+      "package tour",
+      "跟团游"
+    ],
+    [
+      "travel agent",
+      "旅行社"
+    ],
+    [
+      "apply for",
+      "申请"
+    ],
+    [
+      "get around",
+      "四处走动"
+    ],
+    [
+      "be known for",
+      "因……而闻名"
+    ],
+    [
+      "set off",
+      "出发"
+    ]
+  ],
+  "chunks": [
+    [
+      "check in",
+      "登记入住",
+      "phr",
+      "check ____ at the hotel",
+      "in",
+      null
+    ],
+    [
+      "check out",
+      "结账离开",
+      "phr",
+      "check ____ before noon",
+      "out",
+      null
+    ],
+    [
+      "apply for",
+      "申请",
+      "phr",
+      "apply ____ a visa",
+      "for",
+      null
+    ],
+    [
+      "get around",
+      "四处走动",
+      "phr",
+      "get ____ on foot",
+      "around",
+      null
+    ],
+    [
+      "set off",
+      "出发",
+      "phr",
+      "set ____ at dawn",
+      "off",
+      null
+    ],
+    [
+      "be known for",
+      "因……而闻名",
+      "prep",
+      "be known ____ its history",
+      "for",
+      null
+    ],
+    [
+      "a credit card",
+      "信用卡",
+      "coll",
+      "pay by ____ card（用信用卡支付）",
+      "credit",
+      null
+    ],
+    [
+      "package tour",
+      "跟团游",
+      "coll",
+      "book a package ____（预订跟团游）",
+      "tour",
+      null
+    ],
+    [
+      "be home to",
+      "是……的家园",
+      "prep",
+      "be home ____ ancient ruins",
+      "to",
+      null
+    ],
+    [
+      "narrow down",
+      "缩小范围",
+      "phr",
+      "narrow ____ the choices",
+      "down",
+      null
+    ],
+    [
+      "in detail",
+      "详细地",
+      "coll",
+      "explain it in ____（详细解释）",
+      "detail",
+      [
+        "in",
+        "detail"
+      ]
+    ],
+    [
+      "make contact with",
+      "与……联系",
+      "prep",
+      "make contact ____ the guide",
+      "with",
+      null
+    ],
+    [
+      "a must-see sight",
+      "必看景点",
+      "coll",
+      "a ____ sight（必看景点）",
+      "must-see",
+      null
+    ],
+    [
+      "public transport",
+      "公共交通",
+      "coll",
+      "use public ____（使用公共交通）",
+      "transport",
+      [
+        "public",
+        "transport"
+      ]
+    ],
+    [
+      "be off the beaten path",
+      "人迹罕至",
+      "coll",
+      "off the beaten ____（人迹罕至）",
+      "path",
+      null
+    ]
+  ]
+}

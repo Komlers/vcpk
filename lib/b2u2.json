@@ -1,0 +1,324 @@
+{
+  "book": "b2",
+  "unit": "u2",
+  "label": "必修二 U2",
+  "name": "必修二U2 Wildlife Protection",
+  "words": [
+    [
+      "wildlife",
+      "野生动物"
+    ],
+    [
+      "poster",
+      "海报"
+    ],
+    [
+      "species",
+      "物种"
+    ],
+    [
+      "shark",
+      "鲨鱼"
+    ],
+    [
+      "fin",
+      "鱼鳍"
+    ],
+    [
+      "habitat",
+      "栖息地"
+    ],
+    [
+      "mass",
+      "大量；群众"
+    ],
+    [
+      "endanger",
+      "危及"
+    ],
+    [
+      "average",
+      "平均的"
+    ],
+    [
+      "concerned",
+      "关心的"
+    ],
+    [
+      "adapt",
+      "适应"
+    ],
+    [
+      "pressure",
+      "压力"
+    ],
+    [
+      "reserve",
+      "保护区；保留"
+    ],
+    [
+      "hunt",
+      "狩猎"
+    ],
+    [
+      "observe",
+      "观察"
+    ],
+    [
+      "beauty",
+      "美丽"
+    ],
+    [
+      "remind",
+      "提醒"
+    ],
+    [
+      "fur",
+      "皮毛"
+    ],
+    [
+      "sacred",
+      "神圣的"
+    ],
+    [
+      "reduce",
+      "减少"
+    ],
+    [
+      "reduce",
+      "减少"
+    ],
+    [
+      "recycle",
+      "回收"
+    ],
+    [
+      "unusual",
+      "不寻常的"
+    ],
+    [
+      "stir",
+      "搅动"
+    ],
+    [
+      "insect",
+      "昆虫"
+    ],
+    [
+      "net",
+      "网"
+    ],
+    [
+      "neighbourhood",
+      "社区"
+    ],
+    [
+      "emotion",
+      "情感"
+    ],
+    [
+      "unexpected",
+      "意外的"
+    ],
+    [
+      "remove",
+      "移除"
+    ],
+    [
+      "plain",
+      "平原；朴素的"
+    ],
+    [
+      "harmony",
+      "和谐"
+    ],
+    [
+      "be concerned about",
+      "关心"
+    ],
+    [
+      "adapt to",
+      "适应"
+    ],
+    [
+      "under pressure",
+      "面临压力"
+    ],
+    [
+      "make out",
+      "看清；辨认"
+    ],
+    [
+      "watch over",
+      "看护"
+    ],
+    [
+      "stir up",
+      "激起"
+    ],
+    [
+      "be aware of",
+      "意识到"
+    ],
+    [
+      "protect ... from",
+      "保护……免受"
+    ],
+    [
+      "on average",
+      "平均"
+    ],
+    [
+      "die out",
+      "灭绝"
+    ],
+    [
+      "in harmony with",
+      "与……和谐相处"
+    ],
+    [
+      "make progress",
+      "取得进步"
+    ],
+    [
+      "cut down",
+      "砍倒"
+    ]
+  ],
+  "chunks": [
+    [
+      "be concerned about",
+      "关心",
+      "prep",
+      "be concerned ____ wildlife",
+      "about",
+      null
+    ],
+    [
+      "adapt to",
+      "适应",
+      "prep",
+      "adapt ____ the habitat",
+      "to",
+      null
+    ],
+    [
+      "under pressure",
+      "面临压力",
+      "coll",
+      "under great ____（面临巨大压力）",
+      "pressure",
+      [
+        "under",
+        "pressure"
+      ]
+    ],
+    [
+      "make out",
+      "看清；辨认",
+      "phr",
+      "make ____ the shape in the dark",
+      "out",
+      null
+    ],
+    [
+      "watch over",
+      "看护",
+      "prep",
+      "watch over the animals",
+      "over",
+      null
+    ],
+    [
+      "stir up",
+      "激起",
+      "phr",
+      "stir up emotions",
+      "up",
+      null
+    ],
+    [
+      "be aware of",
+      "意识到",
+      "prep",
+      "be aware ____ the danger",
+      "of",
+      null
+    ],
+    [
+      "protect ... from",
+      "保护……免受",
+      "prep",
+      "protect animals ____ hunters",
+      "from",
+      null
+    ],
+    [
+      "on average",
+      "平均",
+      "coll",
+      "on ____, ...",
+      "average",
+      [
+        "on",
+        "average"
+      ]
+    ],
+    [
+      "die out",
+      "灭绝",
+      "phr",
+      "die out completely",
+      "out",
+      null
+    ],
+    [
+      "in harmony with",
+      "与……和谐相处",
+      "prep",
+      "live in harmony ____ nature",
+      "with",
+      [
+        "in",
+        "harmony",
+        "with"
+      ]
+    ],
+    [
+      "cut down",
+      "砍倒",
+      "phr",
+      "cut down trees",
+      "down",
+      null
+    ],
+    [
+      "remind sb. of",
+      "提醒某人",
+      "prep",
+      "remind us ____ the danger",
+      "of",
+      null
+    ],
+    [
+      "an endangered species",
+      "濒危物种",
+      "coll",
+      "an endangered ____（濒危物种）",
+      "species",
+      [
+        "an",
+        "endangered",
+        "species"
+      ]
+    ],
+    [
+      "reduce ... by",
+      "减少了",
+      "prep",
+      "reduce the number ____ half",
+      "by",
+      null
+    ]
+  ]
+}
