@@ -358,10 +358,29 @@
   </div>
 </div>
 
+<!-- ================= 通用网页内弹窗（替代 alert/confirm/prompt） ================= -->
+<div id="dlgModal" class="modal hidden">
+  <div class="modalMask"></div>
+  <div class="modalBox dlgBox">
+    <div class="dlgHead">
+      <span class="dlgIcon info" id="dlgIcon">ℹ️</span>
+      <h3 id="dlgTitle">提示</h3>
+    </div>
+    <div class="dlgMsg" id="dlgMsg"></div>
+    <input id="dlgInput" class="dlgInput hidden" maxlength="20">
+    <div class="dlgError hidden" id="dlgError"></div>
+    <div class="btnRow dlgBtns">
+      <button class="dlgBtn" id="dlgCancel">取 消</button>
+      <button class="dlgBtn primary" id="dlgOk">确 定</button>
+    </div>
+  </div>
+</div>
+
 <script src="js/config.js?v=2"></script>
 <script src="js/storage.js?v=2"></script>
 <script src="js/wordbank.js?v=2"></script>
 <script src="js/ui.js?v=2"></script>
+<script src="js/dialog.js?v=2"></script>
 <script src="js/editor.js?v=2"></script>
 <script src="js/game.js?v=2"></script>
 <script src="js/events.js?v=2"></script>

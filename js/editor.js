@@ -88,15 +88,20 @@
   }
 
   /* ================= 新建班级 ================= */
-  function newClass() {
-    const name = prompt("请输入新班级名称：", "");
-    if (name === null) return;
-    const cls = name.trim();
-    if (!cls) return;
-    if (rosters()[cls] !== undefined) {
-      alert("已存在同名班级「" + cls + "」。");
-      return;
-    }
+  async function newClass() {
+    const val = await dlgPrompt({
+      title: "➕ 新建班级",
+      message: "班级名称用于分开保存名单、战绩和擂主。",
+      placeholder: "例如：高一3班",
+      validate: v => {
+        const cls = v.trim();
+        if (!cls) return "班级名称不能为空。";
+        if (rosters()[cls] !== undefined) return "已存在同名班级「" + cls + "」。";
+        return "";
+      }
+    });
+    if (val === null) return;
+    const cls = val.trim();
     const rs = rosters();
     rs[cls] = [];
     saveRosters(rs);
@@ -107,33 +112,40 @@
   }
 
   /* ================= 重命名班级 ================= */
-  function renameClass() {
+  async function renameClass() {
     if (!edCls) return;
-    const name = prompt("将班级「" + edCls + "」重命名为：", edCls);
-    if (name === null) return;
-    const to = name.trim();
-    if (!to || to === edCls) return;
+    const oldName = edCls;
+    const val = await dlgPrompt({
+      title: "重命名班级",
+      message: "将班级「" + oldName + "」重命名，名单、战绩、擂主会一并迁移。",
+      value: oldName,
+      validate: v => {
+        const to = v.trim();
+        if (!to) return "班级名称不能为空。";
+        if (to !== oldName && rosters()[to] !== undefined) return "已存在同名班级「" + to + "」。";
+        return "";
+      }
+    });
+    if (val === null) return;
+    const to = val.trim();
+    if (!to || to === oldName) return;
     const rs = rosters();
-    if (rs[to] !== undefined) {
-      alert("已存在同名班级「" + to + "」。");
-      return;
-    }
     /* 迁移名单 */
-    rs[to] = rs[edCls];
-    delete rs[edCls];
+    rs[to] = rs[oldName];
+    delete rs[oldName];
     /* 迁移战绩、擂主、配置（读取旧键，写入新键） */
     try {
-      const oldHis = localStorage.getItem(hisKey(edCls));
-      const oldChamp = localStorage.getItem(champKey(edCls));
-      const oldCfg = localStorage.getItem("vpk_cfg_" + edCls);
-      localStorage.removeItem(hisKey(edCls));
-      localStorage.removeItem(champKey(edCls));
-      localStorage.removeItem("vpk_cfg_" + edCls);
+      const oldHis = localStorage.getItem(hisKey(oldName));
+      const oldChamp = localStorage.getItem(champKey(oldName));
+      const oldCfg = localStorage.getItem("vpk_cfg_" + oldName);
+      localStorage.removeItem(hisKey(oldName));
+      localStorage.removeItem(champKey(oldName));
+      localStorage.removeItem("vpk_cfg_" + oldName);
       if (oldHis !== null) localStorage.setItem(hisKey(to), oldHis);
       if (oldChamp !== null) localStorage.setItem(champKey(to), oldChamp);
       if (oldCfg !== null) localStorage.setItem("vpk_cfg_" + to, oldCfg);
     } catch (e) {}
-    if (S.cls === edCls) S.cls = to;
+    if (S.cls === oldName) S.cls = to;
     saveRosters(rs);
     edCls = to;
     renderEdAll();
@@ -141,9 +153,12 @@
   }
 
   /* ================= 删除班级 ================= */
-  function deleteClass() {
+  async function deleteClass() {
     if (!edCls) return;
-    if (!confirm("确定删除班级「" + edCls + "」？其名单、对战历史、擂主和配置都会一并清除，且不可恢复。")) return;
+    const ok = await dlgConfirm(
+      "确定删除班级「" + edCls + "」？其名单、对战历史、擂主和配置都会一并清除，且不可恢复。",
+      { title: "删除班级", type: "error", okText: "确认删除", cancelText: "保留" });
+    if (!ok) return;
     const rs = rosters();
     delete rs[edCls];
     saveRosters(rs);
@@ -217,13 +232,15 @@
     const raw = $("edAddInput").value.trim();
     if (!raw) return;
     if (!NAME_RE.test(raw)) {
-      alert("名字含非法字符，仅支持中文、英文、数字及 · . - @ 等。");
+      dlgAlert("名字含非法字符，仅支持中文、英文、数字及 · . - @ 等。",
+        { type: "error", title: "无法添加" });
       return;
     }
     const rs = rosters();
     const roster = rs[edCls];
     if (roster.includes(raw)) {
-      alert("名单中已存在「" + dispName(raw) + "」。");
+      dlgAlert("名单中已存在「" + dispName(raw) + "」。",
+        { type: "warning", title: "名字重复" });
       $("edAddInput").value = "";
       return;
     }
@@ -237,22 +254,26 @@
   }
 
   /* ================= 改名 ================= */
-  function editName(i) {
+  async function editName(i) {
     const rs = rosters();
     const roster = rs[edCls];
     const old = roster[i];
-    const val = prompt("修改名字：", old);
+    const val = await dlgPrompt({
+      title: "修改名字",
+      message: "原名字：" + dispName(old),
+      value: old,
+      maxlength: 8,
+      validate: v => {
+        const nv = v.trim();
+        if (!nv) return "名字不能为空。";
+        if (!NAME_RE.test(nv)) return "名字含非法字符，仅支持中文、英文、数字及 · . - @ 等。";
+        if (nv !== old && roster.includes(nv)) return "名单中已存在「" + dispName(nv) + "」。";
+        return "";
+      }
+    });
     if (val === null) return;
     const nv = val.trim();
     if (!nv || nv === old) return;
-    if (!NAME_RE.test(nv)) {
-      alert("名字含非法字符，仅支持中文、英文、数字及 · . - @ 等。");
-      return;
-    }
-    if (roster.includes(nv)) {
-      alert("名单中已存在「" + dispName(nv) + "」。");
-      return;
-    }
     roster[i] = nv;
     commit(rs);
     renderEdNameList();
@@ -261,11 +282,14 @@
   }
 
   /* ================= 删除名字 ================= */
-  function removeName(i) {
+  async function removeName(i) {
     const rs = rosters();
     const roster = rs[edCls];
     const target = roster[i];
-    if (!confirm("从「" + edCls + "」名单中删除「" + dispName(target) + "」？")) return;
+    const ok = await dlgConfirm(
+      "从「" + edCls + "」名单中删除「" + dispName(target) + "」？",
+      { type: "error", title: "删除名字", okText: "确认删除", cancelText: "保留" });
+    if (!ok) return;
     roster.splice(i, 1);
     commit(rs);
     renderEdNameList();
@@ -297,8 +321,9 @@
     $("edBatchText").value = "";
     $("edBatchArea").classList.add("hidden");
     const skipped = stat.empty + stat.comment + stat.invalid + stat.dup;
-    alert("批量添加完成：新增 " + added + " 人，跳过 " + skipped +
-      " 行（重复/空行/注释/非法）。当前共 " + roster.length + " 人。");
+    dlgAlert("新增 " + added + " 人，跳过 " + skipped +
+      " 行（重复/空行/注释/非法）。当前共 " + roster.length + " 人。",
+      { type: "success", title: "批量添加完成" });
   }
 
   /* ================= 统计 ================= */

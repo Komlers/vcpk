@@ -292,7 +292,10 @@ function endBattle(){
   /* ② 异步加载词库，完成后补建索引、恢复配置（过滤已选词库）与题池提示 */
   try{ await loadWordBank(); }
   catch(err){
-    alert("词库加载失败：" + err.message + "\n\n请确认本页面通过 http:// 或 https:// 访问；直接双击 index.html（file://）会被浏览器拦截本地 JSON 请求。");
+    dlgAlert(
+      "<b>词库加载失败：" + err.message + "</b><br><br>" +
+      "请确认本页面通过 http:// 或 https:// 访问；直接双击 index.html（file://）会被浏览器拦截本地 JSON 请求。",
+      { type: "error", title: "❌ 加载失败", html: true, okText: "我知道了" });
     return;
   }
   buildIndex();

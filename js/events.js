@@ -47,12 +47,15 @@ $("pickModal").addEventListener("click", e=>{
 });
 
 /* ================== 班级切换 / 删除 ================== */
-$("classChips").addEventListener("click", e=>{
+$("classChips").addEventListener("click", async e=>{
   const chip = e.target.closest(".chip");
   if(!chip) return;
   const cls = chip.dataset.cls;
   if(e.target.closest(".clsDel")){
-    if(!confirm("确定删除班级「" + cls + "」的名单？其对战历史、擂主和配置也会一并清除。")) return;
+    const ok = await dlgConfirm(
+      "确定删除班级「" + cls + "」的名单？其对战历史、擂主和配置也会一并清除。",
+      { type: "error", title: "删除班级", okText: "确认删除", cancelText: "保留" });
+    if(!ok) return;
     const rs = rosters();
     delete rs[cls];
     saveRosters(rs);
@@ -76,11 +79,16 @@ $("classChips").addEventListener("click", e=>{
 });
 
 /* ================== 导入 TXT 名单 ================== */
-$("importRosterBtn").addEventListener("click", ()=>{
-  const name = prompt("请输入要导入的班级名称：");
+$("importRosterBtn").addEventListener("click", async ()=>{
+  const name = await dlgPrompt({
+    title: "导入班级名单",
+    message: "请输入要导入的班级名称：",
+    placeholder: "例如：高一3班",
+    validate: v => v.trim() ? "" : "班级名称不能为空。"
+  });
   if(name === null) return;
   const cls = name.trim();
-  if(!cls){ alert("班级名称不能为空。"); return; }
+  if(!cls) return;
   pendingClass = cls;
   $("rosterFile").click();
 });
@@ -89,15 +97,21 @@ $("rosterFile").addEventListener("change", e=>{
   if(!file) return;
   const cls = pendingClass; pendingClass = "";
   const reader = new FileReader();
-  reader.onload = ()=>{
+  reader.onload = async ()=>{
     const {names, stat} = parseRosterText(reader.result);
     e.target.value = "";
     if(!names.length){
-      alert("文件里没有解析出有效名字。请确认 TXT 是一行一个名字，且名字只含中文 / 字母 / 数字。");
+      dlgAlert("文件里没有解析出有效名字。请确认 TXT 是一行一个名字，且名字只含中文 / 字母 / 数字。",
+        { type: "error", title: "导入失败" });
       return;
     }
     const existing = rosters();
-    if(existing[cls] && !confirm("班级「" + cls + "」已有名单（" + existing[cls].length + " 人），导入将覆盖旧名单，确定继续？")) return;
+    if(existing[cls]){
+      const overwrite = await dlgConfirm(
+        "班级「" + cls + "」已有名单（" + existing[cls].length + " 人），导入将覆盖旧名单，确定继续？",
+        { type: "warning", title: "覆盖名单", okText: "覆盖导入", cancelText: "取消" });
+      if(!overwrite) return;
+    }
     existing[cls] = names;
     saveRosters(existing);
     S.cls = cls;
@@ -108,18 +122,21 @@ $("rosterFile").addEventListener("change", e=>{
     if(stat.comment) skip.push("注释行 " + stat.comment);
     if(stat.invalid)  skip.push("特殊字符行 " + stat.invalid);
     if(stat.dup)      skip.push("重复名 " + stat.dup);
-    alert("✅ 已导入「" + cls + "」共 " + names.length + " 人。"
-      + (skip.length ? "\n跳过：" + skip.join("、") : ""));
+    dlgAlert("已导入「" + cls + "」共 " + names.length + " 人。"
+      + (skip.length ? "<br>跳过：" + skip.join("、") : ""),
+      { type: "success", title: "✅ 导入成功", html: true });
   };
   reader.readAsText(file, "UTF-8");
 });
-$("clearBtn").addEventListener("click", ()=>{
-  if(confirm("确定清空 " + S.cls + " 的全部对战历史和擂主记录吗？此操作不可恢复。")){
-    localStorage.removeItem(hisKey(S.cls));
-    saveChamp(S.cls, "");
-    redName = ""; blueName = ""; champFixed = false;
-    refreshNameBoxes(); renderHistory();
-  }
+$("clearBtn").addEventListener("click", async ()=>{
+  const ok = await dlgConfirm(
+    "确定清空 " + S.cls + " 的全部对战历史和擂主记录吗？此操作不可恢复。",
+    { type: "error", title: "清空历史", okText: "确认清空", cancelText: "保留" });
+  if(!ok) return;
+  localStorage.removeItem(hisKey(S.cls));
+  saveChamp(S.cls, "");
+  redName = ""; blueName = ""; champFixed = false;
+  refreshNameBoxes(); renderHistory();
 });
 
 /* ================== 词库弹窗 ================== */
@@ -161,22 +178,27 @@ $("libFile").addEventListener("change", e=>{
   const file = e.target.files && e.target.files[0];
   if(!file) return;
   const reader = new FileReader();
-  reader.onload = ()=>{
+  reader.onload = async ()=>{
     e.target.value = "";
     try{
       const r = importCustomLib(reader.result);
       tempUnits.push(r.tag);
       renderLibChips();
-      alert("✅ 已导入词库「" + r.name + "」：" + r.count + " 个单词"
-        + (r.chunks ? " + " + r.chunks + " 个词块" : "") + "。\n已自动选中，点确定后生效。");
+      await dlgAlert("已导入词库「" + r.name + "」：" + r.count + " 个单词"
+        + (r.chunks ? " + " + r.chunks + " 个词块" : "") + "。<br>已自动选中，点确定后生效。",
+        { type: "success", title: "✅ 词库导入成功", html: true });
     }catch(err){
-      alert("❌ 导入失败：" + err.message);
+      dlgAlert("导入失败：" + err.message,
+        { type: "error", title: "❌ 词库导入失败" });
     }
   };
   reader.readAsText(file, "UTF-8");
 });
-$("libConfirm").addEventListener("click", ()=>{
-  if(!tempUnits.length){ alert("请至少选择一个词库！"); return; }
+$("libConfirm").addEventListener("click", async ()=>{
+  if(!tempUnits.length){
+    dlgAlert("请至少选择一个词库！", { type: "warning", title: "未选择词库" });
+    return;
+  }
   S.units = tempUnits;
   S.useChunks = !S.wordsOnly && S.units.includes("U2");
   saveCfg();
@@ -253,9 +275,15 @@ $("hisModal").addEventListener("click", e=>{
 });
 
 /* ================== 开始 PK / 限时 ================== */
-$("startBtn").addEventListener("click", ()=>{
-  if(!redName || !blueName){ alert("请先抽取（或手输）红蓝双方选手！"); return; }
-  if(!S.units.length){ alert("请先选择词库！"); return; }
+$("startBtn").addEventListener("click", async ()=>{
+  if(!redName || !blueName){
+    dlgAlert("请先抽取（或手输）红蓝双方选手！", { type: "warning", title: "选手未就位" });
+    return;
+  }
+  if(!S.units.length){
+    dlgAlert("请先选择词库！", { type: "warning", title: "未选择词库" });
+    return;
+  }
   S.useChunks = !S.wordsOnly && S.units.includes("U2");
   saveCfg();
   S.p1 = redName; S.p2 = blueName;

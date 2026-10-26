@@ -257,9 +257,12 @@ function createLibChip(tag, file, displayText){
     del.className = "libDel";
     del.textContent = "×";
     del.title = "删除此自定义词库";
-    del.addEventListener("click", e=>{
+    del.addEventListener("click", async e=>{
       e.stopPropagation();
-      if(!confirm("确定删除自定义词库「" + (LIB_INFO[tag]?.name || tag) + "」吗？此操作不可恢复。")) return;
+      const ok = await dlgConfirm(
+        "确定删除自定义词库「" + (LIB_INFO[tag]?.name || tag) + "」吗？此操作不可恢复。",
+        { type: "error", title: "删除词库", okText: "确认删除", cancelText: "保留" });
+      if(!ok) return;
       deleteCustomLib(tag);
       tempUnits = tempUnits.filter(t => t !== tag);
       renderLibChips();
