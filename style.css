@@ -438,13 +438,18 @@
                  border-radius:0 8px 8px 0;}
   .libGroup .libChips{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
 
-  /* 只加载纯单词复选框 */
-  .wordsOnlyLabel{display:flex;align-items:center;gap:12px;margin-top:16px;
+  /* 擂台设置：设置项与小号解释 */
+  .setItem{margin-top:20px;}
+  .setItem:first-of-type{margin-top:14px;}
+  .setHint{font-size:16px;color:var(--muted);line-height:1.55;margin:5px 0 0 34px;}
+
+  /* 复选框标题 */
+  .wordsOnlyLabel{display:flex;align-items:center;gap:12px;
                   font-size:23px;color:var(--ink2);cursor:pointer;user-select:none;}
   .wordsOnlyLabel input{width:22px;height:22px;cursor:pointer;accent-color:var(--blue);}
 
   /* 擂台超时检测：每题限时选择 */
-  .qTimeoutRow{display:flex;align-items:center;gap:10px;margin-left:34px;flex-wrap:wrap;}
+  .qTimeoutRow{display:flex;align-items:center;gap:10px;margin:10px 0 0 34px;flex-wrap:wrap;}
   .qTimeoutLabel{font-size:20px;color:var(--ink2);font-weight:600;}
   .qTimeoutOpt{padding:8px 22px;font-size:20px;font-weight:700;border-radius:12px;
                border:2px solid var(--line);background:#fafbfe;color:var(--ink2);
