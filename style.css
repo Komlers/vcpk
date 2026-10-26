@@ -354,6 +354,16 @@
                   font-size:23px;color:var(--ink2);cursor:pointer;user-select:none;}
   .wordsOnlyLabel input{width:22px;height:22px;cursor:pointer;accent-color:var(--blue);}
 
+  /* 擂台超时检测：每题限时选择 */
+  .qTimeoutRow{display:flex;align-items:center;gap:10px;margin-left:34px;flex-wrap:wrap;}
+  .qTimeoutLabel{font-size:20px;color:var(--ink2);font-weight:600;}
+  .qTimeoutOpt{padding:8px 22px;font-size:20px;font-weight:700;border-radius:12px;
+               border:2px solid var(--line);background:#fafbfe;color:var(--ink2);
+               cursor:pointer;transition:all .15s;}
+  .qTimeoutOpt:hover{border-color:#c3d2ee;}
+  .qTimeoutOpt.active{border-color:var(--blue);background:var(--blue-bg);color:#2456bd;}
+  .qTimeoutRow.disabled{opacity:.45;pointer-events:none;}
+
   /* ============ 限时滚轮 ============ */
   .card.center{display:flex;flex-direction:column;align-items:center;}
   .timerPicker{display:flex;align-items:center;gap:20px;margin:16px 0 8px;}

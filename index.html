@@ -175,6 +175,21 @@
       勾选后：每轮比赛结束统计错词，下次比赛优先重考错词。<br>
       不勾选：不统计错词，每次比赛完全使用当前所选词库出题（默认）。
     </div>
+
+    <label class="wordsOnlyLabel" style="margin-top:18px">
+      <input type="checkbox" id="questionTimeoutChk">
+      擂台超时检测
+    </label>
+    <div class="mini" style="margin:6px 0 8px 34px;line-height:1.6">
+      开启后，每道题须在限定时间内作答，超时直接进入下一题，双方均不计分（防止故意拖延）。
+    </div>
+    <div class="qTimeoutRow" id="qTimeoutRow">
+      <span class="qTimeoutLabel">每题限时：</span>
+      <button class="qTimeoutOpt" data-sec="3">3s</button>
+      <button class="qTimeoutOpt" data-sec="5">5s</button>
+      <button class="qTimeoutOpt" data-sec="7">7s</button>
+    </div>
+
     <div class="btnRow" style="margin-top:24px">
       <button class="startBtn small" id="settingClose">关 闭</button>
     </div>

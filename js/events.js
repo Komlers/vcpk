@@ -209,6 +209,20 @@ $("rememberWrongChk").addEventListener("change", e=>{
   saveCfg();
   planInfo();
 });
+/* 擂台超时检测开关 */
+$("questionTimeoutChk").addEventListener("change", e=>{
+  S.questionTimeout = e.target.checked;
+  renderQuestionTimeoutUI();
+  saveCfg();
+});
+/* 每题限时 3s / 5s / 7s */
+$("qTimeoutRow").addEventListener("click", e=>{
+  const btn = e.target.closest(".qTimeoutOpt");
+  if(!btn || !S.questionTimeout) return;
+  S.questionTimeoutDur = parseInt(btn.dataset.sec);
+  renderQuestionTimeoutUI();
+  saveCfg();
+});
 
 /* ================== 规则介绍弹窗 ================== */
 $("ruleBtn").addEventListener("click", ()=>$("ruleModal").classList.remove("hidden"));

@@ -271,6 +271,8 @@ function restoreCfg(){
   S.dur = 60;
   S.wordsOnly = false;
   S.rememberWrong = false;
+  S.questionTimeout = true;
+  S.questionTimeoutDur = 5;
   try{
     const c = JSON.parse(localStorage.getItem("vpk_cfg_" + S.cls));
     if(c){
@@ -278,6 +280,8 @@ function restoreCfg(){
       if(c.dur) S.dur = c.dur;
       if(c.wordsOnly !== undefined) S.wordsOnly = !!c.wordsOnly;
       if(c.rememberWrong !== undefined) S.rememberWrong = !!c.rememberWrong;
+      if(c.questionTimeout !== undefined) S.questionTimeout = !!c.questionTimeout;
+      if(c.questionTimeoutDur) S.questionTimeoutDur = c.questionTimeoutDur;
     }
   }catch(e){}
   /* 首次使用不默认勾选任何词库，由用户手动选择；
@@ -285,11 +289,21 @@ function restoreCfg(){
   S.useChunks = !S.wordsOnly && S.units.includes("U2");
   $("wordsOnlyChk").checked = S.wordsOnly;
   $("rememberWrongChk").checked = S.rememberWrong;
+  $("questionTimeoutChk").checked = S.questionTimeout;
+  renderQuestionTimeoutUI();
   /* 临时赛选项不持久化，每次恢复配置时重置 */
   S.noRecord = false;
   $("noRecordChk").checked = false;
   updateDurBtn();
   updateLibBtn();
+}
+/* 擂台超时检测 UI：更新 3s/5s/7s 按钮选中态，关闭开关时整行变灰 */
+function renderQuestionTimeoutUI(){
+  const row = $("qTimeoutRow");
+  row.classList.toggle("disabled", !S.questionTimeout);
+  row.querySelectorAll(".qTimeoutOpt").forEach(b=>{
+    b.classList.toggle("active", parseInt(b.dataset.sec) === S.questionTimeoutDur);
+  });
 }
 /* 题池提示：随选词库与时长实时更新 */
 function planInfo(){

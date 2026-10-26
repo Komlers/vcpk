@@ -93,10 +93,36 @@ function nextQuestion(){
       b.disabled = false;
     });
   });
+  startQuestionTimer();
+}
+/* ================== 单题超时检测（防拖延） ================== */
+function clearQuestionTimer(){
+  if(S.qTimer){ clearTimeout(S.qTimer); S.qTimer = null; }
+}
+function startQuestionTimer(){
+  clearQuestionTimer();
+  if(!S.questionTimeout) return;
+  S.qTimer = setTimeout(questionTimeout, S.questionTimeoutDur * 1000);
+}
+/* 题目超时：双方均不计分，锁定双方并短暂提示后进入下一题 */
+function questionTimeout(){
+  if(S.pendingNext) return;
+  S.qTimer = null;
+  S.pendingNext = true;
+  /* 锁定双方，禁止继续点击 */
+  [1,2].forEach(k=>{
+    S.locked[k-1] = true;
+    $("side"+k).classList.add("locked");
+  });
+  fx("⏰ 超时", "#9a8c5b", 18);
+  fx("⏰ 超时", "#9a8c5b", 82);
+  beep(160, .25);
+  setTimeout(()=>{ if(S.left > 0) nextQuestion(); }, 700);
 }
 function scheduleNext(delay){
   if(S.pendingNext) return;
   S.pendingNext = true;
+  clearQuestionTimer();
   setTimeout(()=>{ if(S.left > 0) nextQuestion(); }, delay);
 }
 /* 计分：答对 +10（连击每层 +5，封顶 +20）；答错记入错词/错块本 */
@@ -166,6 +192,7 @@ function answer(k, e){
 /* ================== 结算 ================== */
 function endBattle(){
   clearInterval(S.timer);
+  clearQuestionTimer();
   const [a,b] = S.scores;
   /* 临时赛（noRecord）不记录战绩、不统计错题、不更新擂主 */
   if(!S.revival && !S.noRecord){
