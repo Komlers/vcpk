@@ -120,8 +120,12 @@ function renderChips(){
   });
   const tip = $("noRosterTip");
   if(tip) tip.style.display = names.length ? "none" : "";
+  /* 已有名单后，主页面不再显示导入按钮，导入功能移至名单编辑器内 */
   const ib = $("importRosterBtn");
-  if(ib) ib.textContent = names.length ? "导入" : "📥 导入班级名单（TXT）";
+  if(ib){
+    ib.textContent = "📥 导入班级名单（TXT）";
+    ib.style.display = names.length ? "none" : "";
+  }
   const row = document.querySelector(".classRow");
   if(row) row.classList.toggle("has-roster", names.length > 0);
 }

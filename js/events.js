@@ -90,12 +90,14 @@ $("importRosterBtn").addEventListener("click", async ()=>{
   const cls = name.trim();
   if(!cls) return;
   pendingClass = cls;
+  pendingImportInEditor = false;
   $("rosterFile").click();
 });
 $("rosterFile").addEventListener("change", e=>{
   const file = e.target.files && e.target.files[0];
   if(!file) return;
   const cls = pendingClass; pendingClass = "";
+  const inEditor = pendingImportInEditor; pendingImportInEditor = false;
   const reader = new FileReader();
   reader.onload = async ()=>{
     const {names, stat} = parseRosterText(reader.result);
@@ -114,20 +116,57 @@ $("rosterFile").addEventListener("change", e=>{
     }
     existing[cls] = names;
     saveRosters(existing);
-    S.cls = cls;
-    redName = ""; blueName = ""; champFixed = false;
-    resetDrawn(); restoreCfg(); refreshNameBoxes(); renderHistory();
     const skip = [];
     if(stat.empty)   skip.push("空行 " + stat.empty);
     if(stat.comment) skip.push("注释行 " + stat.comment);
     if(stat.invalid)  skip.push("特殊字符行 " + stat.invalid);
     if(stat.dup)      skip.push("重复名 " + stat.dup);
+    if(inEditor){
+      /* 从名单编辑器内导入：不改变主页面当前班级/选手，只刷新编辑器与班级 chips */
+      refreshEditor();
+      renderChips();
+    }else{
+      /* 主页面首次导入：切换到该班级并刷新主界面 */
+      S.cls = cls;
+      redName = ""; blueName = ""; champFixed = false;
+      resetDrawn(); restoreCfg(); refreshNameBoxes(); renderHistory();
+    }
     dlgAlert("已导入「" + cls + "」共 " + names.length + " 人。"
       + (skip.length ? "<br>跳过：" + skip.join("、") : ""),
-      { type: "success", title: "✅ 导入成功", html: true });
+      { type: "success", title: "导入成功", html: true });
   };
   reader.readAsText(file, "UTF-8");
 });
+
+/* 名单编辑器内的「📥 导入TXT」：导入到当前选中的班级 */
+$("edImportBtn").addEventListener("click", ()=>{
+  const cls = $("edClassSelect").value;
+  if(!cls){
+    dlgAlert("请先「新建班级」，再导入名单。", { type: "warning", title: "还没有班级" });
+    return;
+  }
+  pendingClass = cls;
+  pendingImportInEditor = true;
+  $("rosterFile").click();
+});
+
+/* 「❓ 添加帮助」：从 res/import.md 加载并转 HTML 显示 */
+$("edHelpBtn").addEventListener("click", async ()=>{
+  try{
+    const res = await fetch("res/import.md", {cache:"no-cache"});
+    if(!res.ok) throw new Error("help file missing");
+    const md = await res.text();
+    $("importHelpContent").innerHTML = mdToHtml(md);
+    $("importHelpModal").classList.remove("hidden");
+  }catch(err){
+    dlgAlert("帮助内容加载失败：" + err.message, { type: "error", title: "出错了" });
+  }
+});
+$("importHelpClose").addEventListener("click", ()=>$("importHelpModal").classList.add("hidden"));
+$("importHelpModal").addEventListener("click", e=>{
+  if(e.target.classList.contains("modalMask")) $("importHelpModal").classList.add("hidden");
+});
+
 $("clearBtn").addEventListener("click", async ()=>{
   const ok = await dlgConfirm(
     "确定清空 " + S.cls + " 的全部对战历史和擂主记录吗？此操作不可恢复。",

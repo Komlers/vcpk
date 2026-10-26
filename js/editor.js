@@ -336,6 +336,13 @@
   }
 
   /* ================= 事件绑定 ================= */
+  /* 暴露刷新函数：供 events.js 在编辑器内导入名单后刷新编辑器 UI */
+  window.refreshEditor = function () {
+    renderEdClassSelect();
+    renderEdNameList();
+    updateEdStat();
+  };
+
   $("openEditorBtn").addEventListener("click", openEditor);
   $("edClose").addEventListener("click", closeEditor);
   $("editorModal").addEventListener("click", e => {

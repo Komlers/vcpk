@@ -227,7 +227,9 @@
     <!-- 工具栏 -->
     <div class="edToolBar">
       <input id="edSearch" class="edInput" placeholder="🔍 搜索名字…">
+      <button class="edMiniBtn" id="edImportBtn">📥 导入</button>
       <button class="edMiniBtn" id="edBatchBtn">📋 批量添加</button>
+      <a href="javascript:;" class="edHelpLink" id="edHelpBtn" title="如何添加名字">❓ 添加帮助</a>
     </div>
 
     <!-- 批量添加展开区 -->
@@ -252,6 +254,18 @@
 
     <div class="btnRow" style="margin-top:14px">
       <button class="startBtn small" id="edClose">完 成</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 添加名单帮助弹窗（内容从 res/import.md 动态加载） ============ -->
+<div id="importHelpModal" class="modal hidden">
+  <div class="modalMask"></div>
+  <div class="modalBox updateModalBox">
+    <h3>❓ 如何添加 / 导入名单</h3>
+    <div class="updateContent" id="importHelpContent"></div>
+    <div class="btnRow" style="margin-top:20px">
+      <button class="startBtn small" id="importHelpClose">我知道了</button>
     </div>
   </div>
 </div>

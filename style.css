@@ -274,8 +274,10 @@
   /* 弹窗内部隐藏滚动条（保留滚动功能），圆角完整显示 */
   .modalBox::-webkit-scrollbar,
   .libTabPanel::-webkit-scrollbar,
-  .pickGrid::-webkit-scrollbar{width:0;height:0;}
-  .modalBox, .libTabPanel, .pickGrid{scrollbar-width:none;-ms-overflow-style:none;}
+  .pickGrid::-webkit-scrollbar,
+  .updateContent::-webkit-scrollbar,
+  .edNameList::-webkit-scrollbar{width:0;height:0;}
+  .modalBox, .libTabPanel, .pickGrid, .updateContent, .edNameList{scrollbar-width:none;-ms-overflow-style:none;}
   .modalBox h3{font-size:27px;color:var(--ink2);font-weight:700;margin-bottom:18px;
                display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
   .modalBox h3 .hint{font-size:21px;font-weight:400;color:var(--muted2);margin-left:auto;}
@@ -302,6 +304,9 @@
             border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink2);
             cursor:pointer;}
   .edToolBar{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+  .edHelpLink{font-size:18px;font-weight:600;color:var(--blue-d);text-decoration:none;
+               white-space:nowrap;cursor:pointer;}
+  .edHelpLink:hover{text-decoration:underline;}
   .edInput{flex:1;min-width:0;padding:10px 14px;font-size:20px;
             border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);}
   .edInput:focus{outline:none;border-color:var(--blue);}
