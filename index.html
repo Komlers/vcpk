@@ -127,6 +127,7 @@
       <div class="importLibRow">
         <button class="drawBtn" id="importLibBtn" style="font-size:20px;padding:10px 20px">📥 导入本地词库（JSON）</button>
         <input type="file" id="libFile" accept=".json,application/json" style="display:none">
+        <a href="javascript:;" class="libHelpLink" id="customHelpBtn">如何制作自定义词库</a>
       </div>
       <div class="libChips" id="customChips" style="margin-top:16px"></div>
     </div>
@@ -273,6 +274,18 @@
   </div>
 </div>
 
+<!-- ============ 自定义词库制作帮助弹窗（内容从 res/custom.md 动态加载） ============ -->
+<div id="customHelpModal" class="modal hidden">
+  <div class="modalMask"></div>
+  <div class="modalBox updateModalBox">
+    <h3>📝 如何制作自定义词库</h3>
+    <div class="updateContent" id="customHelpContent"></div>
+    <div class="btnRow" style="margin-top:20px">
+      <button class="startBtn small" id="customHelpClose">我知道了</button>
+    </div>
+  </div>
+</div>
+
 <!-- ================= 规则介绍弹窗 ================= -->
 <div id="ruleModal" class="modal hidden">
   <div class="modalMask"></div>
@@ -393,14 +406,14 @@
   </div>
 </div>
 
-<script src="js/config.js?v=2"></script>
-<script src="js/storage.js?v=2"></script>
-<script src="js/wordbank.js?v=2"></script>
-<script src="js/ui.js?v=2"></script>
-<script src="js/dialog.js?v=2"></script>
-<script src="js/editor.js?v=2"></script>
-<script src="js/game.js?v=2"></script>
-<script src="js/events.js?v=2"></script>
+<script src="js/config.js?v=3"></script>
+<script src="js/storage.js?v=3"></script>
+<script src="js/wordbank.js?v=3"></script>
+<script src="js/ui.js?v=3"></script>
+<script src="js/dialog.js?v=3"></script>
+<script src="js/editor.js?v=3"></script>
+<script src="js/game.js?v=3"></script>
+<script src="js/events.js?v=3"></script>
 
 
 </body></html>

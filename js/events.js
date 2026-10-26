@@ -167,6 +167,23 @@ $("importHelpModal").addEventListener("click", e=>{
   if(e.target.classList.contains("modalMask")) $("importHelpModal").classList.add("hidden");
 });
 
+/* 自定义词库面板「如何制作自定义词库」：从 res/custom.md 加载并转 HTML */
+$("customHelpBtn").addEventListener("click", async ()=>{
+  try{
+    const res = await fetch("res/custom.md", {cache:"no-cache"});
+    if(!res.ok) throw new Error("custom.md missing");
+    const md = await res.text();
+    $("customHelpContent").innerHTML = mdToHtml(md);
+    $("customHelpModal").classList.remove("hidden");
+  }catch(err){
+    dlgAlert("帮助内容加载失败：" + err.message, { type: "error", title: "出错了" });
+  }
+});
+$("customHelpClose").addEventListener("click", ()=>$("customHelpModal").classList.add("hidden"));
+$("customHelpModal").addEventListener("click", e=>{
+  if(e.target.classList.contains("modalMask")) $("customHelpModal").classList.add("hidden");
+});
+
 $("clearBtn").addEventListener("click", async ()=>{
   const ok = await dlgConfirm(
     "确定清空 " + S.cls + " 的全部对战历史和擂主记录吗？此操作不可恢复。",

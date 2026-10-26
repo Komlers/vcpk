@@ -41,6 +41,11 @@ function mdToHtml(md){
     s = s.replace(/`([^`]+)`/g, (_, c) => { codes.push(c); return "C"+(codes.length-1)+""; });
     s = escHtml(s);
     s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    /* 超链接 [文字](URL)：仅允许常见安全协议与相对路径，新窗口打开 */
+    s = s.replace(/\[([^\]]*)\]\(([^()\s]+)\)/g, (_, text, url) => {
+      const safe = /^(https?:|mailto:|tel:|\/|#|\.\/|\.\.\/|res\/|template\/|lib\/|js\/)/i.test(url);
+      return '<a href="'+(safe?url:"#")+'" target="_blank" rel="noopener noreferrer">'+text+'</a>';
+    });
     s = s.replace(/C(\d+)/g, (_, i) => "<code>"+escHtml(codes[i])+"</code>");
     return s;
   };
@@ -50,12 +55,47 @@ function mdToHtml(md){
   const isHr = l => /^---+\s*$/.test(l);
   const isUl = l => /^\s*[-*]\s+/.test(l);
   const isOl = l => /^\s*\d+\.\s+/.test(l);
+  /* 表格：当前行是 |...| 且下一行是分隔行（只含 空格/冒号/竖线/连字符 且含连字符） */
+  const isTableRow = l => /^\s*\|.*\|\s*$/.test(l);
+  const isTableSep  = l => /^\s*\|?[\s:|-]+\|?\s*$/.test(l) && /-/.test(l);
+  const splitTableRow = l => l.trim().replace(/^\|/,"").replace(/\|\s*$/,"")
+                                   .split("|").map(c=>c.trim());
+  const alignAttr = a => a==="center" ? ' style="text-align:center"'
+                          : a==="right" ? ' style="text-align:right"' : "";
   while(i < lines.length){
     const line = lines[i];
+    /* 围栏代码块：从 ``` 开始到下一个 ``` 结束，内容原样保留（仅转义 HTML） */
+    if(/^```/.test(line)){
+      i++;
+      const buf = [];
+      while(i < lines.length && !/^```/.test(lines[i])){ buf.push(lines[i]); i++; }
+      if(i < lines.length) i++; /* 跳过结束的 ``` */
+      html += "<pre><code>"+escHtml(buf.join("\n"))+"</code></pre>";
+      continue;
+    }
     if(!line.trim()){ i++; continue; }
     let m = line.match(/^(#{1,6})\s+(.*)$/);
     if(m){ const n=m[1].length; html += "<h"+n+">"+inline(m[2])+"</h"+n+">"; i++; continue; }
     if(isHr(line)){ html += "<hr>"; i++; continue; }
+    /* 表格：表头行 + 分隔行 + 若干数据行 */
+    if(isTableRow(line) && i+1 < lines.length && isTableSep(lines[i+1])){
+      const headers = splitTableRow(line);
+      const aligns = splitTableRow(lines[i+1]).map(c=>
+        /^:.*:$/.test(c) ? "center" : /:$/.test(c) ? "right" : "left");
+      i += 2;
+      let t = "<table><thead><tr>";
+      headers.forEach((h,idx)=>{ t += "<th"+alignAttr(aligns[idx])+">"+inline(h)+"</th>"; });
+      t += "</tr></thead><tbody>";
+      while(i < lines.length && isTableRow(lines[i])){
+        t += "<tr>";
+        splitTableRow(lines[i]).forEach((c,idx)=>{
+          t += "<td"+alignAttr(aligns[idx])+">"+inline(c)+"</td>";
+        });
+        t += "</tr>"; i++;
+      }
+      t += "</tbody></table>";
+      html += t; continue;
+    }
     if(isUl(line)){
       html += "<ul>";
       while(i < lines.length && isUl(lines[i])){

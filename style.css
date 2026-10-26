@@ -295,6 +295,19 @@
   .updateContent strong{color:var(--red-d);}
   .updateContent code{background:#f0f3f9;padding:2px 8px;border-radius:6px;
                       font-size:17px;color:var(--blue-d);font-family:Consolas,monospace;}
+  .updateContent pre{background:#f5f7fb;border:1px solid var(--line);border-radius:12px;
+                     padding:14px 16px;margin:12px 0;overflow-x:auto;}
+  .updateContent pre code{background:none;padding:0;border-radius:0;
+                          font-size:16px;line-height:1.6;color:var(--ink2);white-space:pre;}
+  .updateContent table{width:100%;border-collapse:collapse;margin:14px 0;
+                       font-size:17px;overflow:hidden;border-radius:10px;}
+  .updateContent th{background:#eef2f9;color:var(--ink2);font-weight:700;
+                    border:1px solid var(--line);padding:9px 12px;text-align:left;}
+  .updateContent td{border:1px solid var(--line);padding:9px 12px;
+                    color:var(--ink2);line-height:1.5;}
+  .updateContent tbody tr:nth-child(even){background:#f7f9fc;}
+  .updateContent a{color:var(--blue-d);text-decoration:none;}
+  .updateContent a:hover{text-decoration:underline;}
   .updateContent hr{border:none;border-top:1px solid var(--line);margin:16px 0;}
 
   /* ============ 名单编辑器 ============ */
@@ -307,6 +320,9 @@
   .edHelpLink{font-size:18px;font-weight:600;color:var(--blue-d);text-decoration:none;
                white-space:nowrap;cursor:pointer;}
   .edHelpLink:hover{text-decoration:underline;}
+  .libHelpLink{font-size:19px;font-weight:600;color:var(--blue-d);text-decoration:none;
+                white-space:nowrap;cursor:pointer;}
+  .libHelpLink:hover{text-decoration:underline;}
   .edInput{flex:1;min-width:0;padding:10px 14px;font-size:20px;
             border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);}
   .edInput:focus{outline:none;border-color:var(--blue);}
