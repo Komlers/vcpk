@@ -26,6 +26,13 @@ const WORD_BANK_FILES = [
 ];
 const CUSTOM_LIB_KEY = "vpk_custom_libs";  /* 自定义词库持久化键 */
 
+/* ================== 版本与更新提示 ==================
+   每次发布更新时修改 APP_VERSION，并在 res/update.md 写明更新内容。
+   已读版本号存 localStorage（UPDATE_READ_KEY），版本不同则弹窗提醒。 */
+const APP_VERSION = "2.0";
+const UPDATE_READ_KEY = "vpk_update_read";
+const UPDATE_MD_URL = "res/update.md";
+
 /* ================== 题量方案（按挑战时长自动配比） ==================
    w=单词题，c1=词块选义，c2=词块配对，c3=词块重组
    ⚠️ PLAN 只决定「开场前 N 题的配比」，**不再是题池总上限**。

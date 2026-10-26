@@ -299,4 +299,6 @@ function endBattle(){
   restoreCfg();   /* 词库加载后重新过滤已选词库 tag，确保用户保存的选择正确恢复 */
   updateLibBtn();
   planInfo();
+  /* 检查版本更新（异步，不阻塞主流程），未读版本则弹窗提醒 */
+  checkUpdate();
 })();

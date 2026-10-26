@@ -32,6 +32,69 @@ function show(id){
   ["setup","battle","result"].forEach(x=>$(x).classList.toggle("hidden", x!==id));
 }
 
+/* ================== 轻量 Markdown 转 HTML ==================
+   支持：标题(#~######)、无序/有序列表、粗体、行内代码、水平分隔线、段落 */
+function mdToHtml(md){
+  const escHtml = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  const codes = [];
+  const inline = s => {
+    s = s.replace(/`([^`]+)`/g, (_, c) => { codes.push(c); return "C"+(codes.length-1)+""; });
+    s = escHtml(s);
+    s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    s = s.replace(/C(\d+)/g, (_, i) => "<code>"+escHtml(codes[i])+"</code>");
+    return s;
+  };
+  const lines = String(md).replace(/\r\n/g,"\n").split("\n");
+  let html = "", i = 0;
+  const isHeading = l => /^#{1,6}\s/.test(l);
+  const isHr = l => /^---+\s*$/.test(l);
+  const isUl = l => /^\s*[-*]\s+/.test(l);
+  const isOl = l => /^\s*\d+\.\s+/.test(l);
+  while(i < lines.length){
+    const line = lines[i];
+    if(!line.trim()){ i++; continue; }
+    let m = line.match(/^(#{1,6})\s+(.*)$/);
+    if(m){ const n=m[1].length; html += "<h"+n+">"+inline(m[2])+"</h"+n+">"; i++; continue; }
+    if(isHr(line)){ html += "<hr>"; i++; continue; }
+    if(isUl(line)){
+      html += "<ul>";
+      while(i < lines.length && isUl(lines[i])){
+        html += "<li>"+inline(lines[i].replace(/^\s*[-*]\s+/, ""))+"</li>"; i++;
+      }
+      html += "</ul>"; continue;
+    }
+    if(isOl(line)){
+      html += "<ol>";
+      while(i < lines.length && isOl(lines[i])){
+        html += "<li>"+inline(lines[i].replace(/^\s*\d+\.\s+/, ""))+"</li>"; i++;
+      }
+      html += "</ol>"; continue;
+    }
+    /* 段落：合并连续普通行 */
+    const para = [];
+    while(i < lines.length && lines[i].trim() && !isHeading(lines[i]) && !isHr(lines[i])
+          && !isUl(lines[i]) && !isOl(lines[i])){ para.push(lines[i]); i++; }
+    html += "<p>"+inline(para.join("<br>"))+"</p>";
+  }
+  return html;
+}
+
+/* ================== 更新提示检查 ==================
+   已读版本号 !== 当前版本号时，拉取 update.md 转 HTML 弹窗 */
+async function checkUpdate(){
+  let readVer = "";
+  try{ readVer = localStorage.getItem(UPDATE_READ_KEY) || ""; }catch(e){}
+  if(readVer === APP_VERSION) return;
+  try{
+    const res = await fetch(UPDATE_MD_URL, {cache:"no-cache"});
+    if(!res.ok) return;
+    const md = await res.text();
+    $("updateVer").textContent = APP_VERSION;
+    $("updateContent").innerHTML = mdToHtml(md);
+    $("updateModal").classList.remove("hidden");
+  }catch(e){}
+}
+
 /* ================== 班级与战绩渲染 ================== */
 /* 班级选择：根据 LocalStorage 中的名单动态渲染 chips */
 function renderChips(){

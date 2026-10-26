@@ -224,6 +224,17 @@ $("qTimeoutRow").addEventListener("click", e=>{
   saveCfg();
 });
 
+/* ================== 更新提示弹窗 ================== */
+/* 「我知道了」：记录当前版本为已读，以后不再弹 */
+$("updateGotIt").addEventListener("click", ()=>{
+  try{ localStorage.setItem(UPDATE_READ_KEY, APP_VERSION); }catch(e){}
+  $("updateModal").classList.add("hidden");
+});
+/* 「稍后处理」：不记录，下次进入仍弹出 */
+$("updateLater").addEventListener("click", ()=>{
+  $("updateModal").classList.add("hidden");
+});
+
 /* ================== 规则介绍弹窗 ================== */
 $("ruleBtn").addEventListener("click", ()=>$("ruleModal").classList.remove("hidden"));
 $("ruleClose").addEventListener("click", ()=>$("ruleModal").classList.add("hidden"));
