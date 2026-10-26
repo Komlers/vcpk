@@ -176,8 +176,9 @@ function endBattle(){
     });
     saveHis(S.cls, h);
   }
-  if(!S.noRecord){
-    /* 错词账本更新（加时赛同样生效）：复现词答对即出本，再错次数+1；新错词计入 */
+  if(!S.noRecord && S.rememberWrong){
+    /* 错词账本更新（加时赛同样生效，仅在启用错词记忆时）：
+       复现词答对即出本，再错次数+1；新错词计入 */
     const h = loadHis(S.cls);
     (S.reviewList||[]).forEach(word=>{
       const missed = [...S.wrongSet].some(x=>x.split("|")[0]===word);

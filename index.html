@@ -50,6 +50,7 @@
     <div class="heroBtns">
       <button class="heroBtn" id="ruleBtn">📖 规则介绍</button>
       <button class="heroBtn" id="hisBtn">📊 历史战绩</button>
+      <button class="heroBtn" id="settingBtn">⚙️ 擂台设置</button>
     </div>
   </div>
 
@@ -153,6 +154,25 @@
     <div class="btnRow" style="margin-top:20px">
       <button class="drawBtn" id="durCancel">取消</button>
       <button class="startBtn small" id="durConfirm">确定</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 擂台设置弹窗 ================= -->
+<div id="settingModal" class="modal hidden">
+  <div class="modalMask"></div>
+  <div class="modalBox">
+    <h3>⚙️ 擂台设置</h3>
+    <label class="wordsOnlyLabel">
+      <input type="checkbox" id="rememberWrongChk">
+      启用错词记忆
+    </label>
+    <div class="mini" style="margin-top:10px;line-height:1.7">
+      勾选后：每轮比赛结束统计错词，下次比赛优先重考错词。<br>
+      不勾选：不统计错词，每次比赛完全使用当前所选词库出题（默认）。
+    </div>
+    <div class="btnRow" style="margin-top:24px">
+      <button class="startBtn small" id="settingClose">关 闭</button>
     </div>
   </div>
 </div>

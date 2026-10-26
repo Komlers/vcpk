@@ -98,8 +98,10 @@ function specFromWrong(en, cn, kind){
   if(wordByEn[en]) return {t:"w", w:wordByEn[en]};
   return null;
 }
-/* 上节课错的词与词块：按错误次数取前 8 优先复现 */
+/* 上节课错的词与词块：按错误次数取前 8 优先复现；
+   未启用「错词记忆」时返回空，每次完全用当前词库出题 */
 function reviewSpecs(cls){
+  if(!S.rememberWrong) return [];
   const h = loadHis(cls);
   return Object.entries(h.wrongs||{}).sort((a,b)=>b[1]-a[1]).slice(0,8)
     .map(e=>specFromWrong(e[0],"","")).filter(Boolean);

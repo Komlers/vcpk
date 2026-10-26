@@ -55,7 +55,7 @@ function reviewWords(c){
 function saveCfg(){
   try{
     localStorage.setItem("vpk_cfg_" + S.cls, JSON.stringify({
-      units: S.units, dur: S.dur, wordsOnly: S.wordsOnly
+      units: S.units, dur: S.dur, wordsOnly: S.wordsOnly, rememberWrong: S.rememberWrong
     }));
   }catch(e){}
 }

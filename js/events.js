@@ -198,6 +198,18 @@ $("noRecordChk").addEventListener("change", e=>{
   S.noRecord = e.target.checked;
 });
 
+/* ================== 擂台设置弹窗 ================== */
+$("settingBtn").addEventListener("click", ()=>$("settingModal").classList.remove("hidden"));
+$("settingClose").addEventListener("click", ()=>$("settingModal").classList.add("hidden"));
+$("settingModal").addEventListener("click", e=>{
+  if(e.target.classList.contains("modalMask")) $("settingModal").classList.add("hidden");
+});
+$("rememberWrongChk").addEventListener("change", e=>{
+  S.rememberWrong = e.target.checked;
+  saveCfg();
+  planInfo();
+});
+
 /* ================== 规则介绍弹窗 ================== */
 $("ruleBtn").addEventListener("click", ()=>$("ruleModal").classList.remove("hidden"));
 $("ruleClose").addEventListener("click", ()=>$("ruleModal").classList.add("hidden"));

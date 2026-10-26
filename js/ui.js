@@ -270,18 +270,21 @@ function restoreCfg(){
   S.units = [];
   S.dur = 60;
   S.wordsOnly = false;
+  S.rememberWrong = false;
   try{
     const c = JSON.parse(localStorage.getItem("vpk_cfg_" + S.cls));
     if(c){
       if(Array.isArray(c.units) && c.units.length) S.units = c.units.filter(t => LIB_INFO[t]);
       if(c.dur) S.dur = c.dur;
       if(c.wordsOnly !== undefined) S.wordsOnly = !!c.wordsOnly;
+      if(c.rememberWrong !== undefined) S.rememberWrong = !!c.rememberWrong;
     }
   }catch(e){}
   /* 首次使用不默认勾选任何词库，由用户手动选择；
      勾选「只加载纯单词」时强制不使用词块 */
   S.useChunks = !S.wordsOnly && S.units.includes("U2");
   $("wordsOnlyChk").checked = S.wordsOnly;
+  $("rememberWrongChk").checked = S.rememberWrong;
   /* 临时赛选项不持久化，每次恢复配置时重置 */
   S.noRecord = false;
   $("noRecordChk").checked = false;
