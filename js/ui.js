@@ -156,7 +156,8 @@ function renderHistory(){
     body.innerHTML = html;
     clearBtn.classList.remove("hidden");
   }
-  const rw = reviewWords(S.cls).length;
+  /* 错词记忆关闭时不显示待复现错词（即使历史上有 wrongs 数据） */
+  const rw = S.rememberWrong ? reviewWords(S.cls).length : 0;
   let info = "";
   if(redName) info += "擂主已就位：" + esc(dispName(redName)) + (champFixed ? "（本地记忆）" : "") + "。";
   if(rw) info += "🔁 待复现 " + rw + " 个错词。";
