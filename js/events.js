@@ -312,6 +312,8 @@ $("updateGotIt").addEventListener("click", ()=>{
 $("updateLater").addEventListener("click", ()=>{
   $("updateModal").classList.add("hidden");
 });
+/* footer「更新说明」：手动打开更新弹窗再次阅读 */
+$("openUpdateLink").addEventListener("click", ()=>showUpdateModal());
 
 /* ================== 规则介绍弹窗 ================== */
 $("ruleBtn").addEventListener("click", ()=>$("ruleModal").classList.remove("hidden"));

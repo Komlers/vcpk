@@ -119,20 +119,26 @@ function mdToHtml(md){
   return html;
 }
 
-/* ================== 更新提示检查 ==================
-   已读版本号 !== 当前版本号时，拉取 update.md 转 HTML 弹窗 */
-async function checkUpdate(){
-  let readVer = "";
-  try{ readVer = localStorage.getItem(UPDATE_READ_KEY) || ""; }catch(e){}
-  if(readVer === APP_VERSION) return;
+/* ================== 更新提示 ==================
+   拉取 update.md 转 HTML 并显示更新弹窗（自动检查与手动入口共用） */
+async function showUpdateModal(){
   try{
     const res = await fetch(UPDATE_MD_URL, {cache:"no-cache"});
-    if(!res.ok) return;
+    if(!res.ok) throw new Error("update.md missing");
     const md = await res.text();
     $("updateVer").textContent = APP_VERSION;
     $("updateContent").innerHTML = mdToHtml(md);
     $("updateModal").classList.remove("hidden");
-  }catch(e){}
+  }catch(e){
+    dlgAlert("更新内容加载失败：" + e.message, { type: "error", title: "出错了" });
+  }
+}
+/* 已读版本号 !== 当前版本号时，自动弹出更新提示 */
+async function checkUpdate(){
+  let readVer = "";
+  try{ readVer = localStorage.getItem(UPDATE_READ_KEY) || ""; }catch(e){}
+  if(readVer === APP_VERSION) return;
+  showUpdateModal();
 }
 
 /* ================== 班级与战绩渲染 ================== */
