@@ -48,7 +48,7 @@
     <div class="logo"><span class="r">词</span>汇<span class="b">擂</span>台</div>
     <div class="sub">双人同台 · 单词 / 词块对战 · <b>败者守擂</b> · 班级名单本地保存</div>
     <div class="heroBtns">
-      <button class="heroBtn" id="ruleBtn">📖 规则介绍</button>
+      <button class="heroBtn" id="ruleBtn">📖 使用说明</button>
       <button class="heroBtn" id="hisBtn">📊 历史战绩</button>
       <button class="heroBtn" id="settingBtn">⚙️ 擂台设置</button>
     </div>
@@ -96,7 +96,7 @@
     </div>
     <label class="wordsOnlyLabel">
       <input type="checkbox" id="noRecordChk">
-      本次PK不计入战绩（临时赛：不记录战绩 / 错题，败者不守擂）
+      本次PK不计入战绩（临时赛：不记录战绩和错题，败者不守擂）
     </label>
     <div class="mini" id="planInfo" style="margin-top:14px"></div>
   </div>
@@ -205,7 +205,7 @@
 <div id="updateModal" class="modal hidden">
   <div class="modalMask"></div>
   <div class="modalBox updateModalBox">
-    <h3>🎉 网页已更新至 <span id="updateVer">2.1</span></h3>
+    <h3>🎉 网页已更新至 <span id="updateVer">?.?</span></h3>
     <div class="updateContent" id="updateContent"></div>
     <div class="btnRow" style="margin-top:20px">
       <button class="drawBtn" id="updateLater">稍后处理</button>
@@ -286,19 +286,35 @@
   </div>
 </div>
 
-<!-- ================= 规则介绍弹窗 ================= -->
+<!-- ================= 使用说明弹窗 ================= -->
 <div id="ruleModal" class="modal hidden">
   <div class="modalMask"></div>
   <div class="modalBox">
-    <h3>📖 规则介绍</h3>
+    <h3>📖 使用说明</h3>
     <div class="ruleBody">
+      <div class="ruleItem"><b>🚀 快速上手（三步）</b><p>
+        ① <b>选择班级</b>：首次使用点「导入班级名单」导入 TXT（一行一个名字）；之后可用「名单编辑器」增删改。<br>
+        ② <b>上台选手</b>：点击红方 / 蓝方框随机抽取，或点「输入」手动指定。<br>
+        ③ <b>选择词库与限时</b>，点「开始 PK」即可自动全屏开战。</p></div>
+
       <div class="ruleItem"><b>🎯 对战方式</b><p>红蓝双方同台答题，屏幕左右各一套选项，同时作答、互不干扰。答对得分，答错不扣分。</p></div>
-      <div class="ruleItem"><b>⏱ 限时挑战</b><p>每局可设 30 秒～5 分钟，时间到立即结算。题池按时长自动扩满，全程不重复出题。</p></div>
+
       <div class="ruleItem"><b>📚 题型说明</b><p>纯单词词库为「单词选义」；含词块的词库会加入「词块选义 / 词块配对 / 词块重组」三种题型，按比例混合出题。</p></div>
+
+      <div class="ruleItem"><b>⏱ 限时与超时</b><p>每局可设 30 秒～5 分钟，时间到立即结算，题池按时长自动扩满、全程不重复。在「擂台设置」中还可开启<b>每题超时检测</b>（3s / 5s / 7s），超时直接跳过、双方均不计分，防止故意拖延。</p></div>
+
       <div class="ruleItem"><b>🔥 连击加分</b><p>连续答对触发连击，连击越高单次得分越多；答错则连击清零。屏幕上方会显示当前连击数。</p></div>
+
       <div class="ruleItem"><b>🛡 败者守擂</b><p>每局结束后，败者（或平局时双方）成为下一局擂主（红方），系统自动抽取新的挑战者（蓝方），实现车轮战。</p></div>
-      <div class="ruleItem"><b>🔁 错词复现</b><p>本局答错的单词和词块会进入「错词本」，下节课优先出题，答对即出本。结算页可发起 30 秒错词加时赛。</p></div>
-      <div class="ruleItem"><b>💾 本地保存</b><p>班级名单、对战战绩、擂主记录、词库与时长配置均保存在本机浏览器（LocalStorage），不上传任何服务器。</p></div>
+
+      <div class="ruleItem"><b>🔁 错词复现</b><p>答错的单词和词块进入「错词本」，下次比赛优先重考、答对即出本；结算页可发起 30 秒错词加时赛。若不希望跨词库保留错词，可在「擂台设置」中关闭「错词记忆」。</p></div>
+
+      <div class="ruleItem"><b>🎲 临时赛事</b><p>勾选「本次PK不计入战绩」后，该局不记录战绩、不统计错题、败者不守擂，适合临时练习。</p></div>
+
+      <div class="ruleItem"><b>🗂 名单与词库</b><p>「名单编辑器」支持班级新建 / 重命名 / 删除、名字改名 / 删除、搜索与批量添加；内置 <b>25 个词库</b>按必修、选必分册分组，也可在「自定义词库」中导入本地 JSON 词库（可借助 AI 按模板生成，点「如何制作自定义词库」查看）。</p></div>
+
+      <div class="ruleItem"><b>💾 本地保存</b><p>班级名单、战绩、擂主、词库与配置均保存在本机浏览器（LocalStorage），不上传任何服务器；清除浏览器数据会丢失，建议保留原始文件备份。</p></div>
+
       <div class="ruleItem"><b>⌨ 快捷键</b><p><kbd>F</kbd> 进入 / 退出全屏 · <kbd>Esc</kbd> 退出全屏（右上角也有按钮）。</p></div>
     </div>
     <div class="btnRow" style="margin-top:20px">
@@ -378,7 +394,7 @@
   <div id="winName"></div>
   <div id="finalScore"></div>
   <div class="wrongBox" id="wrongBox">
-    <h4>错词/错块本（本局错的单词与词块，下次优先复现）</h4>
+    <h4>错词/错块本（本局错的单词与词块）</h4>
     <div id="wrongChips"></div>
   </div>
   <div class="btnRow">

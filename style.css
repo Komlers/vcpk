@@ -400,8 +400,9 @@
   /* 规则介绍弹窗 */
   .ruleBody{display:flex;flex-direction:column;gap:16px;}
   .ruleItem{background:#f8f9fc;border-radius:14px;padding:16px 20px;border:1px solid var(--line);}
-  .ruleItem b{font-size:23px;color:var(--ink2);display:block;margin-bottom:6px;}
+  .ruleItem > b{font-size:23px;color:var(--ink2);display:block;margin-bottom:6px;}
   .ruleItem p{font-size:21px;color:var(--muted2);line-height:1.6;margin:0;}
+  .ruleItem p b{font-size:inherit;display:inline;color:var(--ink2);font-weight:700;}
   .ruleItem kbd{background:#eef1f8;border:1px solid var(--line);border-radius:6px;
                 padding:2px 10px;font-size:19px;font-family:inherit;color:var(--ink2);}
 
