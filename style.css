@@ -295,6 +295,48 @@
                       font-size:17px;color:var(--blue-d);font-family:Consolas,monospace;}
   .updateContent hr{border:none;border-top:1px solid var(--line);margin:16px 0;}
 
+  /* ============ 名单编辑器 ============ */
+  .editorModalBox{display:flex;flex-direction:column;overflow:hidden;max-width:700px;}
+  .edClassBar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px;}
+  .edSelect{flex:1;min-width:180px;padding:10px 14px;font-size:20px;font-weight:600;
+            border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink2);
+            cursor:pointer;}
+  .edToolBar{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+  .edInput{flex:1;min-width:0;padding:10px 14px;font-size:20px;
+            border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);}
+  .edInput:focus{outline:none;border-color:var(--blue);}
+  .edInput:disabled{background:#f5f6f9;cursor:not-allowed;}
+  .edMiniBtn{padding:9px 16px;font-size:18px;font-weight:600;border-radius:10px;
+             border:2px solid var(--line);background:#fafbfe;color:var(--ink2);
+             cursor:pointer;transition:all .15s;white-space:nowrap;}
+  .edMiniBtn:hover:not(:disabled){border-color:#c3d2ee;background:#f4f7fe;}
+  .edMiniBtn:disabled{opacity:.5;cursor:not-allowed;}
+  .edMiniBtn.primary{border-color:var(--blue);background:var(--blue-bg);color:#2456bd;}
+  .edMiniBtn.primary:hover{background:#e3edff;}
+  .edMiniBtn.danger{border-color:#f0c9c9;color:#c0392b;}
+  .edMiniBtn.danger:hover:not(:disabled){background:#fdecec;border-color:#e3a8a8;}
+
+  .edBatchArea{border:2px dashed var(--line);border-radius:12px;padding:12px;margin-bottom:12px;background:#fafbfe;}
+  .edTextarea{width:100%;height:150px;font-size:19px;line-height:1.6;resize:vertical;
+              border:1px solid var(--line);border-radius:10px;padding:10px 12px;
+              font-family:inherit;color:var(--ink);box-sizing:border-box;}
+  .edTextarea:focus{outline:none;border-color:var(--blue);}
+  .edBatchBtns{display:flex;justify-content:flex-end;gap:10px;margin-top:10px;}
+
+  .edNameList{flex:1;min-height:160px;max-height:38vh;overflow-y:auto;
+              border:1px solid var(--line);border-radius:12px;padding:8px;}
+  .edNameRow{display:flex;align-items:center;justify-content:space-between;gap:10px;
+             padding:9px 12px;border-radius:9px;}
+  .edNameRow:hover{background:#f4f7fe;}
+  .edNameText{font-size:21px;font-weight:600;color:var(--ink);}
+  .edNameText.ghost{color:#9a8c5b;}
+  .edNameText.ghost::after{content:" ·";}
+  .edNameBtns{display:flex;gap:8px;flex-shrink:0;}
+  .edEmpty{padding:30px 16px;text-align:center;font-size:19px;color:var(--muted2);line-height:1.7;}
+
+  .edAddBar{display:flex;gap:10px;margin-top:12px;}
+  .edStat{margin-top:10px;font-size:18px;color:var(--muted2);font-weight:600;}
+
   /* 时长选择弹窗 */
   .durPicker{display:flex;align-items:center;justify-content:center;gap:30px;padding:20px 0 10px;}
   .durArrow{width:72px;height:72px;border-radius:50%;border:2px solid var(--line);

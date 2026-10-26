@@ -61,6 +61,7 @@
     <div class="classRow">
       <div class="chips" id="classChips"></div>
       <button class="drawBtn" id="importRosterBtn">📥 导入班级名单（TXT）</button>
+      <button class="drawBtn" id="openEditorBtn">✏️ 名单编辑器</button>
     </div>
     <div class="mini" id="noRosterTip" style="margin-top:14px;color:#9a6a00">⚠ 还没有班级名单，点右侧按钮导入TXT。<br>一行一个名字，自动去重，名单仅保存在本机。</div>
     <input type="file" id="rosterFile" accept=".txt,text/plain" style="display:none">
@@ -209,6 +210,52 @@
   </div>
 </div>
 
+<!-- ================= 名单编辑器弹窗 ================= -->
+<div id="editorModal" class="modal hidden">
+  <div class="modalMask"></div>
+  <div class="modalBox editorModalBox">
+    <h3>✏️ 名单编辑器</h3>
+
+    <!-- 班级管理栏 -->
+    <div class="edClassBar">
+      <select id="edClassSelect" class="edSelect"></select>
+      <button class="edMiniBtn" id="edNewClass">➕ 新建班级</button>
+      <button class="edMiniBtn" id="edRenameClass">重命名</button>
+      <button class="edMiniBtn danger" id="edDelClass">删除班级</button>
+    </div>
+
+    <!-- 工具栏 -->
+    <div class="edToolBar">
+      <input id="edSearch" class="edInput" placeholder="🔍 搜索名字…">
+      <button class="edMiniBtn" id="edBatchBtn">📋 批量添加</button>
+    </div>
+
+    <!-- 批量添加展开区 -->
+    <div class="edBatchArea hidden" id="edBatchArea">
+      <textarea id="edBatchText" class="edTextarea" placeholder="一行一个名字，可直接粘贴多行，自动去重并跳过无效行"></textarea>
+      <div class="edBatchBtns">
+        <button class="edMiniBtn" id="edBatchCancel">取消</button>
+        <button class="edMiniBtn primary" id="edBatchConfirm">✔ 确认添加</button>
+      </div>
+    </div>
+
+    <!-- 名字列表 -->
+    <div class="edNameList" id="edNameList"></div>
+
+    <!-- 添加单个名字 -->
+    <div class="edAddBar">
+      <input id="edAddInput" class="edInput" placeholder="输入名字，回车或点添加" maxlength="8">
+      <button class="edMiniBtn primary" id="edAddBtn">➕ 添加</button>
+    </div>
+
+    <div class="edStat" id="edStat"></div>
+
+    <div class="btnRow" style="margin-top:14px">
+      <button class="startBtn small" id="edClose">完 成</button>
+    </div>
+  </div>
+</div>
+
 <!-- ================= 规则介绍弹窗 ================= -->
 <div id="ruleModal" class="modal hidden">
   <div class="modalMask"></div>
@@ -315,6 +362,7 @@
 <script src="js/storage.js?v=2"></script>
 <script src="js/wordbank.js?v=2"></script>
 <script src="js/ui.js?v=2"></script>
+<script src="js/editor.js?v=2"></script>
 <script src="js/game.js?v=2"></script>
 <script src="js/events.js?v=2"></script>
 
