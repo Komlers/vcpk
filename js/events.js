@@ -316,8 +316,8 @@ $("updateGotIt").addEventListener("click", ()=>{
 $("updateLater").addEventListener("click", ()=>{
   $("updateModal").classList.add("hidden");
 });
-/* footer「更新说明」：手动打开更新弹窗再次阅读 */
-$("openUpdateLink").addEventListener("click", ()=>showUpdateModal());
+/* 主页「更新说明」按钮：手动打开更新弹窗再次阅读 */
+$("updateBtn").addEventListener("click", ()=>showUpdateModal());
 
 /* ================== 关于项目弹窗 ==================
    简介为静态内容；版本号取自 config.js 的 APP_VERSION，避免两处写死不一致 */
