@@ -152,14 +152,16 @@
 <!-- ================= 时长选择弹窗 ================= -->
 <div id="durModal" class="modal hidden">
   <div class="modalMask"></div>
-  <div class="modalBox">
+  <div class="modalBox fixedFoot">
     <h3>⏱ 选择限时</h3>
-    <div class="durPicker">
-      <button class="durArrow" id="durMinus">−</button>
-      <div class="durValue" id="durValue">1:00</div>
-      <button class="durArrow" id="durPlus">+</button>
+    <div class="modalScroll">
+      <div class="durPicker">
+        <button class="durArrow" id="durMinus">−</button>
+        <div class="durValue" id="durValue">1:00</div>
+        <button class="durArrow" id="durPlus">+</button>
+      </div>
+      <div class="mini" style="text-align:center;margin-top:10px">每次调整 30 秒 · 范围 30 秒 ~ 5 分钟</div>
     </div>
-    <div class="mini" style="text-align:center;margin-top:10px">每次调整 30 秒 · 范围 30 秒 ~ 5 分钟</div>
     <div class="btnRow" style="margin-top:20px">
       <button class="drawBtn" id="durCancel">取消</button>
       <button class="startBtn small" id="durConfirm">确定</button>
@@ -170,8 +172,9 @@
 <!-- ================= 擂台设置弹窗 ================= -->
 <div id="settingModal" class="modal hidden">
   <div class="modalMask"></div>
-  <div class="modalBox">
+  <div class="modalBox fixedFoot">
     <h3>⚙️ 擂台设置</h3>
+    <div class="modalScroll">
 
     <div class="setItem">
       <label class="wordsOnlyLabel">
@@ -206,6 +209,7 @@
       </div>
     </div>
 
+    </div>
     <div class="btnRow" style="margin-top:26px">
       <button class="startBtn small" id="settingClose">关 闭</button>
     </div>
@@ -300,7 +304,7 @@
 <!-- ================= 关于项目弹窗 ================= -->
 <div id="aboutModal" class="modal hidden">
   <div class="modalMask"></div>
-  <div class="modalBox aboutBox">
+  <div class="modalBox aboutBox fixedFoot">
     <h3>ℹ️ 关于项目</h3>
 
     <div class="aboutHead">
@@ -308,7 +312,7 @@
       <div class="aboutMeta">版本 <b id="aboutVer">2.0</b> · 纯前端 · 数据只存本机</div>
     </div>
 
-    <div class="ruleBody">
+    <div class="ruleBody modalScroll">
       <div class="ruleItem"><b>这是什么</b><p>
         面向高中英语课堂的<b>双人单词对战网页应用</b>：红方擂主对蓝方挑战者，同屏限时答题，败者守擂实现车轮战，适合教室大屏互动教学。</p></div>
 
@@ -356,9 +360,9 @@
 <!-- ================= 历史战绩弹窗 ================= -->
 <div id="hisModal" class="modal hidden">
   <div class="modalMask"></div>
-  <div class="modalBox">
+  <div class="modalBox fixedFoot">
     <h3 id="hisTitle">📊 本班战绩</h3>
-    <div id="hisBody" class="mini">暂无记录</div>
+    <div id="hisBody" class="mini modalScroll">暂无记录</div>
     <button class="clearBtn hidden" id="clearBtn">清空本班历史</button>
     <div class="btnRow" style="margin-top:20px">
       <button class="drawBtn" id="hisClose">关闭</button>
@@ -369,12 +373,12 @@
 <!-- ================= 选名弹窗 ================= -->
 <div id="pickModal" class="modal hidden">
   <div class="modalMask"></div>
-  <div class="modalBox">
+  <div class="modalBox fixedFoot pickModalBox">
     <div class="pickTabs">
       <button class="pickTab on" data-side="red">🛡 红方</button>
       <button class="pickTab" data-side="blue">⚔ 蓝方</button>
     </div>
-    <div class="pickGrid" id="pickGrid"></div>
+    <div class="pickGrid modalScroll" id="pickGrid"></div>
     <div class="btnRow" style="margin-top:16px">
       <button class="drawBtn" id="pickCancel">关闭</button>
     </div>
@@ -437,12 +441,12 @@
 <!-- ================= 通用网页内弹窗（替代 alert/confirm/prompt） ================= -->
 <div id="dlgModal" class="modal hidden">
   <div class="modalMask"></div>
-  <div class="modalBox dlgBox">
+  <div class="modalBox dlgBox fixedFoot">
     <div class="dlgHead">
       <span class="dlgIcon info" id="dlgIcon">ℹ️</span>
       <h3 id="dlgTitle">提示</h3>
     </div>
-    <div class="dlgMsg" id="dlgMsg"></div>
+    <div class="dlgMsg modalScroll" id="dlgMsg"></div>
     <input id="dlgInput" class="dlgInput hidden" maxlength="20">
     <div class="dlgError hidden" id="dlgError"></div>
     <div class="btnRow dlgBtns">

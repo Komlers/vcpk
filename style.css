@@ -286,6 +286,14 @@
                display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
   .modalBox h3 .hint{font-size:21px;font-weight:400;color:var(--muted2);margin-left:auto;}
 
+  /* 有底部按钮的弹窗统一结构：标题与底部按钮固定，只有中间内容滚动
+     用法：.modalBox 加 fixedFoot，把可滚动内容包进（或标上）.modalScroll */
+  .modalBox.fixedFoot{display:flex;flex-direction:column;overflow:hidden;max-height:82vh;}
+  .modalBox.fixedFoot > *{flex:none;}
+  .modalBox.fixedFoot > .modalScroll{flex:1;min-height:0;overflow-y:auto;padding-right:8px;}
+  /* 选名弹窗的名单网格改为撑满剩余空间，不再用固定 50vh 上限 */
+  .pickModalBox .pickGrid{max-height:none;}
+
   /* ============ 更新提示弹窗 ============ */
   .updateModalBox{display:flex;flex-direction:column;overflow:hidden;max-width:680px;}
   .updateContent{flex:1;min-height:0;overflow-y:auto;padding-right:8px;line-height:1.7;}
