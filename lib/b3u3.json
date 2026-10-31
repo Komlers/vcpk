@@ -191,7 +191,7 @@
       "a series of",
       "一系列",
       "coll",
-      "a series of events",
+      "a series ____ events",
       "of",
       [
         "a",
@@ -203,7 +203,7 @@
       "occur to",
       "想到",
       "prep",
-      "It occurred to me that ...",
+      "It occurred ____ me that ...",
       "to",
       null
     ],
@@ -211,7 +211,7 @@
       "settle down",
       "定居",
       "phr",
-      "settle down in the district",
+      "settle ____ in the district",
       "down",
       null
     ],
@@ -219,7 +219,7 @@
       "be made up of",
       "由……组成",
       "prep",
-      "be made up of diverse cultures",
+      "be made up ____ diverse cultures",
       "of",
       null
     ],
@@ -227,7 +227,7 @@
       "bring about",
       "引起",
       "phr",
-      "bring about change",
+      "bring ____ change",
       "about",
       null
     ],
@@ -235,7 +235,7 @@
       "earn a living",
       "谋生",
       "coll",
-      "earn a living as a chef",
+      "earn a ____ as a chef",
       "living",
       [
         "earn",
@@ -247,7 +247,7 @@
       "be known as",
       "作为……闻名",
       "prep",
-      "be known as a melting pot",
+      "be known ____ a melting pot",
       "as",
       null
     ],
@@ -255,7 +255,7 @@
       "be famous for",
       "因……闻名",
       "prep",
-      "be famous for its food",
+      "be famous ____ its food",
       "for",
       null
     ],
@@ -263,7 +263,7 @@
       "be located in",
       "位于",
       "prep",
-      "be located in downtown",
+      "be located ____ downtown",
       "in",
       null
     ],
@@ -271,7 +271,7 @@
       "be home to",
       "是……的家园",
       "prep",
-      "be home to immigrants",
+      "be home ____ immigrants",
       "to",
       null
     ],
@@ -279,7 +279,7 @@
       "be mixed with",
       "与……混合",
       "prep",
-      "be mixed with ethnic groups",
+      "be mixed ____ ethnic groups",
       "with",
       null
     ],
@@ -287,7 +287,7 @@
       "be different from",
       "与……不同",
       "prep",
-      "be different from other cities",
+      "be different ____ other cities",
       "from",
       null
     ],
@@ -295,7 +295,7 @@
       "be proud of",
       "为……骄傲",
       "prep",
-      "be proud of the diversity",
+      "be proud ____ the diversity",
       "of",
       null
     ],
@@ -303,7 +303,7 @@
       "escape from",
       "逃离",
       "prep",
-      "escape from poverty",
+      "escape ____ poverty",
       "from",
       null
     ],
@@ -311,7 +311,7 @@
       "be situated in",
       "位于",
       "prep",
-      "be situated in the heart of the city",
+      "be situated ____ the heart of the city",
       "in",
       null
     ]

@@ -86,10 +86,6 @@
       "减少"
     ],
     [
-      "reduce",
-      "减少"
-    ],
-    [
       "recycle",
       "回收"
     ],
@@ -226,7 +222,7 @@
       "watch over",
       "看护",
       "prep",
-      "watch over the animals",
+      "watch ____ the animals",
       "over",
       null
     ],
@@ -234,7 +230,7 @@
       "stir up",
       "激起",
       "phr",
-      "stir up emotions",
+      "stir ____ emotions",
       "up",
       null
     ],
@@ -269,7 +265,7 @@
       "die out",
       "灭绝",
       "phr",
-      "die out completely",
+      "die ____ completely",
       "out",
       null
     ],
@@ -289,7 +285,7 @@
       "cut down",
       "砍倒",
       "phr",
-      "cut down trees",
+      "cut ____ trees",
       "down",
       null
     ],

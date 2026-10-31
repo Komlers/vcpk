@@ -171,7 +171,7 @@
       "as well as",
       "以及",
       "coll",
-      "England as well ____ Wales",
+      "England ____ well as Wales",
       "as",
       [
         "as",
@@ -223,7 +223,7 @@
       "date back to",
       "追溯到",
       "prep",
-      "date back to the 1st century",
+      "date back ____ the 1st century",
       "to",
       null
     ],
@@ -255,7 +255,7 @@
       "take over",
       "接管",
       "phr",
-      "take over the island",
+      "take ____ the island",
       "over",
       null
     ],

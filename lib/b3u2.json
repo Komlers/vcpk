@@ -78,10 +78,6 @@
       "拒绝"
     ],
     [
-      "reject",
-      "拒绝"
-    ],
-    [
       "accept",
       "接受"
     ],
@@ -191,7 +187,7 @@
       "be faced with",
       "面对",
       "prep",
-      "be faced with a dilemma",
+      "be faced ____ a dilemma",
       "with",
       null
     ],
@@ -199,7 +195,7 @@
       "be in need of",
       "需要",
       "prep",
-      "be in need of care",
+      "be in need ____ care",
       "of",
       null
     ],
@@ -207,7 +203,7 @@
       "be willing to",
       "愿意",
       "phr",
-      "be willing to help",
+      "be willing ____ help",
       "to",
       null
     ],
@@ -215,7 +211,7 @@
       "be committed to",
       "致力于",
       "prep",
-      "be committed to the cause",
+      "be committed ____ the cause",
       "to",
       null
     ],
@@ -223,7 +219,7 @@
       "care for",
       "照顾",
       "prep",
-      "care for the patient",
+      "care ____ the patient",
       "for",
       null
     ],
@@ -231,7 +227,7 @@
       "be grateful to",
       "感激某人",
       "prep",
-      "be grateful to the doctor",
+      "be grateful ____ the doctor",
       "to",
       null
     ],
@@ -251,7 +247,7 @@
       "be appointed as",
       "被任命为",
       "prep",
-      "be appointed as director",
+      "be appointed ____ director",
       "as",
       null
     ],
@@ -259,7 +255,7 @@
       "first of all",
       "首先",
       "coll",
-      "first of all, ...",
+      "first of ____, ...",
       "all",
       [
         "first",
@@ -271,7 +267,7 @@
       "be patient with",
       "对……耐心",
       "prep",
-      "be patient with patients",
+      "be patient ____ patients",
       "with",
       null
     ],
@@ -279,7 +275,7 @@
       "be honest with",
       "对……诚实",
       "prep",
-      "be honest with oneself",
+      "be honest ____ oneself",
       "with",
       null
     ],
@@ -287,7 +283,7 @@
       "carry sb. through",
       "帮助某人度过",
       "prep",
-      "carry her through the hard times",
+      "carry her ____ the hard times",
       "through",
       null
     ],
@@ -295,7 +291,7 @@
       "be known for",
       "因……闻名",
       "prep",
-      "be known for her kindness",
+      "be known ____ her kindness",
       "for",
       null
     ],
@@ -303,7 +299,7 @@
       "respond to",
       "回应",
       "prep",
-      "respond to the call",
+      "respond ____ the call",
       "to",
       null
     ],
@@ -311,7 +307,7 @@
       "complain about",
       "抱怨",
       "prep",
-      "complain about the situation",
+      "complain ____ the situation",
       "about",
       null
     ]

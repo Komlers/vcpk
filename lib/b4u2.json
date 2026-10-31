@@ -188,43 +188,11 @@
       null
     ],
     [
-      "switch over",
-      "切换（频道）",
-      "phr",
-      "switch ____ to another channel（换频道）",
-      "over",
-      null
-    ],
-    [
-      "switch from ... to ...",
-      "从……转变为……",
-      "phr",
-      "switch ____ paper to digital records",
-      "from",
-      null
-    ],
-    [
-      "household appliances",
-      "家用电器",
-      "coll",
-      "modern household ____（现代家用电器）",
-      "appliances",
-      null
-    ],
-    [
       "remote control",
       "遥控器",
       "coll",
       "use the remote ____（使用遥控器）",
       "control",
-      null
-    ],
-    [
-      "remote area",
-      "偏远地区",
-      "coll",
-      "a ____ mountain area（偏远山区）",
-      "remote",
       null
     ],
     [
@@ -236,27 +204,11 @@
       null
     ],
     [
-      "automatic mode",
-      "自动模式",
-      "coll",
-      "set it to ____ mode（设为自动模式）",
-      "automatic",
-      null
-    ],
-    [
       "integrate ... into ...",
       "使……并入……",
       "prep",
       "integrate technology ____ daily life",
       "into",
-      null
-    ],
-    [
-      "integrate ... with ...",
-      "把……与……结合",
-      "prep",
-      "integrate theory ____ practice",
-      "with",
       null
     ],
     [
@@ -268,62 +220,10 @@
       null
     ],
     [
-      "smoke sensor",
-      "烟雾传感器",
-      "coll",
-      "a smoke ____（烟雾传感器）",
-      "sensor",
-      [
-        "a",
-        "smoke",
-        "sensor"
-      ]
-    ],
-    [
-      "motion sensor",
-      "运动传感器",
-      "coll",
-      "a motion ____（运动传感器）",
-      "sensor",
-      [
-        "a",
-        "motion",
-        "sensor"
-      ]
-    ],
-    [
-      "a mode of transport",
-      "一种交通方式",
-      "coll",
-      "Bikes are a mode ____ transport.",
-      "of",
-      [
-        "a mode",
-        "of",
-        "transport"
-      ]
-    ],
-    [
-      "in ... mode",
-      "处于……模式",
-      "prep",
-      "The camera is ____ manual mode.",
-      "in",
-      null
-    ],
-    [
       "daily routine",
       "日常惯例",
       "coll",
       "my daily ____（我的日常惯例）",
-      "routine",
-      null
-    ],
-    [
-      "break a routine",
-      "打破常规",
-      "phr",
-      "break the daily ____（打破日常常规）",
       "routine",
       null
     ],
@@ -336,30 +236,6 @@
       null
     ],
     [
-      "under one's command",
-      "由……指挥",
-      "prep",
-      "The army is ____ his command.",
-      "under",
-      null
-    ],
-    [
-      "voice commands",
-      "语音指令",
-      "coll",
-      "give voice ____（发出语音指令）",
-      "commands",
-      null
-    ],
-    [
-      "obey orders",
-      "服从命令",
-      "phr",
-      "obey ____（服从命令）",
-      "orders",
-      null
-    ],
-    [
       "be critical to",
       "对……至关重要",
       "prep",
@@ -368,83 +244,11 @@
       null
     ],
     [
-      "be critical of",
-      "批评；挑剔",
-      "prep",
-      "be critical ____ the report",
-      "of",
-      null
-    ],
-    [
-      "a critical moment",
-      "关键时刻",
-      "coll",
-      "at a critical ____（在关键时刻）",
-      "moment",
-      null
-    ],
-    [
-      "a gas leak",
-      "煤气泄漏",
-      "coll",
-      "a gas ____（煤气泄漏）",
-      "leak",
-      [
-        "a",
-        "gas",
-        "leak"
-      ]
-    ],
-    [
       "leak out",
       "泄露；走漏",
       "phr",
       "The secret leaked ____.",
       "out",
-      null
-    ],
-    [
-      "a fantasy world",
-      "幻想世界",
-      "coll",
-      "live in a ____ world（生活在幻想中）",
-      "fantasy",
-      [
-        "a",
-        "fantasy",
-        "world"
-      ]
-    ],
-    [
-      "be available to sb.",
-      "（某人）可获得",
-      "prep",
-      "be available ____ everyone",
-      "to",
-      null
-    ],
-    [
-      "be available for",
-      "可用于；有空",
-      "prep",
-      "be available ____ hire",
-      "for",
-      null
-    ],
-    [
-      "be readily available",
-      "随时可获得",
-      "coll",
-      "be readily ____（随时可获得）",
-      "available",
-      null
-    ],
-    [
-      "the structure of",
-      "……的结构",
-      "coll",
-      "the ____ of the building",
-      "structure",
       null
     ],
     [
@@ -460,22 +264,6 @@
       ]
     ],
     [
-      "security camera",
-      "监控摄像头",
-      "coll",
-      "a security ____（监控摄像头）",
-      "camera",
-      null
-    ],
-    [
-      "security system",
-      "安全系统",
-      "coll",
-      "a home security ____（家庭安全系统）",
-      "system",
-      null
-    ],
-    [
       "commit a crime",
       "犯罪",
       "phr",
@@ -488,35 +276,11 @@
       ]
     ],
     [
-      "crime rate",
-      "犯罪率",
-      "coll",
-      "a rising crime ____（上升的犯罪率）",
-      "rate",
-      null
-    ],
-    [
       "artificial intelligence",
       "人工智能",
       "coll",
       "artificial ____（人工智能）",
       "intelligence",
-      null
-    ],
-    [
-      "artificial light",
-      "人造光",
-      "coll",
-      "under ____ light（在人造光下）",
-      "artificial",
-      null
-    ],
-    [
-      "It is predicted that",
-      "据预测",
-      "phr",
-      "It is ____ that prices will rise.",
-      "predicted",
       null
     ],
     [
@@ -528,135 +292,11 @@
       null
     ],
     [
-      "weather forecast",
-      "天气预报",
-      "coll",
-      "weather ____（天气预报）",
-      "forecast",
-      null
-    ],
-    [
       "be opposed to",
       "反对；抵制",
       "prep",
       "be opposed ____ the plan",
       "to",
-      null
-    ],
-    [
-      "as opposed to",
-      "而不是；与……相比",
-      "prep",
-      "as opposed ____ the old method",
-      "to",
-      null
-    ],
-    [
-      "advocate doing sth.",
-      "提倡做某事",
-      "phr",
-      "advocate ____ a healthy diet",
-      "doing",
-      null
-    ],
-    [
-      "an advocate of",
-      "……的倡导者",
-      "prep",
-      "an advocate ____ free trade",
-      "of",
-      null
-    ],
-    [
-      "put emphasis on",
-      "强调",
-      "prep",
-      "put emphasis ____ practice",
-      "on",
-      null
-    ],
-    [
-      "with an emphasis on",
-      "强调；重视",
-      "prep",
-      "with an emphasis ____ safety",
-      "on",
-      null
-    ],
-    [
-      "live in luxury",
-      "过奢侈生活",
-      "phr",
-      "live in ____（过奢侈生活）",
-      "luxury",
-      null
-    ],
-    [
-      "a luxury hotel",
-      "豪华酒店",
-      "coll",
-      "a ____ hotel（豪华酒店）",
-      "luxury",
-      [
-        "a",
-        "luxury",
-        "hotel"
-      ]
-    ],
-    [
-      "career prospects",
-      "职业前景",
-      "coll",
-      "bright career ____（光明的职业前景）",
-      "prospects",
-      null
-    ],
-    [
-      "a career in",
-      "……方面的职业",
-      "prep",
-      "a career ____ medicine",
-      "in",
-      null
-    ],
-    [
-      "resistance to",
-      "对……的抵抗",
-      "prep",
-      "resistance ____ change",
-      "to",
-      null
-    ],
-    [
-      "resist doing sth.",
-      "抵制做某事",
-      "phr",
-      "resist ____ temptation",
-      "doing",
-      null
-    ],
-    [
-      "be accurate in",
-      "在……方面准确",
-      "prep",
-      "be accurate ____ every detail",
-      "in",
-      null
-    ],
-    [
-      "to be accurate",
-      "准确地说",
-      "phr",
-      "____ be accurate, the figure is 42.",
-      "to",
-      null
-    ],
-    [
-      "signpost words",
-      "指示词；路标词",
-      "coll",
-      "____ words help readers follow the text.",
-      "Signpost",
       null
     ]
   ]

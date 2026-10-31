@@ -138,10 +138,6 @@
       "识别"
     ],
     [
-      "identify",
-      "识别"
-    ],
-    [
       "in danger of",
       "处于……危险中"
     ],
@@ -262,7 +258,7 @@
       "put forward",
       "提出",
       "phr",
-      "put forward a ____（提出建议）",
+      "put ____ a suggestion（提出建议）",
       "forward",
       null
     ],

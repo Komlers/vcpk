@@ -126,10 +126,6 @@
       "独立地"
     ],
     [
-      "spacecraft",
-      "航天器"
-    ],
-    [
       "be disappointed at",
       "对……失望"
     ],
@@ -144,10 +140,6 @@
     [
       "in the hope of",
       "抱着……希望"
-    ],
-    [
-      "solar system",
-      "太阳系"
     ],
     [
       "be known as",
@@ -191,7 +183,7 @@
       "carry on",
       "继续",
       "phr",
-      "carry on the exploration",
+      "carry ____ the exploration",
       "on",
       null
     ],
@@ -199,7 +191,7 @@
       "in the hope of",
       "抱着……希望",
       "coll",
-      "in the hope of finding life",
+      "in the hope ____ finding life",
       "of",
       [
         "in",
@@ -212,7 +204,7 @@
       "be known as",
       "作为……闻名",
       "prep",
-      "be known as a space pioneer",
+      "be known ____ a space pioneer",
       "as",
       null
     ],
@@ -220,7 +212,7 @@
       "lead to",
       "导致",
       "prep",
-      "lead to new discoveries",
+      "lead ____ new discoveries",
       "to",
       null
     ],
@@ -228,7 +220,7 @@
       "make progress",
       "取得进步",
       "coll",
-      "make progress in space travel",
+      "make ____ in space travel",
       "progress",
       [
         "make",
@@ -239,7 +231,7 @@
       "be capable of",
       "能够",
       "prep",
-      "be capable of reaching Mars",
+      "be capable ____ reaching Mars",
       "of",
       null
     ],
@@ -247,7 +239,7 @@
       "be curious about",
       "对……好奇",
       "prep",
-      "be curious about the universe",
+      "be curious ____ the universe",
       "about",
       null
     ],
@@ -255,7 +247,7 @@
       "be connected to",
       "连接到",
       "prep",
-      "be connected to the spacecraft",
+      "be connected ____ the spacecraft",
       "to",
       null
     ],
@@ -263,7 +255,7 @@
       "be determined to",
       "决心",
       "phr",
-      "be determined to explore space",
+      "be determined ____ explore space",
       "to",
       null
     ],
@@ -271,7 +263,7 @@
       "be disappointed at",
       "对……失望",
       "prep",
-      "be disappointed at the failure",
+      "be disappointed ____ the failure",
       "at",
       null
     ],
@@ -279,7 +271,7 @@
       "be faced with",
       "面对",
       "prep",
-      "be faced with challenges",
+      "be faced ____ challenges",
       "with",
       null
     ],
@@ -287,7 +279,7 @@
       "be aware of",
       "意识到",
       "prep",
-      "be aware of the risks",
+      "be aware ____ the risks",
       "of",
       null
     ],
@@ -295,7 +287,7 @@
       "be proud of",
       "为……骄傲",
       "prep",
-      "be proud of the astronauts",
+      "be proud ____ the astronauts",
       "of",
       null
     ],
@@ -303,7 +295,7 @@
       "solar system",
       "太阳系",
       "coll",
-      "the solar system",
+      "the solar ____",
       "system",
       [
         "solar",
@@ -314,7 +306,7 @@
       "zero gravity",
       "零重力",
       "coll",
-      "in zero gravity（在零重力下）",
+      "in zero ____（在零重力下）",
       "gravity",
       [
         "zero",

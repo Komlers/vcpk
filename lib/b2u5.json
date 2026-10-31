@@ -208,7 +208,7 @@
       "be faced with",
       "面对",
       "prep",
-      "be faced with challenges",
+      "be faced ____ challenges",
       "with",
       null
     ],
@@ -224,7 +224,7 @@
       "prove to be",
       "证明是",
       "phr",
-      "prove to be a success",
+      "prove to ____ a success",
       "be",
       null
     ],
@@ -232,7 +232,7 @@
       "be absorbed in",
       "全神贯注于",
       "prep",
-      "be absorbed in the performance",
+      "be absorbed ____ the performance",
       "in",
       null
     ],
@@ -248,7 +248,7 @@
       "be grateful for",
       "感激",
       "prep",
-      "be grateful for the opportunity",
+      "be grateful ____ the opportunity",
       "for",
       null
     ],
@@ -256,7 +256,7 @@
       "come up with",
       "想出",
       "prep",
-      "come up with an idea",
+      "come up ____ an idea",
       "with",
       null
     ],
@@ -264,7 +264,7 @@
       "take part in",
       "参加",
       "prep",
-      "take part in the virtual choir",
+      "take part ____ the virtual choir",
       "in",
       null
     ],
@@ -283,7 +283,7 @@
       "a live performance",
       "现场演出",
       "coll",
-      "a live performance（现场演出）",
+      "a live ____（现场演出）",
       "performance",
       [
         "a",
@@ -295,7 +295,7 @@
       "be set in",
       "以……为背景",
       "prep",
-      "be set in Vienna",
+      "be set ____ Vienna",
       "in",
       null
     ],
@@ -303,7 +303,7 @@
       "be moved by",
       "被……感动",
       "prep",
-      "be moved by the song",
+      "be moved ____ the song",
       "by",
       null
     ],
