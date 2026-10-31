@@ -146,11 +146,20 @@ function reviewSpecs(cls){
 
 /* ================== 干扰项生成 ================== */
 /* 词块选义干扰项：同家族优先 */
+/* 词块选义干扰项：同家族优先；按中文去重，且必须与正确答案不同。
+   不同词块可能同义（be proud of / be proud about、跨册重复的 be known as 等），
+   若不过滤会出现两个一模一样的选项，甚至干扰项与正确答案同义。 */
 function chunkDistractCn(i){
-  const fam = CHUNKS[i][2];
+  const fam = CHUNKS[i][2], ans = CHUNKS[i][1];
   const same = [], rest = [];
   chunkCand(i).forEach(j=>{ if(j===i) return; (CHUNKS[j][2]===fam?same:rest).push(j); });
-  return shuffle(same).concat(shuffle(rest)).slice(0,3).map(j=>CHUNKS[j][1]);
+  const out = [];
+  const push = v => { if(v && v !== ans && !out.includes(v) && out.length < 3) out.push(v); };
+  shuffle(same).forEach(j=>push(CHUNKS[j][1]));
+  shuffle(rest).forEach(j=>push(CHUNKS[j][1]));
+  /* 范围内同义项过多导致凑不满时，从全部词块补足，保证始终有 3 个干扰项 */
+  if(out.length < 3) shuffle(CHUNKS).forEach(c=>push(c[1]));
+  return out;
 }
 /* 配对题干扰项：介词类取介词池，其余取同家族其他答案（保证 3 个互不相同且≠答案） */
 function pairDistract(i){
