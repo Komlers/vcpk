@@ -144,13 +144,17 @@
   .mini{font-size:23px;color:var(--muted);}
 
   /* ============ 全屏按钮 ============ */
-  #fsBtn{position:fixed;top:18px;right:18px;z-index:999;display:flex;align-items:center;gap:8px;
+  #fsBtn,#installBtn{position:fixed;top:18px;z-index:999;display:flex;align-items:center;gap:8px;
          padding:9px 18px;border-radius:13px;border:2px solid var(--line);
          background:rgba(255,255,255,.94);color:var(--ink2);font-size:21px;font-weight:700;
          cursor:pointer;transition:all .15s;box-shadow:var(--shadow-sm);}
-  #fsBtn:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg);}
-  #fsBtn:active{transform:scale(.96);}
-  #fsBtn svg{width:21px;height:21px;display:block;}
+  /* 安装按钮固定在左上角，与右上角全屏按钮左右对称 */
+  #fsBtn{right:18px;}
+  #installBtn{left:18px;}
+  #installBtn:disabled{opacity:.5;cursor:default;}
+  #fsBtn:hover,#installBtn:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg);}
+  #fsBtn:active,#installBtn:active{transform:scale(.96);}
+  #fsBtn svg,#installBtn svg{width:21px;height:21px;display:block;}
   #fsBtn .icoExit{display:none;}
   #fsBtn.on .icoEnter{display:none;}
   #fsBtn.on .icoExit{display:block;}

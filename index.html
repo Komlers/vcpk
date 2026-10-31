@@ -31,9 +31,17 @@
 <meta name="twitter:description" content="面向高中英语课堂的双人单词 PK 应用：限时答题、多种题型、败者守擂车轮战，适合教室大屏互动教学。">
 
 <link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- ================= 安装为桌面应用（浏览器允许安装时才显示，见 js/pwa.js） ================= -->
+<button id="installBtn" class="hidden" title="将本网页安装为桌面应用">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10"></path><path d="M7.5 9.5 12 14l4.5-4.5"></path><path d="M4 16v2.5A2.5 2.5 0 0 0 6.5 21h11a2.5 2.5 0 0 0 2.5-2.5V16"></path></svg>
+  <span id="installLabel">安装</span>
+</button>
 
 <!-- ================= 全屏按钮 ================= -->
 <button id="fsBtn" title="全屏 / 退出全屏（快捷键 F，Esc 退出）">
@@ -431,6 +439,7 @@
 <script src="js/editor.js?v=4"></script>
 <script src="js/game.js?v=4"></script>
 <script src="js/events.js?v=4"></script>
+<script src="js/pwa.js?v=4"></script>
 
 
 </body></html>

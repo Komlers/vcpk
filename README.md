@@ -21,6 +21,7 @@
 - **自定义词库**：支持导入本地 JSON 词库，可借助 AI 按模板生成
 - **网页内弹窗**：所有提示、确认、输入均在网页内完成，不依赖浏览器对话框
 - **全屏模式**：开始 PK 自动全屏，适配教室大屏
+- **安装为桌面应用**：Edge / Chrome 打开时可一键「安装」，像桌面软件一样独立窗口运行，断网也能打开
 - **禁止右键**：防止触屏长按误触浏览器右键菜单
 - **高 DPI 适配**：针对 4K / 300% 缩放大屏优化
 
@@ -73,8 +74,11 @@ Word/
 ├── index.html            # 主页面（含所有弹窗结构）
 ├── 404.html              # 404 页面
 ├── style.css             # 全局样式
+├── manifest.webmanifest  # PWA 清单（应用名、图标、独立窗口显示）
+├── sw.js                 # Service Worker（安装条件 + 离线外壳）
 ├── favicon.ico
 ├── sample.txt            # 名单示例文件
+├── icons/                # PWA 图标（96 / 128 / 192 / 256 / 512）
 ├── js/
 │   ├── config.js         # 全局配置、词库注册、状态定义
 │   ├── storage.js        # localStorage 读写、名单解析
@@ -83,7 +87,8 @@ Word/
 │   ├── dialog.js         # 网页内通用弹窗（alert/confirm/prompt）
 │   ├── editor.js         # 名单编辑器逻辑
 │   ├── game.js           # 对战逻辑、计时、结算
-│   └── events.js         # 事件绑定
+│   ├── events.js         # 事件绑定
+│   └── pwa.js            # 安装引导（注册 SW、安装按钮）
 ├── lib/                  # 内置词库（25 个 JSON）
 │   ├── b1u1.json ~ b1u5.json
 │   ├── b2u1.json ~ b2u5.json
@@ -106,6 +111,12 @@ Word/
 ### 在线使用（推荐）
 
 直接访问 **[pk.danevan.top](https://pk.danevan.top/)**，无需安装、无需部署，浏览器打开即可使用。
+
+### 安装为桌面应用（Edge / Chrome）
+
+用 Edge 或 Chrome 打开网页后，浏览器会提示「将本网页作为应用安装」；也可以点页面左上角的「安装」按钮手动触发。安装后从开始菜单 / 桌面图标打开，即以独立窗口运行，不受地址栏和标签页干扰，断网时也能打开已加载过的内容。
+
+> 按钮只在浏览器认为可安装时出现（需 HTTPS）；已安装、或用 Safari / Firefox 打开时不显示。
 
 ### 本地运行
 
@@ -204,4 +215,5 @@ npx serve .
 - 原生 HTML5 / CSS3 / JavaScript（无框架、无构建步骤）
 - localStorage 本地持久化
 - Fetch API 加载词库
+- Web App Manifest + Service Worker（可安装为桌面应用、断网可打开）
 - 纯静态站点，在线地址：[pk.danevan.top](https://pk.danevan.top/)
