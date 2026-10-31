@@ -36,7 +36,8 @@ const SHELL = [
   "icons/icon-512.png",
   "res/update.md",
   "res/import.md",
-  "res/custom.md"
+  "res/custom.md",
+  "res/tips.md"
 ];
 
 self.addEventListener("install", e => {

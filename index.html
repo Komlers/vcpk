@@ -56,7 +56,7 @@
     <div class="logo"><span class="r">词</span>汇<span class="b">擂</span>台</div>
     <div class="sub">双人同台 · 单词 / 词块对战 · <b>败者守擂</b> · 班级名单本地保存</div>
     <div class="heroBtns">
-      <button class="heroBtn" id="ruleBtn">📖 使用说明</button>
+      <button class="heroBtn" id="aboutBtn">ℹ️ 关于项目</button>
       <button class="heroBtn" id="hisBtn">📊 历史战绩</button>
       <button class="heroBtn" id="settingBtn">⚙️ 擂台设置</button>
     </div>
@@ -295,39 +295,58 @@
   </div>
 </div>
 
-<!-- ================= 使用说明弹窗 ================= -->
-<div id="ruleModal" class="modal hidden">
+<!-- ================= 关于项目弹窗 ================= -->
+<div id="aboutModal" class="modal hidden">
   <div class="modalMask"></div>
-  <div class="modalBox">
-    <h3>📖 使用说明</h3>
-    <div class="ruleBody">
-      <div class="ruleItem"><b>🚀 快速上手（三步）</b><p>
-        ① <b>选择班级</b>：首次使用点「导入班级名单」导入 TXT（一行一个名字）；之后可用「名单编辑器」增删改。<br>
-        ② <b>上台选手</b>：点击红方 / 蓝方框随机抽取，或点「输入」手动指定。<br>
-        ③ <b>选择词库与限时</b>，点「开始 PK」即可自动全屏开战。</p></div>
+  <div class="modalBox aboutBox">
+    <h3>ℹ️ 关于项目</h3>
 
-      <div class="ruleItem"><b>🎯 对战方式</b><p>红蓝双方同台答题，屏幕左右各一套选项，同时作答、互不干扰。答对得分，答错不扣分。</p></div>
-
-      <div class="ruleItem"><b>📚 题型说明</b><p>纯单词词库为「单词选义」；含词块的词库会加入「词块选义 / 词块配对 / 词块重组」三种题型，按比例混合出题。</p></div>
-
-      <div class="ruleItem"><b>⏱ 限时与超时</b><p>每局可设 30 秒～5 分钟，时间到立即结算，题池按时长自动扩满、全程不重复。在「擂台设置」中还可开启<b>每题超时检测</b>（3s / 5s / 7s），超时直接跳过、双方均不计分，防止故意拖延。</p></div>
-
-      <div class="ruleItem"><b>🔥 连击加分</b><p>连续答对触发连击，连击越高单次得分越多；答错则连击清零。屏幕上方会显示当前连击数。</p></div>
-
-      <div class="ruleItem"><b>🛡 败者守擂</b><p>每局结束后，败者（或平局时双方）成为下一局擂主（红方），系统自动抽取新的挑战者（蓝方），实现车轮战。</p></div>
-
-      <div class="ruleItem"><b>🔁 错词复现</b><p>答错的单词和词块进入「错词本」，下次比赛优先重考、答对即出本；结算页可发起 30 秒错词加时赛。若不希望跨词库保留错词，可在「擂台设置」中关闭「错词记忆」。</p></div>
-
-      <div class="ruleItem"><b>🎲 临时赛事</b><p>勾选「本次PK不计入战绩」后，该局不记录战绩、不统计错题、败者不守擂，适合临时练习。</p></div>
-
-      <div class="ruleItem"><b>🗂 名单与词库</b><p>「名单编辑器」支持班级新建 / 重命名 / 删除、名字改名 / 删除、搜索与批量添加；内置 <b>25 个词库</b>按必修、选必分册分组，也可在「自定义词库」中导入本地 JSON 词库（可借助 AI 按模板生成，点「如何制作自定义词库」查看）。</p></div>
-
-      <div class="ruleItem"><b>💾 本地保存</b><p>班级名单、战绩、擂主、词库与配置均保存在本机浏览器（LocalStorage），不上传任何服务器；清除浏览器数据会丢失，建议保留原始文件备份。</p></div>
-
-      <div class="ruleItem"><b>⌨ 快捷键</b><p><kbd>F</kbd> 进入 / 退出全屏 · <kbd>Esc</kbd> 退出全屏（右上角也有按钮）。</p></div>
+    <div class="aboutHead">
+      <div class="aboutLogo"><span class="r">词</span>汇<span class="b">擂</span>台</div>
+      <div class="aboutMeta">版本 <b id="aboutVer">2.0</b> · 纯前端 · 数据只存本机</div>
     </div>
+
+    <div class="ruleBody">
+      <div class="ruleItem"><b>这是什么</b><p>
+        面向高中英语课堂的<b>双人单词对战网页应用</b>：红方擂主对蓝方挑战者，同屏限时答题，败者守擂实现车轮战，适合教室大屏互动教学。</p></div>
+
+      <div class="ruleItem"><b>对战方式</b><p>
+        一局 30 秒～5 分钟，屏幕左右各一套选项，双方同时作答、互不干扰；答对得分，连击越高单次得分越多，答错不扣分。</p></div>
+
+      <div class="ruleItem"><b>题型</b><p>
+        单词题：<b>单词选义</b>。词块题：<b>词块选义</b>、<b>词块配对</b>、<b>词块重组</b>，覆盖介词搭配、动词短语、固定搭配，按时长自动配比混合出题。</p></div>
+
+      <div class="ruleItem"><b>词库</b><p>
+        内置 <b>25 个词库</b>，对齐人教版高中英语必修 1～3、选择性必修 1～2 共 25 个单元；支持多选混合出题，也可导入本地 JSON 自定义词库。</p></div>
+
+      <div class="ruleItem"><b>名单与战绩</b><p>
+        班级名单支持 TXT 导入与内置编辑器（批量添加、搜索、改名、删除）；战绩、最高连击、错词本、擂主按班级分别保存。</p></div>
+
+      <div class="ruleItem"><b>数据与隐私</b><p>
+        所有数据（名单、战绩、配置、自定义词库）只保存在本机浏览器，不上传服务器；无账号、无追踪、无广告。</p></div>
+
+      <div class="ruleItem"><b>安装为桌面应用</b><p>
+        用 Edge / Chrome 打开时，可点左上角「安装」把本页装成桌面应用，独立窗口运行，断网也能打开。</p></div>
+
+      <div class="ruleItem"><b>关于作者</b><p>
+        在线地址 <a href="https://pk.danevan.top/" target="_blank" rel="noopener noreferrer">pk.danevan.top</a> · 作者 <a href="https://www.danevan.top/" target="_blank" rel="noopener noreferrer">Dan_Evan</a> · &copy; 2026 All Rights Reserved.</p></div>
+    </div>
+
+    <div class="btnRow" style="margin-top:22px">
+      <button class="drawBtn" id="aboutTipsBtn">📖 使用说明</button>
+      <button class="startBtn small" id="aboutClose">关 闭</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 使用说明弹窗（内容从 res/tips.md 动态加载） ============ -->
+<div id="tipsModal" class="modal hidden">
+  <div class="modalMask"></div>
+  <div class="modalBox updateModalBox">
+    <h3>📖 使用说明</h3>
+    <div class="updateContent" id="tipsContent"></div>
     <div class="btnRow" style="margin-top:20px">
-      <button class="startBtn small" id="ruleClose">我知道了</button>
+      <button class="startBtn small" id="tipsClose">我知道了</button>
     </div>
   </div>
 </div>

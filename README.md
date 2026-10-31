@@ -97,6 +97,7 @@ Word/
 │   └── b5u1.json ~ b5u5.json
 ├── res/                  # 在线文档（Markdown，弹窗内加载）
 │   ├── update.md         # 版本更新说明
+│   ├── tips.md           # 使用说明（「关于项目」弹窗内打开）
 │   ├── import.md         # 名单添加帮助
 │   └── custom.md         # 自定义词库制作帮助
 └── template/

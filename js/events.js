@@ -315,11 +315,33 @@ $("updateLater").addEventListener("click", ()=>{
 /* footer「更新说明」：手动打开更新弹窗再次阅读 */
 $("openUpdateLink").addEventListener("click", ()=>showUpdateModal());
 
-/* ================== 规则介绍弹窗 ================== */
-$("ruleBtn").addEventListener("click", ()=>$("ruleModal").classList.remove("hidden"));
-$("ruleClose").addEventListener("click", ()=>$("ruleModal").classList.add("hidden"));
-$("ruleModal").addEventListener("click", e=>{
-  if(e.target.classList.contains("modalMask")) $("ruleModal").classList.add("hidden");
+/* ================== 关于项目弹窗 ==================
+   简介为静态内容；版本号取自 config.js 的 APP_VERSION，避免两处写死不一致 */
+$("aboutBtn").addEventListener("click", ()=>{
+  $("aboutVer").textContent = APP_VERSION;
+  $("aboutModal").classList.remove("hidden");
+});
+$("aboutClose").addEventListener("click", ()=>$("aboutModal").classList.add("hidden"));
+$("aboutModal").addEventListener("click", e=>{
+  if(e.target.classList.contains("modalMask")) $("aboutModal").classList.add("hidden");
+});
+
+/* ================== 使用说明弹窗（内容从 res/tips.md 加载） ==================
+   「关于项目」底部的「使用说明」按钮触发；弹窗叠在关于窗口之上，关闭后回到关于 */
+$("aboutTipsBtn").addEventListener("click", async ()=>{
+  try{
+    const res = await fetch("res/tips.md", {cache:"no-cache"});
+    if(!res.ok) throw new Error("tips.md missing");
+    const md = await res.text();
+    $("tipsContent").innerHTML = mdToHtml(md);
+    $("tipsModal").classList.remove("hidden");
+  }catch(err){
+    dlgAlert("使用说明加载失败：" + err.message, { type: "error", title: "出错了" });
+  }
+});
+$("tipsClose").addEventListener("click", ()=>$("tipsModal").classList.add("hidden"));
+$("tipsModal").addEventListener("click", e=>{
+  if(e.target.classList.contains("modalMask")) $("tipsModal").classList.add("hidden");
 });
 
 /* ================== 历史战绩弹窗 ================== */
