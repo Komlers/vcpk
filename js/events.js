@@ -1,10 +1,14 @@
-/* ================== 抽人 ================== */
+/* ================== 抽人 ==================
+   没有名单（临时体验）时，点红蓝框直接展开手输区并聚焦对应输入框，
+   而不是弹一句「名单人数不足」把路堵死。 */
 $("redBox").addEventListener("click", ()=>{
+  if(!hasRoster()){ enterManualMode("m1"); return; }
   const name = takeName(blueName);
   if(!name){ $("drawInfo").textContent = "名单人数不足，无法抽取红方（请先导入或在名单中增加学生）。"; return; }
   animateDraw("redNameBox", name, ()=>{ redName = name; champFixed = false; renderHistory(); });
 });
 $("blueBox").addEventListener("click", ()=>{
+  if(!hasRoster()){ enterManualMode("m2"); return; }
   const name = takeName(redName);
   if(!name){ $("drawInfo").textContent = "名单人数不足，无法抽取蓝方（请先导入或在名单中增加学生）。"; return; }
   animateDraw("blueNameBox", name, ()=>{ blueName = name; renderHistory(); });
@@ -15,8 +19,17 @@ $("manualBtn").addEventListener("click", ()=>{
   $("manualBtn").textContent = manualMode ? "收起" : "输入";
   refreshNameBoxes();   /* 打开手输时，把手输框预填为当前名字 */
 });
-$("m1").addEventListener("input", e=>{ const raw = e.target.value.trim(); redName = resolveGhostName(raw); $("redNameBox").textContent = dispName(redName) || "待抽取"; champFixed=false; renderHistory(); });
-$("m2").addEventListener("input", e=>{ const raw = e.target.value.trim(); blueName = resolveGhostName(raw); $("blueNameBox").textContent = dispName(blueName) || "待抽取"; renderHistory(); });
+$("m1").addEventListener("input", e=>{
+  redName = resolveGhostName(e.target.value.trim());
+  $("redNameBox").textContent = dispName(redName) || namePlaceholder();
+  champFixed = false;
+  renderHistory();
+});
+$("m2").addEventListener("input", e=>{
+  blueName = resolveGhostName(e.target.value.trim());
+  $("blueNameBox").textContent = dispName(blueName) || namePlaceholder();
+  renderHistory();
+});
 
 /* ================== 选名弹窗 ================== */
 $("pickBtn").addEventListener("click", ()=>{
@@ -67,6 +80,8 @@ $("classChips").addEventListener("click", async e=>{
     if(S.cls === cls){ S.cls = ""; redName = ""; blueName = ""; champFixed = false; }
     autoSelectClass();
     resetDrawn(); refreshNameBoxes(); restoreCfg(); renderHistory();
+    /* 删到没有班级了：直接进入临时体验的手输形态 */
+    if(!S.cls) enterManualMode();
     return;
   }
   document.querySelectorAll("#classChips .chip").forEach(x=>x.classList.remove("on"));
@@ -361,8 +376,24 @@ $("hisModal").addEventListener("click", e=>{
 /* ================== 开始 PK / 限时 ================== */
 $("startBtn").addEventListener("click", async ()=>{
   if(!redName || !blueName){
-    dlgAlert("请先抽取（或手输）红蓝双方选手！", { type: "warning", title: "选手未就位" });
+    dlgAlert(hasRoster()
+      ? "请先抽取（或手输）红蓝双方选手！"
+      : "请先输入红蓝双方选手的名字。",
+      { type: "warning", title: "选手未就位" });
+    if(!hasRoster()) enterManualMode(redName ? "m2" : "m1");
     return;
+  }
+  /* 手输名字与名单共用一套字符规则，避免出现奇怪的符号进到战绩里 */
+  if(!validName(redName) || !validName(blueName)){
+    dlgAlert("选手名字只能包含中文、英文字母、数字及 · . - 等符号。",
+      { type: "warning", title: "名字无效" });
+    return;
+  }
+  if(dispName(redName) === dispName(blueName)){
+    const same = await dlgConfirm(
+      "红蓝双方名字相同（" + dispName(redName) + "），仍要开始吗？",
+      { type: "warning", title: "名字重复", okText: "仍要开始", cancelText: "改一下" });
+    if(!same) return;
   }
   if(!S.units.length){
     dlgAlert("请先选择词库！", { type: "warning", title: "未选择词库" });
@@ -406,15 +437,16 @@ $("side2").addEventListener("click", e=>answer(2, e));
 
 /* ================== 结算页按钮 ================== */
 $("againBtn").addEventListener("click", ()=>{
-  /* 败者/连击低者守擂：红方已定，只需重抽蓝方；全对平局则擂主已清空，红蓝都重抽 */
-  redName = loadChamp(S.cls);
+  /* 败者/连击低者守擂：红方已定，只需重抽蓝方；全对平局则擂主已清空，红蓝都重抽。
+     临时体验没有班级可存擂主，用本会话的 S.trialChamp 承接。 */
+  redName = S.cls ? loadChamp(S.cls) : S.trialChamp;
   champFixed = !!redName; blueName = "";
   show("setup"); refreshNameBoxes(); renderHistory();
 });
 $("reviveBtn").addEventListener("click", ()=>startBattle(true));
 $("homeBtn").addEventListener("click", ()=>{
   show("setup");
-  redName = loadChamp(S.cls);
+  redName = S.cls ? loadChamp(S.cls) : S.trialChamp;
   champFixed = !!redName; blueName = "";
   refreshNameBoxes(); renderHistory();
 });
@@ -457,6 +489,11 @@ document.addEventListener("keydown", e=>{
 });
 syncFsBtn();
 if(!fsSupported()){ $("fsBtn").style.display = "none"; }
+
+/* ================== 临时体验 ==================
+   一个班级都没有时（首次使用），直接展开手输区：
+   红蓝框提示「点此输入」，用户不必先导入名单也能试打一局（该局不记录战绩）。 */
+if(!S.cls) enterManualMode();
 
 /* ================== 禁止右键菜单 ==================
    触屏大屏上学生长按容易触发 Windows 右键，弹出浏览器菜单影响答题。

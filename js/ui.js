@@ -209,19 +209,23 @@ function renderHistory(){
   /* 错词记忆关闭时不显示待复现错词（即使历史上有 wrongs 数据） */
   const rw = S.rememberWrong ? reviewWords(S.cls).length : 0;
   let info = "";
-  if(redName) info += "擂主已就位：" + esc(dispName(redName)) + (champFixed ? "（本地记忆）" : "") + "。";
+  /* 临时体验（无班级）的擂主只在本会话内有效，不标注「本地记忆」 */
+  if(redName) info += "擂主已就位：" + esc(dispName(redName)) + (champFixed && S.cls ? "（本地记忆）" : "") + "。";
   if(rw) info += "🔁 待复现 " + rw + " 个错词。";
-  $("drawInfo").textContent = info || "先抽擂主（红方），再抽挑战者（蓝方）。";
+  /* 临时体验没有「抽取」动作，底部状态行留空，避免与上方提示重复 */
+  $("drawInfo").textContent = info || (S.cls
+    ? "先抽擂主（红方），再抽挑战者（蓝方）。"
+    : "");
 
   /* 名单载入状态：直观确认名单已导入、还剩多少人没抽 */
   if(!S.cls){
-    $("rosterInfo").textContent = "⚠ 还没有班级名单，请点击「导入班级名单（TXT）」按钮，从本地 TXT 导入。";
+    $("rosterInfo").textContent = "💡 还没有班级名单：可直接在下方输入两位选手名字体验一局（不记录战绩），或先导入 TXT 名单。";
     return;
   }
   const roster = rosters()[S.cls] || [];
   $("rosterInfo").textContent = roster.length
     ? "✅ 名单已载入：" + S.cls + " · 共 " + roster.length + " 人"
-    : "⚠ 「" + S.cls + "」名单为空，请重新导入 TXT。";
+    : "⚠ 「" + S.cls + "」名单为空：可导入 TXT，也可直接输入名字（这局的战绩会记到本班）。";
 }
 
 /* ================== 抽人 ================== */
@@ -262,12 +266,38 @@ function animateDraw(boxId, finalName, done){
     }
   }, 70);
 }
+/* 红蓝框的占位文案：有名单时「待抽取」，没有名单时提示「点此输入」 */
+function namePlaceholder(){ return hasRoster() ? "待抽取" : "点此输入"; }
 function refreshNameBoxes(){
-  $("redNameBox").textContent = dispName(redName) || "待抽取";
-  $("blueNameBox").textContent = dispName(blueName) || "待抽取";
+  const tip = namePlaceholder();
+  $("redNameBox").textContent = dispName(redName) || tip;
+  $("blueNameBox").textContent = dispName(blueName) || tip;
+  /* 空名字时占位文案收小变淡，避免「点此输入」比真名字还抢眼 */
+  $("redNameBox").classList.toggle("ph", !redName);
+  $("blueNameBox").classList.toggle("ph", !blueName);
+  /* 没有名单时，红蓝框的提示改为「点击输入」，点一下就能直接打字 */
+  const act = hasRoster() ? "（点击抽取）" : "（点击输入）";
+  document.querySelectorAll(".drawBox .dact").forEach(el => { el.textContent = act; });
+  const h = $("drawHint");
+  if(h) h.textContent = hasRoster()
+    ? "先抽擂主（红方），再抽挑战者（蓝方）"
+    : "直接输入两个名字即可开打";
+  /* 没有名单时「选择」无意义（选名列表为空），收起入口 */
+  const pick = $("pickBtn");
+  if(pick) pick.style.display = hasRoster() ? "" : "none";
   /* 手输框显示不带@的名字，内部 redName/blueName 可能存的是带@的幽灵名 */
   $("m1").value = dispName(redName);
   $("m2").value = dispName(blueName);
+}
+/* 临时体验：没有名单时直接展开手输区，免去用户去找「输入」小链接 */
+function enterManualMode(focusId){
+  manualMode = true;
+  $("manualRow").classList.remove("hidden");
+  $("manualBtn").textContent = "收起";
+  if(focusId){
+    const el = $(focusId);
+    if(el){ el.focus(); el.select(); }
+  }
 }
 
 /* ================== 选名弹窗 ================== */

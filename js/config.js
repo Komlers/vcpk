@@ -58,7 +58,8 @@ let S = {
   questionTimeout:true, questionTimeoutDur:5, qTimer:null, mode:"mix",
   pool:[], qi:0, round:1, scores:[0,0], streak:[0,0], maxStreak:[0,0],
   locked:[false,false], timer:null, left:0, pendingNext:false,
-  wrongSet:new Set(), revival:false, basePoints:10, curQ:null, reviewList:[]
+  wrongSet:new Set(), revival:false, basePoints:10, curQ:null, reviewList:[],
+  trialChamp:""   /* 临时体验（无班级）时的擂主：只在本会话内继承，不写 localStorage */
 };
 let redName = "", blueName = "", champFixed = false, manualMode = false, drawnPool = [];
 let pickSide = "red";       /* 选名弹窗当前选中方 */

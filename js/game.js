@@ -194,8 +194,9 @@ function endBattle(){
   clearInterval(S.timer);
   clearQuestionTimer();
   const [a,b] = S.scores;
-  /* 临时赛（noRecord）不记录战绩、不统计错题、不更新擂主 */
-  if(!S.revival && !S.noRecord){
+  /* 临时赛（noRecord）不记录战绩、不统计错题、不更新擂主；
+     临时体验（无班级，手输名字试玩）同样不落库，只在本次会话里保留比分与错词 */
+  if(!S.revival && !S.noRecord && S.cls){
     const h = loadHis(S.cls);
     h.matches.push({t:Date.now(), p1:S.p1, p2:S.p2, s1:a, s2:b, unit:S.units.join("+")});
     [S.p1, S.p2].forEach((n,i)=>{
@@ -203,7 +204,7 @@ function endBattle(){
     });
     saveHis(S.cls, h);
   }
-  if(!S.noRecord && S.rememberWrong){
+  if(!S.noRecord && S.rememberWrong && S.cls){
     /* 错词账本更新（加时赛同样生效，仅在启用错词记忆时）：
        复现词答对即出本，再错次数+1；新错词计入 */
     const h = loadHis(S.cls);
@@ -237,8 +238,9 @@ function endBattle(){
         champ = S.p2;
       }
     }
-    /* 败者/连击低者成为下期擂主 → 写入本班本地记录；全对平局则清空 */
-    saveChamp(S.cls, clearChamp ? "" : champ);
+    /* 有班级：写入本班本地记录；临时体验（无班级）：只在本会话继承擂主，不落库 */
+    if(S.cls) saveChamp(S.cls, clearChamp ? "" : champ);
+    else S.trialChamp = clearChamp ? "" : champ;
   }
   let title;
   if(a===b){
@@ -251,9 +253,12 @@ function endBattle(){
   show("result");
   $("winName").textContent = title;
   $("winName").style.color = a===b ? "#3a4150" : (a>b ? "#e05555" : "#4a7fe0");
+  /* 临时体验（无班级）不写战绩，结算页明确告知 */
+  const scopeTxt = S.revival ? "错词加时赛"
+    : (S.cls ? S.units.length + " 个词库" : "临时体验 · 不记录战绩");
   $("finalScore").innerHTML =
     '<span class="r">' + esc(dispName(S.p1)) + " " + a + "</span> : " + b + ' <span class="b">' + esc(dispName(S.p2)) + "</span>"
-    + '<div class="mini" style="margin-top:8px">' + (S.revival ? "错词加时赛" : (S.units.length + " 个词库")) + " · " + (S.dur>=60 ? (S.dur/60)+" 分钟" : S.dur+" 秒") + "</div>";
+    + '<div class="mini" style="margin-top:8px">' + scopeTxt + " · " + (S.dur>=60 ? (S.dur/60)+" 分钟" : S.dur+" 秒") + "</div>";
   const wc = $("wrongChips");
   wc.innerHTML = "";
   const ws = [...S.wrongSet].map(w=>w.split("|"));

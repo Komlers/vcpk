@@ -181,6 +181,8 @@
     refreshNameBoxes();
     restoreCfg();
     renderHistory();
+    /* 删到没有班级了：主界面切回临时体验的手输形态 */
+    if (!S.cls) enterManualMode();
   }
 
   /* ================= 名字列表渲染 ================= */
