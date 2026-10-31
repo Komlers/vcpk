@@ -148,11 +148,10 @@
          background:rgba(255,255,255,.94);color:var(--ink2);font-size:21px;font-weight:700;
          cursor:pointer;transition:all .15s;box-shadow:var(--shadow-sm);}
   /* 安装按钮固定在左上角，与右上角全屏按钮左右对称；
-     平时半透明（与全屏态下的「全屏/退出」按钮观感一致），悬停恢复清晰 */
+     不透明度跟随全屏状态，与「全屏/退出」按钮完全一致 */
   #fsBtn{right:18px;}
-  #installBtn{left:18px;opacity:.5;}
-  #installBtn:hover{opacity:1;}
-  #installBtn:disabled{opacity:.35;cursor:default;}
+  #installBtn{left:18px;}
+  #installBtn:disabled{cursor:default;}
   #fsBtn:hover,#installBtn:hover{border-color:var(--blue);color:var(--blue-d);background:var(--blue-bg);}
   #fsBtn:active,#installBtn:active{transform:scale(.96);}
   #fsBtn svg,#installBtn svg{width:21px;height:21px;display:block;}
@@ -160,6 +159,8 @@
   #fsBtn.on .icoEnter{display:none;}
   #fsBtn.on .icoExit{display:block;}
   #fsBtn.on{opacity:.5;}
+  /* 安装按钮与全屏按钮同步变淡，保证两者在对战时观感一致 */
+  #installBtn.on{opacity:.5;}
 
   /* ============ 对战页 ============ */
   #battle{padding:0;}

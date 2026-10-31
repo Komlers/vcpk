@@ -464,6 +464,9 @@ function fsSupported(){
 function syncFsBtn(){
   const on = !!fsElement();
   $("fsBtn").classList.toggle("on", on);
+  /* 安装按钮与全屏按钮同步：全屏（对战）时一起变淡，主页时都是实心 */
+  const ib = $("installBtn");
+  if(ib) ib.classList.toggle("on", on);
   $("fsLabel").textContent = on ? "退出" : "全屏";
 }
 function toggleFullscreen(){

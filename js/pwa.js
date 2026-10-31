@@ -32,7 +32,12 @@
   }
 
   function hide() { btn.classList.add("hidden"); }
-  function show() { if (!isStandalone()) btn.classList.remove("hidden"); }
+  function show() {
+    if (isStandalone()) return;
+    btn.classList.remove("hidden");
+    /* 若此刻已在全屏（对战）状态，立即与「全屏/退出」按钮同步不透明度 */
+    if (typeof syncFsBtn === "function") syncFsBtn();
+  }
 
   /* 浏览器认为可安装时才会派发：此时才露出按钮 */
   window.addEventListener("beforeinstallprompt", e => {
