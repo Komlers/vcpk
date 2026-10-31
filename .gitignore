@@ -12,3 +12,9 @@
 # Demo Folder
 demo/
 data/
+other/
+
+# IDE Dir
+.vscode
+.idea
+.workbuddy
