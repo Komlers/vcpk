@@ -408,6 +408,7 @@ function restoreCfg(){
   $("rememberWrongChk").checked = S.rememberWrong;
   $("questionTimeoutChk").checked = S.questionTimeout;
   renderQuestionTimeoutUI();
+  renderSettingStatus();
   /* 临时赛选项不持久化，每次恢复配置时重置 */
   S.noRecord = false;
   $("noRecordChk").checked = false;
@@ -421,6 +422,18 @@ function renderQuestionTimeoutUI(){
   row.querySelectorAll(".qTimeoutOpt").forEach(b=>{
     b.classList.toggle("active", parseInt(b.dataset.sec) === S.questionTimeoutDur);
   });
+}
+/* 主页「当前擂台设置」状态行：错词记忆 / 是否只加载纯单词 / 单题超时 */
+function renderSettingStatus(){
+  const box = $("setStatusLine");
+  if(!box) return;
+  const parts = [
+    S.rememberWrong ? "错词将记忆" : "错词不记忆",
+    S.wordsOnly ? "只加载纯单词" : "加载完整词库",
+    S.questionTimeout ? "单题超时：" + S.questionTimeoutDur + "s" : "单题不限时"
+  ];
+  box.innerHTML = parts.map(t => '<span>' + esc(t) + '</span>')
+                       .join('<span class="setSep">|</span>');
 }
 /* 题池提示：随选词库与时长实时更新 */
 function planInfo(){

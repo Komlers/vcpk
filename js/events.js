@@ -269,6 +269,7 @@ $("wordsOnlyChk").addEventListener("change", e=>{
   syncUseChunks();
   saveCfg();
   planInfo();
+  renderSettingStatus();
 });
 
 /* ================== 本次PK不计入战绩（临时赛，不持久化） ================== */
@@ -286,11 +287,13 @@ $("rememberWrongChk").addEventListener("change", e=>{
   S.rememberWrong = e.target.checked;
   saveCfg();
   planInfo();
+  renderSettingStatus();
 });
 /* 擂台超时检测开关 */
 $("questionTimeoutChk").addEventListener("change", e=>{
   S.questionTimeout = e.target.checked;
   renderQuestionTimeoutUI();
+  renderSettingStatus();
   saveCfg();
 });
 /* 每题限时 3s / 5s / 7s */
@@ -299,6 +302,7 @@ $("qTimeoutRow").addEventListener("click", e=>{
   if(!btn || !S.questionTimeout) return;
   S.questionTimeoutDur = parseInt(btn.dataset.sec);
   renderQuestionTimeoutUI();
+  renderSettingStatus();
   saveCfg();
 });
 

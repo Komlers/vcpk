@@ -480,6 +480,11 @@
                   font-size:23px;color:var(--ink2);cursor:pointer;user-select:none;}
   .wordsOnlyLabel input{width:22px;height:22px;cursor:pointer;accent-color:var(--blue);}
 
+  /* 当前擂台设置状态（主页第三步，浅绿提示） */
+  .setStatusLine{display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+                 margin-top:12px;font-size:21px;font-weight:600;color:#3fa06b;line-height:1.5;}
+  .setStatusLine .setSep{color:#a9d7bd;font-weight:400;}
+
   /* 擂台超时检测：每题限时选择 */
   .qTimeoutRow{display:flex;align-items:center;gap:10px;margin:10px 0 0 34px;flex-wrap:wrap;}
   .qTimeoutLabel{font-size:20px;color:var(--ink2);font-weight:600;}
