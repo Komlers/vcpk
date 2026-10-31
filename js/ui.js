@@ -219,7 +219,7 @@ function renderHistory(){
 
   /* 名单载入状态：直观确认名单已导入、还剩多少人没抽 */
   if(!S.cls){
-    $("rosterInfo").textContent = "💡 还没有班级名单：可直接在下方输入两位选手名字体验一局（不记录战绩），或先导入 TXT 名单。";
+    $("rosterInfo").textContent = "💡 还没有班级名单：可直接在下方输入两位选手名字体验一局，或先导入 TXT 名单。";
     return;
   }
   const roster = rosters()[S.cls] || [];
@@ -281,7 +281,7 @@ function refreshNameBoxes(){
   const h = $("drawHint");
   if(h) h.textContent = hasRoster()
     ? "先抽擂主（红方），再抽挑战者（蓝方）"
-    : "直接输入两个名字即可开打";
+    : "直接输入两个名字即可开始";
   /* 没有名单时「选择」无意义（选名列表为空），收起入口 */
   const pick = $("pickBtn");
   if(pick) pick.style.display = hasRoster() ? "" : "none";
