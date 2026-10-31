@@ -21,13 +21,13 @@ $("manualBtn").addEventListener("click", ()=>{
 });
 $("m1").addEventListener("input", e=>{
   redName = resolveGhostName(e.target.value.trim());
-  $("redNameBox").textContent = dispName(redName) || namePlaceholder();
+  $("redNameBox").textContent = dispName(redName) || "待抽取";
   champFixed = false;
   renderHistory();
 });
 $("m2").addEventListener("input", e=>{
   blueName = resolveGhostName(e.target.value.trim());
-  $("blueNameBox").textContent = dispName(blueName) || namePlaceholder();
+  $("blueNameBox").textContent = dispName(blueName) || "待抽取";
   renderHistory();
 });
 

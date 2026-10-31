@@ -73,8 +73,6 @@
            background:#fff;border:2px solid var(--line);box-shadow:var(--shadow-sm);}
   .dlabel{font-size:22px;color:var(--muted);letter-spacing:1px;margin-bottom:6px;}
   .dname{font-size:46px;font-weight:800;min-height:58px;line-height:58px;letter-spacing:2px;}
-  /* 还没确定选手时的占位文案（待抽取 / 点此输入）：收小变淡，不抢真名字的视觉分量 */
-  .dname.ph{font-size:30px;font-weight:700;letter-spacing:1px;opacity:.5;}
   .drawBox.red .dname{color:var(--red-d);}
   .drawBox.blue .dname{color:var(--blue-d);}
   .drawBtn{font-size:27px;padding:14px 28px;border-radius:14px;border:2px solid var(--line);

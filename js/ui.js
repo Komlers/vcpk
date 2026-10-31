@@ -266,18 +266,9 @@ function animateDraw(boxId, finalName, done){
     }
   }, 70);
 }
-/* 红蓝框的占位文案：有名单时「待抽取」，没有名单时提示「点此输入」 */
-function namePlaceholder(){ return hasRoster() ? "待抽取" : "点此输入"; }
 function refreshNameBoxes(){
-  const tip = namePlaceholder();
-  $("redNameBox").textContent = dispName(redName) || tip;
-  $("blueNameBox").textContent = dispName(blueName) || tip;
-  /* 空名字时占位文案收小变淡，避免「点此输入」比真名字还抢眼 */
-  $("redNameBox").classList.toggle("ph", !redName);
-  $("blueNameBox").classList.toggle("ph", !blueName);
-  /* 没有名单时，红蓝框的提示改为「点击输入」，点一下就能直接打字 */
-  const act = hasRoster() ? "（点击抽取）" : "（点击输入）";
-  document.querySelectorAll(".drawBox .dact").forEach(el => { el.textContent = act; });
+  $("redNameBox").textContent = dispName(redName) || "待抽取";
+  $("blueNameBox").textContent = dispName(blueName) || "待抽取";
   const h = $("drawHint");
   if(h) h.textContent = hasRoster()
     ? "先抽擂主（红方），再抽挑战者（蓝方）"
