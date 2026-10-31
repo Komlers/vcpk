@@ -402,8 +402,8 @@ function restoreCfg(){
     }
   }catch(e){}
   /* 首次使用不默认勾选任何词库，由用户手动选择；
-     勾选「只加载纯单词」时强制不使用词块 */
-  S.useChunks = !S.wordsOnly && S.units.includes("U2");
+     含词块的词库会自动启用词块题型，勾选「只加载纯单词」时强制关闭 */
+  syncUseChunks();
   $("wordsOnlyChk").checked = S.wordsOnly;
   $("rememberWrongChk").checked = S.rememberWrong;
   $("questionTimeoutChk").checked = S.questionTimeout;

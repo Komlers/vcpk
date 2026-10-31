@@ -1,4 +1,8 @@
 /* ================== 词库加载 ================== */
+/* 给词块补上所属词库 tag（存于第 7 位），便于按当前选中词库过滤词块题池 */
+function tagChunks(list, tag){
+  return list.map(c => [c[0], c[1], c[2], c[3], c[4], c[5], tag]);
+}
 async function loadWordBank(){
   /* 并行加载所有词库 JSON，避免串行请求在慢网络下累积延迟 */
   await Promise.all(WORD_BANK_FILES.map(async ({file, tag}) => {
@@ -7,7 +11,7 @@ async function loadWordBank(){
     const data = await res.json();
     LIB_INFO[tag] = { name: data.name || file, label: data.label || "", title: data.title || data.name || "", file };
     (data.words || []).forEach(w => LIB.push([w[0], w[1], tag]));
-    if(data.chunks) CHUNKS = CHUNKS.concat(data.chunks);
+    if(data.chunks) CHUNKS = CHUNKS.concat(tagChunks(data.chunks, tag));
   }));
   loadCustomLibs();
 }
@@ -26,7 +30,7 @@ function loadCustomLibs(){
       WORD_BANK_FILES.push({ file: "custom", tag });
     }
     d.words.forEach(w => LIB.push([w[0], w[1], tag]));
-    if(Array.isArray(d.chunks)) CHUNKS = CHUNKS.concat(d.chunks);
+    if(Array.isArray(d.chunks)) CHUNKS = CHUNKS.concat(tagChunks(d.chunks, tag));
   }
 }
 /* 生成下一个可用的自定义 tag（C1, C2, ... 跳过已占用） */
@@ -55,7 +59,7 @@ function importCustomLib(jsonText){
   LIB_INFO[tag] = { name, file: "custom" };
   WORD_BANK_FILES.push({ file: "custom", tag });
   entry.words.forEach(w => LIB.push([w[0], w[1], tag]));
-  if(entry.chunks.length) CHUNKS = CHUNKS.concat(entry.chunks);
+  if(entry.chunks.length) CHUNKS = CHUNKS.concat(tagChunks(entry.chunks, tag));
   return { tag, name, count: entry.words.length, chunks: entry.chunks.length };
 }
 /* 删除自定义词库：从 localStorage、内存数组、索引中清除 */
@@ -74,7 +78,10 @@ function deleteCustomLib(tag){
   for(let i = LIB.length - 1; i >= 0; i--){
     if(LIB[i][2] === tag) LIB.splice(i, 1);
   }
-  /* CHUNKS 无法按 tag 区分（词块不含 tag），只能重建索引；词块数据量小，影响有限 */
+  /* 从 CHUNKS 中移除该 tag 的词块（词块第 7 位记录了所属词库） */
+  for(let i = CHUNKS.length - 1; i >= 0; i--){
+    if(CHUNKS[i][6] === tag) CHUNKS.splice(i, 1);
+  }
   buildIndex();
 }
 
@@ -84,7 +91,37 @@ function buildIndex(){
   for(const k in wordByEn) delete wordByEn[k];
   CHUNKS.forEach((c,i)=>chunkIdxByEn[c[0]]=i);
   LIB.forEach(w=>wordByEn[w[0]]=w);
-  CHUNK_ENS = new Set(CHUNKS.map(c=>c[0]));
+}
+
+/* ================== 词块范围（按选中词库过滤） ==================
+   词块在第 7 位（下标 6）记录所属词库 tag，题池、干扰项、词块英文去重
+   都只在当前选中词库范围内取，避免选必修 1 却抽到选必 2 的词块。 */
+function chunkIdxInScope(){
+  if(!S.units.length) return [];
+  const out = [];
+  CHUNKS.forEach((c,i)=>{ if(S.units.includes(c[6])) out.push(i); });
+  return out;
+}
+/* 当前范围内词块的英文集合：用于避免词块与同名单词重复出题 */
+function chunkEnsInScope(){
+  const s = new Set();
+  CHUNKS.forEach(c=>{ if(S.units.includes(c[6])) s.add(c[0]); });
+  return s;
+}
+/* 当前选中词库是否含词块（决定是否加入词块题型） */
+function hasChunksInScope(){
+  return S.units.some(t => CHUNKS.some(c => c[6] === t));
+}
+/* 统一维护 S.useChunks：只加载纯单词时强制关闭；否则按所选词库是否含词块决定 */
+function syncUseChunks(){
+  S.useChunks = !S.wordsOnly && hasChunksInScope();
+}
+/* 干扰项候选：优先当前选中词库；范围内词块过少时退回全部词块，保证能凑满选项 */
+function chunkCand(i){
+  let list = chunkIdxInScope();
+  if(list.length < 4) list = CHUNKS.map((c,j)=>j);
+  if(i !== undefined && !list.includes(i)) list.push(i);
+  return list;
 }
 
 function specEn(spec){ return spec.t==="w" ? spec.w[0] : CHUNKS[spec.i][0]; }
@@ -112,26 +149,27 @@ function reviewSpecs(cls){
 function chunkDistractCn(i){
   const fam = CHUNKS[i][2];
   const same = [], rest = [];
-  CHUNKS.forEach((c,j)=>{ if(j===i) return; (c[2]===fam?same:rest).push(j); });
+  chunkCand(i).forEach(j=>{ if(j===i) return; (CHUNKS[j][2]===fam?same:rest).push(j); });
   return shuffle(same).concat(shuffle(rest)).slice(0,3).map(j=>CHUNKS[j][1]);
 }
 /* 配对题干扰项：介词类取介词池，其余取同家族其他答案（保证 3 个互不相同且≠答案） */
 function pairDistract(i){
   const key = CHUNKS[i][4], fam = CHUNKS[i][2];
+  const cand = chunkCand(i);
   const out = [];
   const push = v => { if(v && v!==key && !out.includes(v) && out.length<3) out.push(v); };
   if(fam !== "prep"){
-    CHUNKS.forEach((c,j)=>{ if(j!==i && c[2]===fam) push(c[4]); });
+    cand.forEach(j=>{ if(j!==i && CHUNKS[j][2]===fam) push(CHUNKS[j][4]); });
   }
   shuffle(PAIR_POOL).forEach(push);
-  CHUNKS.forEach(c=>push(c[4]));
+  cand.forEach(j=>push(CHUNKS[j][4]));
   while(out.length<3) out.push("—");
   return shuffle(out);
 }
 /* 重组题干扰片段 */
 function orderDecoys(i, n){
   const out = [], own = CHUNKS[i][5];
-  const pool = shuffle(CHUNKS.map((c,j)=>j).filter(j=>j!==i && CHUNKS[j][5]));
+  const pool = shuffle(chunkCand(i).filter(j=>j!==i && CHUNKS[j][5]));
   for(const j of pool){
     if(out.length>=n) break;
     const p = shuffle(CHUNKS[j][5])[0];
@@ -168,13 +206,16 @@ function wordDistract(spec, dir){
 /* 单词候选题源（词块与单词撞名时，该词条只出词块题） */
 function wordSource(){
   const list = libFiltered();
-  return S.useChunks ? list.filter(w=>!CHUNK_ENS.has(w[0])) : list;
+  if(!S.useChunks) return list;
+  const ens = chunkEnsInScope();
+  return list.filter(w=>!ens.has(w[0]));
 }
 /* 题池规模（与 buildPool 口径一致） */
 function poolRange(){
   const words = libFiltered();
-  return { words:(S.useChunks ? words.filter(w=>!CHUNK_ENS.has(w[0])) : words).length,
-           chunks:(S.useChunks ? CHUNKS.length : 0) };
+  const ens = S.useChunks ? chunkEnsInScope() : null;
+  return { words:(ens ? words.filter(w=>!ens.has(w[0])) : words).length,
+           chunks:(S.useChunks ? chunkIdxInScope().length : 0) };
 }
 /* 开场配比：按时长（秒）在锚点间线性插值 */
 function planFor(sec){
@@ -203,7 +244,7 @@ function buildPool(){
   const plan = planFor(S.dur);
   const mix = S.useChunks;
   const words = shuffle(wordSource());
-  const cAll = shuffle(CHUNKS.map((c,i)=>i));
+  const cAll = shuffle(chunkIdxInScope());
   const used = new Set();                       // 键=en：同一词条本局只出一道题（不分题型）
   const mk = (arr, s) => { const e = specEn(s); if(used.has(e)) return; used.add(e); arr.push(s); };
   /* ① 开场段：按 PLAN 配比选词（保证课堂节奏与设计一致，内部乱序） */
@@ -219,7 +260,9 @@ function buildPool(){
       let c = 0;
       for(const i of cand){ if(c >= n) break; if(taken.has(i)) continue; taken.add(i); mk(open, {t:k, i:i}); c++; }
     };
-    take("c1", plan.c1); take("c2", plan.c2); take("c3", plan.c3);
+    /* 稀缺题型优先取题：c3 需要重组片段、数量最少，若排在 c1/c2 之后，
+       单册（约 15 条词块）时会被先占完，导致整局没有词块重组题 */
+    take("c3", plan.c3); take("c2", plan.c2); take("c1", plan.c1);
     /* ② 续题段：其余全部单词 + 其余全部词块（轮转题型），打散后整段续在题池尾部 */
     const restW = [], restC = [];
     for(; wi<words.length; wi++) mk(restW, {t:"w", w:words[wi]});

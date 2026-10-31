@@ -256,7 +256,7 @@ $("libConfirm").addEventListener("click", async ()=>{
     return;
   }
   S.units = tempUnits;
-  S.useChunks = !S.wordsOnly && S.units.includes("U2");
+  syncUseChunks();
   saveCfg();
   updateLibBtn();
   planInfo();
@@ -266,7 +266,7 @@ $("libConfirm").addEventListener("click", async ()=>{
 /* ================== 只加载纯单词 ================== */
 $("wordsOnlyChk").addEventListener("change", e=>{
   S.wordsOnly = e.target.checked;
-  S.useChunks = !S.wordsOnly && S.units.includes("U2");
+  syncUseChunks();
   saveCfg();
   planInfo();
 });
@@ -342,7 +342,7 @@ $("startBtn").addEventListener("click", async ()=>{
     dlgAlert("请先选择词库！", { type: "warning", title: "未选择词库" });
     return;
   }
-  S.useChunks = !S.wordsOnly && S.units.includes("U2");
+  syncUseChunks();
   saveCfg();
   S.p1 = redName; S.p2 = blueName;
   /* 未全屏则自动进入全屏，保证对战体验 */

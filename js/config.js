@@ -10,7 +10,7 @@
    词库随仓库维护，部署后由浏览器 fetch 读取；
    直接双击 index.html（file://）会被浏览器拦截本地 JSON 请求，请用 http:// 访问。 */
 let LIB = [];      // [英文, 中文, 单元标签]
-let CHUNKS = [];   // 词块表 [英文,中文,家族,题干,答案,重组片段]
+let CHUNKS = [];   // 词块表 [英文,中文,家族,题干,答案,重组片段,词库tag]（下标6为内部标记）
 let LIB_INFO = {}; // tag -> { name, file } 词库展示名
 const WORD_BANK_FILES = [
   { file:"b1u1", tag:"B1U1" }, { file:"b1u2", tag:"B1U2" }, { file:"b1u3", tag:"B1U3" },
@@ -49,7 +49,6 @@ const PAIR_POOL = ["of","to","for","with","from","into","on","about","as","in","
 /* 词块/单词索引（buildIndex 填充） */
 let chunkIdxByEn = {};   // 词块英文 -> CHUNKS 下标
 let wordByEn = {};        // 单词英文 -> LIB 词条
-let CHUNK_ENS = new Set();  /* 词块英文集合（避免词块与同名单词重复出题） */
 
 /* ================== 全局状态 ================== */
 const $ = id => document.getElementById(id);
